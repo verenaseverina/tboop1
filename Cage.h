@@ -9,7 +9,7 @@ public:
 	 * @brief Constructor.
 	 * Menciptakan Cage kosong.
 	 */
-	Cage();
+	Cage(int _size);
 
 	/**
 	 * @brief CopyConstructor.

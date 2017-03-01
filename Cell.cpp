@@ -1,10 +1,10 @@
  #include "Cell.h"
 
-Cell::Cell()
+Cell::Cell(int x, int y)
 {
 	content = '\0';
-	cell_id_row = 0;
-	cell_id_col = 0;
+	cell_id_row = x;
+	cell_id_col = y;
 }
 
 Cell::Cell(const Cell& c)

@@ -9,7 +9,7 @@ public:
 	 * @brief Constructor.
 	 * Menciptakan Cell kosong.
 	 */
-	Cell();
+	Cell(int x, int y);
 
 	/**
 	 * @brief CopyConstructor.
