@@ -35,9 +35,7 @@ public:
 
 protected:
 	string interaction;
-	char whereILive;
+	Habitat whereILive;
 	int myWeight;
-	int animal_pos_row;
-	int animal_pos_col;
 };
 #endif
