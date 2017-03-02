@@ -33,9 +33,16 @@ public:
 
 	void interact();
 
+	void move()
+
 protected:
 	string interaction;
+	int animal_id;
+	Habitat* whereToMove;
 	Habitat whereILive;
 	int myWeight;
+	int howMuchIEat; // ini dihitung dari myWeight
+	char whatIEat;
+	bool isTame;
 };
 #endif

@@ -32,8 +32,7 @@ public:
 
 
 private:
-	Habitat* p;
-	//char Habitat;
+	Habitat* h;
 	int size;
 };
 #endif
