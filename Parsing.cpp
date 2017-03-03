@@ -22,6 +22,15 @@ int main()
 
 	readStateFile(&mapstate);
 
+	for (int i = 0; i < mapstate.height; i++)
+	{
+		for (int j = 0; j < mapstate.width; j++)
+		{
+			cout << mapstate.map[i][j];
+		}
+		cout << endl;
+	}
+
 	return 0;
 }
 
@@ -72,14 +81,14 @@ void readStateFile(State* mapstate)
 					(*mapstate).map[k] = new char [(*mapstate).width];
 				}
 			}
-			else if (baris < (*mapstate).height)
+			else if (baris <= (*mapstate).height)
 			{
 				char buf[maxcharsperline];
 				inputFile.getline(buf, maxcharsperline);
 				outputFile << buf << endl;
 				for (int l = 0; l < (*mapstate).width; l++)
 				{
-					(*mapstate).map[baris][l] = buf[l];
+					(*mapstate).map[baris-1][l] = buf[l];
 				}
 			}
 			else
