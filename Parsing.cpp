@@ -22,6 +22,7 @@ int main()
 	State mapstate;
 
 	readStateFile(&mapstate);
+
 	return 0;
 }
 
@@ -62,16 +63,17 @@ void readStateFile(State* mapstate)
 					outputFile << token[i] << " ";
 				}
 				outputFile << endl;
-				(*mapstate).width = stoi(token[0]);
-				(*mapstate).height = stoi(token[1]);
+				(*mapstate).height = stoi(token[0]);
+				(*mapstate).width = stoi(token[1]);
+
 				// buat matriks map sesuai dengan width dan height
 				(*mapstate).map = new char* [(*mapstate).height];
-				for (int k = 0; k <= (*mapstate).height; k++)
+				for (int k = 0; k < (*mapstate).height; k++)
 				{
 					(*mapstate).map[k] = new char [(*mapstate).width];
 				}
 			}
-			else if (baris <= (*mapstate).height + 1)
+			else if (baris < (*mapstate).height)
 			{
 				char buf[maxcharsperline];
 				inputFile.getline(buf, maxcharsperline);
@@ -85,10 +87,10 @@ void readStateFile(State* mapstate)
 			{
 				char buf[maxcharsperline];
 				inputFile.getline(buf, maxcharsperline);
+				outputFile << buf << endl;
 			}
 			/* else{} siapa tau mau taro legendanya di map.txt */
-			baris++;
-		}
+			baris++;		}
 		outputFile.close();
 	}
 }
