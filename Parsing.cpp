@@ -1,33 +1,47 @@
 #include <iostream>
+#include <fstream>
+#include <string>
+#include "bits/stdc++.h"
+
 using namespace std;
 
 const int maxcharsperline = 512;
 const int maxtokensperline = 30;
-const char* const DELIMITER = " ,:{}"; // ini artinya apaan sih??
+const char* const DELIMITER = " x";
 
-typdef struct {
+typedef struct {
 	char** map;
 	int width;
 	int height;
 } State;
 
-void readStateFile(string filePath, State* mapstate)
-{
-	ifstream inputFile(filePath + "/" + "map.txt");
-	ofstream outputFile(filePath + "/" + "cek.txt");
+void readStateFile(State* mapstate);
 
-	baris = 0;
+int main()
+{
+	State mapstate;
+
+	readStateFile(&mapstate);
+	return 0;
+}
+
+void readStateFile(State* mapstate)
+{
+	ifstream inputFile("map.txt");
+	ofstream outputFile("cek.txt");
+
+	int baris = 0;
 	(*mapstate).width = 0;
 	(*mapstate).height = 0;
 
 	if (outputFile.is_open())
 	{
-		while (!inputfile.eof())
+		while (inputFile.good())
 		{
 			if (baris == 0)
 			{
 				// membaca width dan height map dari peta
-				char buf[mascharsperline];
+				char buf[maxcharsperline];
 				inputFile.getline(buf, maxcharsperline);
 				int n = 0;
 				const char* token[maxtokensperline] = {};
@@ -36,22 +50,20 @@ void readStateFile(string filePath, State* mapstate)
 				{
 					for (n = 1; n < maxtokensperline; n++)
 					{
-						token[n] = strtok(o, DELIMITER;
+						token[n] = strtok(0, DELIMITER);
 							if (!token[n])
 							{
 								break;
 							}
 					}
-				}
-
+				}	
 				for (int i = 0; i < n; i++)
 				{
 					outputFile << token[i] << " ";
 				}
 				outputFile << endl;
-				(*maptate).width = stoi(token[2]);
-				(*mapstate).height = stoi(token[5]);
-
+				(*mapstate).width = stoi(token[0]);
+				(*mapstate).height = stoi(token[1]);
 				// buat matriks map sesuai dengan width dan height
 				(*mapstate).map = new char* [(*mapstate).height];
 				for (int k = 0; k <= (*mapstate).height; k++)
@@ -59,20 +71,23 @@ void readStateFile(string filePath, State* mapstate)
 					(*mapstate).map[k] = new char [(*mapstate).width];
 				}
 			}
-			else if (baris <= (*mapstate).height)
+			else if (baris <= (*mapstate).height + 1)
 			{
-				char buf[mascharsperline];
-				int l;
-
-				myfile.getline(buf, maxcharsperline);
+				char buf[maxcharsperline];
+				inputFile.getline(buf, maxcharsperline);
 				outputFile << buf << endl;
-				for (l = 0; l <= (*mapstate).width; l++)
+				for (int l = 0; l < (*mapstate).width; l++)
 				{
 					(*mapstate).map[baris][l] = buf[l];
 				}
 			}
+			else
+			{
+				char buf[maxcharsperline];
+				inputFile.getline(buf, maxcharsperline);
+			}
 			/* else{} siapa tau mau taro legendanya di map.txt */
-			baris++:
+			baris++;
 		}
 		outputFile.close();
 	}
