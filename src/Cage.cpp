@@ -1,3 +1,4 @@
+#include "Cage.h"
 Cage::Cage(int _size) // dapet size ini darimana??
 {
 	int i;
