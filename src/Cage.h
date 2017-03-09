@@ -1,5 +1,7 @@
 // File: Cage.h
 
+#include "Habitat.h"
+#include "Animal.h"
 #ifndef CAGE_H
 #define CAGE_H
 
@@ -33,6 +35,7 @@ public:
 
 private:
 	Habitat* h;
+	Animal* a;
 	int size;
 };
 #endif
