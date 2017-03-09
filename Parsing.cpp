@@ -1,18 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "Parsing.h"
 
 using namespace std;
 
 const int maxcharsperline = 512;
 const int maxtokensperline = 30;
 const char* const DELIMITER = " x";
-
-typedef struct {
-	char** map;
-	int width;
-	int height;
-} State;
 
 void readStateFile(State* mapstate);
 
