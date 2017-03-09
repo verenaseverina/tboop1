@@ -1,17 +1,17 @@
 #include "Cage.h"
-Cage::Cage(int _size) // dapet size ini darimana??
+#include "Parsing.cpp"
+Cage::Cage(State mapstate) // dapet size ini darimana?? dari parsing
 {
 	int i;
 
-	p = new Habitat[_size];
-	size = _size;
-	for (i = 0; i <= size; i++)
+	//h = new Habitat[_size];
+	//size = _size;
+	/*for (i = 0; i < size; i++)
 	{
-		p[i] =
-	}
+		h[i] =
+	}*/
 
 }
-
 Cage::Cage(const Cage& c)
 {
 

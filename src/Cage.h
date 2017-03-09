@@ -1,5 +1,8 @@
 // File: Cage.h
 
+#include "Habitat.h"
+#include "Animal.h"
+#include "Parsing.h"
 #ifndef CAGE_H
 #define CAGE_H
 
@@ -9,7 +12,7 @@ public:
 	 * @brief Constructor.
 	 * Menciptakan Cage kosong.
 	 */
-	Cage(int _size);
+	Cage(State mapstate);
 
 	/**
 	 * @brief CopyConstructor.
@@ -33,6 +36,7 @@ public:
 
 private:
 	Habitat* h;
+	Animal* a;
 	int size;
 };
 #endif

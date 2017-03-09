@@ -3,6 +3,7 @@
 #include <string>
 #ifndef ANIMAL_H
 #define ANIMAL_H
+using namespace std;
 
 class Animal {
 public:
@@ -33,7 +34,7 @@ public:
 
 	void interact();
 
-	void move()
+	void move();
 
 protected:
 	string interaction;
