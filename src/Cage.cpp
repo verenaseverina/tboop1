@@ -1,5 +1,5 @@
 #include "Cage.h"
-Cage::Cage(int _size) // dapet size ini darimana?? dari parsing
+Cage::Cage(State mapstate) // dapet size ini darimana?? dari parsing
 {
 	int i;
 
