@@ -1,16 +1,9 @@
 #include "Cage.h"
 #include "Parsing.cpp"
-Cage::Cage(State mapstate) // dapet size ini darimana?? dari parsing
+Cage::Cage(char c, int row, int col) // dapet size ini darimana?? dari parsing
 {
-	int i;
-
-	//h = new Habitat[_size];
-	//size = _size;
-	/*for (i = 0; i < size; i++)
-	{
-		h[i] =
-	}*/
-
+	
+	//DFS atau BFS ngambil cage, butuh state
 }
 Cage::Cage(const Cage& c)
 {
