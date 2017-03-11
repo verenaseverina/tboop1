@@ -62,12 +62,12 @@ public:
 		}
 	}
 
-	GetHeight()
+	int Zoo::GetHeight()
 	{
 		return(height);
 	}
 	
-	GetWidth()
+	int Zoo::GetWidth()
 	{
 		return(width);
 	}
