@@ -11,36 +11,39 @@ public:
 	 * @brief Constructor.
 	 * Menciptakan Animal kosong.
 	 */
-	Animal(int x, int y);
+	Animal(int _x, int _y, int id);
 
 	/**
 	 * @brief CopyConstructor.
 	 * Membuat salinan dari Animal lain ke objek
 	 * @param c adalah Animal yang hendak disalin
 	 */
-	Animal(const Animal& a);
+//	Animal(const Animal& a);
+//  Sepertinya tidak perlu, tinggal di bitwise copy
 
 	/**
 	 * @brief Destructor.
 	 */
-	~Animal();
+//	~Animal();
+//  Tidak ada variabel dinamik
 
 	/**
 	 * @brief Overloading Operator "="
-	 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
-	 * @param c adalah Animal yang hendak disalin
+	 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit wise
+	 * @param a adalah Animal yang hendak disalin
 	 */
 	Animal& operator=(const Animal& a);
 
-	void interact();
+	virtual void interact() = 0;
 
-	void move();
+	void move(int);
 
 protected:
 	string interaction;
 	int animal_id;
-	Habitat* whereToMove;
-	Habitat whereILive;
+    int x;
+    int y;
+    int cageID;
 	int myWeight;
 	int howMuchIEat; // ini dihitung dari myWeight
 	char whatIEat;
