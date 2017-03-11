@@ -7,7 +7,13 @@ class Cell {
 public:
 	/**
 	 * @brief Constructor.
-	 * Menciptakan Cell kosong.
+	 Mennciptakan Cell kosong tanpa parameter.
+	 */
+	Cell();
+
+	/**
+	 * @brief Constructor.
+	 * Menciptakan Cell kosong dengan parameter.
 	 */
 	Cell(int x, int y);
 

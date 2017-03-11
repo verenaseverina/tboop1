@@ -1,5 +1,12 @@
  #include "Cell.h"
 
+Cell::Cell()
+{
+	content = '\0';
+	cell_id_row = -1;
+	cell_id_col = -1;
+}
+
 Cell::Cell(int x, int y)
 {
 	content = '\0';
