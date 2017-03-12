@@ -2,6 +2,20 @@
 
 #include "Habitat.h"
 #include "Animal.h"
+#include "Tiger.h"
+#include "Panda.h"
+#include "Anoa.h"
+#include "Rhino.h"
+#include "Kangaroo.h"
+#include "Dolphin.h"
+#include "Whale.h"
+#include "Shark.h"
+#include "Bat.h"
+#include "Eagle.h"
+#include "Toucan.h"
+#include "Penguin.h"
+#include "Crocodile.h"
+#include "Hippo.h"
 #include <math.h>
 #ifndef CAGE_H
 #define CAGE_H
@@ -33,12 +47,12 @@ public:
 	 */
 	Cage& operator=(const Cage& c);
 
-	void addAnimal(char animal, int x, int y); // parameternya ini? ada posisinya iya atau ngga?
-
+	void addAnimal(char animal);
 
 private:
 	Habitat* h;
 	Animal** a;
 	int size;
+	static int Neff;
 };
 #endif

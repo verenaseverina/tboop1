@@ -1,0 +1,31 @@
+Darat
+- Tiger (H)
+- Panda (B)
+- Anoa (A)
+- Rhino (R)
+- Kangaroo (D)
+
+Air
+- Dolphin (L)
+- Whale (W)
+- Shark (S)
+
+Udara
+- Kelelawar (K)
+- Elang Botak (E)
+- Toucan (T)
+
+Darat-Air
+- Penguin (P)
+- Crocodile (C)
+- Hippopotamus (N)
+
+Darat-Udara
+- 
+- 
+- 
+
+Udara-Air
+- 
+- 
+- 

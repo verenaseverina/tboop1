@@ -1,5 +1,7 @@
 #include "Cage.h"
 
+int Neff = -1;
+
 Cage::Cage(int _size, Habitat* buf) : size(_size)
 {
 	h = new Habitat[size];
@@ -59,4 +61,41 @@ Cage& Cage::operator=(const Cage& c)
 	}
 
 	return *this;
+}
+
+void Cage::addAnimal(char animal)
+{
+	switch(animal)
+	{
+		case 'H' :
+			a[Neff++] = new Tiger;
+		case 'B' :
+			a[Neff++] = new Panda;
+		case 'A' :
+			a[Neff++] = new Anoa;
+		case 'L' :
+			a[Neff++] = new Dolphin;
+		case 'W' :
+			a[Neff++] = new Whale;
+		case 'S' :
+			a[Neff++] = new Shark;
+		case 'K' :
+			a[Neff++] = new Bat;
+		case 'E' :
+			a[Neff++] = new Eagle;
+		case 'T' :
+			a[Neff++] = new Toucan;
+		case 'P' :
+			a[Neff++] = new Penguin;
+		case 'C' :
+			a[Neff++] = new Crocodile;
+		case 'N' :
+			a[Neff++] = new Hippopotamus;
+		//case '' :
+		//case '' :
+		//case '' :
+		//case '' :
+		//case '' :
+		//case '' :
+	}
 }

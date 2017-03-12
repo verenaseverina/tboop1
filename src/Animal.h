@@ -41,8 +41,8 @@ public:
 protected:
 	string interaction;
 	int animal_id;
-    int x;
-    int y;
+	int x;
+	int y;
     int cageID;
 	int myWeight;
 	int howMuchIEat; // ini dihitung dari myWeight
