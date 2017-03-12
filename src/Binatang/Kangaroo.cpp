@@ -1,25 +1,17 @@
-// File: Kangaroo.h
+#include "Kangaroo.h"
+#include <cstdlib>
 
-
-#include <string>
-#include "../LandAnimal.h"
-#ifndef KANGAROO_H
-#define KANGAROO_H
-
-using namespace std;
-
-class Kangaroo : public LandAnimal 
+Kangaroo::Kangaroo(int x, int y, int id) : LandAnimal(x,y,id)
 {
-	public:
-		/**
-	 	* @brief Constructor.
-	 	* Menciptakan Tiger.
-	 	*/
-		Kangaroo(int x, int y, int id);
+	interaction = "Cuitttt";
+   	srand(time(NULL));
+    myWeight = 110 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(200-110)));
+    howMuchIEat = (0.04 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.09-0.04)))) * myWeight;
+    whatIEat = 'h';
+    isTame = true;
+}
 
-		Kangaroo& operator=(const Kangaroo& a);
-
-		void interact();
-
-		void move(int);
+void Kangaroo::interact()
+{
+	return this->interaction;
 }

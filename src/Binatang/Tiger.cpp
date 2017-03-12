@@ -7,7 +7,7 @@ Tiger::Tiger(int x, int y, int id) : LandAnimal(x,y,id)
    	srand(time(NULL));
     myWeight = 90 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(310-90)));
     howMuchIEat = 0;
-    whatIEat = "c";
+    whatIEat = 'c';
     isTame = false;
 }
 

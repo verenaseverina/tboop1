@@ -7,7 +7,7 @@ Whale::Whale(int x, int y, int id) : WaterAnimal(x,y,id)
    	srand(time(NULL));
     myWeight = 14000 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(16000-14000)));
     howMuchIEat = 0.0667 * myWeight;
-    whatIEat = "c";
+    whatIEat = 'c';
     isTame = true;
 }
 

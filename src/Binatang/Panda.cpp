@@ -7,7 +7,7 @@ Panda::Panda(int x, int y, int id) : LandAnimal(x,y,id)
    	srand(time(NULL));
     myWeight = 70 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(100-70)));
     howMuchIEat = 38*myWeight/100;
-    whatIEat = "h";
+    whatIEat = 'h';
     isTame = true;
 }
 

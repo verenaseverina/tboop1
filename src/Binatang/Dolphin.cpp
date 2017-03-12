@@ -7,7 +7,7 @@ Dolphin::Dolphin(int x, int y, int id) : WaterAnimal(x,y,id)
    	srand(time(NULL));
     myWeight = 110 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(200-110)));
     howMuchIEat = (0.04 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.09-0.04)))) * myWeight;
-    whatIEat = "c";
+    whatIEat = 'c';
     isTame = true;
 }
 
