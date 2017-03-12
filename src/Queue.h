@@ -1,4 +1,4 @@
-#include "Cell.h"
+#include "Habitat.h"
 #ifndef QUEUE_H
 #define QUEUE_H
 #define defaultsize 50 //
@@ -33,16 +33,16 @@ public:
 	/**
 	 * @brief Method Add
 	 * Prosedur untuk menambahkan Cell pada Queue
-	 * @param c adalah Cell yang akan ditambahkan ke Queue
+	 * @param h adalah Habitat yang akan ditambahkan ke Queue
 	 */
-	void Add(Cell c);
+	void Add(Habitat h);
 
 	/**
 	 * @brief Method Del
-	 * Prosedur untuk menghapus Cell pada Queue 
-	 * @return Cell yang akan dihapus
+	 * Fungsi untuk menghapus Habitat pada Queue 
+	 * @return Habitat yang akan dihapus
 	 */
-	Cell Del();
+	Habitat Del();
 
 	/**
 	 * @brief Method isEmpty
@@ -53,11 +53,11 @@ public:
 
 	/**
 	 * @brief Method isInQueue
-	 * Mencari apakah Cell c ada di Queue
-	 * @param c adalah Cell yang ingin dicari 
-	 * @return boolean yang menunjukkan apakah Cell ada di Queue
+	 * Mencari apakah Habitat h ada di Queue
+	 * @param h adalah Habitat yang ingin dicari 
+	 * @return boolean yang menunjukkan apakah Habitat ada di Queue
 	 */
-	bool isInQueue(Cell c);
+	bool isInQueue(Habitat );
 
 private:
 	Cell* mem;

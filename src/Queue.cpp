@@ -1,14 +1,14 @@
 #include "Queue.h"
 Queue::Queue() : size(defaultsize)
 {
-	mem = new Cell[size];
+	mem = new Habitat[size];
 	Head = 0;
 	Tail = 0;
 }
 
 Queue::Queue(const Queue& q) : size(q.size)
 {
-	mem = new Cell[size];
+	mem = new Habitat[size];
 	Head = q.Head;
 	Tail = q.Tail;
 	for (int i = 0; i < size; i++)
@@ -26,7 +26,7 @@ Queue& Queue::operator=(const Queue& q)
 {
 	delete [] mem;
 
-	mem = new Cell[size];
+	mem = new Habitat[size];
 	Head = q.Head;
 	Tail = q.Tail;
 	for (int i = 0; i < size; i++)
@@ -37,15 +37,15 @@ Queue& Queue::operator=(const Queue& q)
 	return *this;
 }
 
-void Queue::Add(Cell c)
+void Queue::Add(Habitat h)
 {
 	Tail++;
-	mem[Tail] = c;
+	mem[Tail] = h;
 }
 
-Cell Queue::Del()
+Habitat Queue::Del()
 {
-	Cell retval;
+	Habitat retval;
 
 	retval = mem[Head];
 	Head++;
@@ -57,7 +57,7 @@ bool Queue::isEmpty()
 	return (Head == Tail);
 }
 
-bool Queue::isInQueue(Cell c)
+bool Queue::isInQueue(Habitat h)
 {
 	int i = Head;
 	bool found = false;
