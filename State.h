@@ -14,6 +14,27 @@ public:
 	 */
 	State();
 
+	/**
+	 * @brief Getter Map
+	 * Mengambil Matriks Map
+	 * @return Matriks Map
+	 */
+	char** GetMap();
+
+	/**
+	 * @brief Getter Height
+	 * Mengambil height dari Map
+	 * @return height Map
+	 */
+	int GetHeight();
+
+	/**
+	 * @brief Getter Width
+	 * Mengambil width dari Map
+	 * @return width Map
+	 */
+	int GetWidth();
+
 private:
 	char** map;
 	int width;

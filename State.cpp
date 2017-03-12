@@ -71,3 +71,18 @@ State::State()
 		outputFile.close();
 	}
 }
+
+char** State::GetMap()
+{
+	return map;
+}
+
+int State::GetHeight()
+{
+	return height;
+}
+
+int State::GetWidth()
+{
+	return width;
+}
