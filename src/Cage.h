@@ -52,7 +52,7 @@ public:
 	 * Menambahkan animal ke dalam array of animal
 	 * @param animal jenis animal yang ingin dimasukkan ke dalam Cage
 	 */
-	void addAnimal(char animal);
+	void addAnimal(char animal, int i);
 
 	/**
 	 * @brief Method containAnimals

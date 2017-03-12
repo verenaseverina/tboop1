@@ -38,6 +38,10 @@ public:
 
 	void move(int);
 
+	int GetX();
+
+	int GetY();
+
 protected:
 	string interaction;
 	int animal_id;

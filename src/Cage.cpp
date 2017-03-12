@@ -69,41 +69,41 @@ void Cage::addAnimal(char animal, int i)
 {	
 	int posid;
 	srand(time(NULL));
-	repeat
+	do
 	{
 		posid = rand() % size;
-	} until (!containAnimal(h[posid].cell_id_row, h[posid].cell_id_col));
+	} while (!containAnimal(h[posid].GetCellRow(), h[posid].GetCellCol()));
 
 	switch(animal)
 	{
 		case 'H' :
-			a[Neff++] = new Tiger(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Tiger(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'B' :
-			a[Neff++] = new Panda(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Panda(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'A' :
-			a[Neff++] = new Anoa(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Anoa(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'R' :
-			a[Neff++] = new Rhino(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Rhino(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'D' :
-			a[Neff++] = new Kangaroo(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Kangaroo(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'L' :
-			a[Neff++] = new Dolphin(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Dolphin(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'W' :
-			a[Neff++] = new Whale(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Whale(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'S' :
-			a[Neff++] = new Shark(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Shark(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'K' :
-			a[Neff++] = new Bat(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Kelelawar(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'E' :
-			a[Neff++] = new Eagle(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new ElangB(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'T' :
-			a[Neff++] = new Toucan(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Toucan(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'P' :
-			a[Neff++] = new Penguin(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Penguin(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'C' :
-			a[Neff++] = new Crocodile(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Crocodile(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'N' :
-			a[Neff++] = new Hippo(h[posid].cell_id_row, h[posid].cell_id_col, i);
+			a[Neff++] = new Hippopotamus(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		//case '' :
 		//case '' :
 		//case '' :
@@ -122,7 +122,7 @@ bool Cage::containAnimal(int x, int y)
 
 	while ((i < tempManyAnimal) && (!found))
 	{
-		if ((x == a[i].x) && (y == a[i].y))
+		if ((x == a[i]->GetX()) && (y == a[i]->GetY()))
 		{
 			found = true;
 		}

@@ -34,3 +34,13 @@ void Animal::move(int dir){
         break;
     }
 }
+
+int Animal::GetX()
+{
+    return x;
+}
+
+int Animal::GetY()
+{
+    return y;
+}
