@@ -1,5 +1,4 @@
 #include "Cage.h"
-#include "Queue.h"
 
 Cage::Cage(int _size, Habitat* buf) : size(_size)
 {
@@ -8,18 +7,30 @@ Cage::Cage(int _size, Habitat* buf) : size(_size)
 	{
 		h[i] = buf[i];
 	}
-
-	// ini dapet buf dari zoo terus dia sekalian itung size
+	
+	float tempManyAnimal = 0.3 * size;
+	int manyAnimal = floor(tempManyAnimal); // perlu casting ke int ga?
+	a = new Animal[manyAnimal];
 }
 
-Cage::Cage(const Cage& c)
+Cage::Cage(const Cage& c) : size(c.size)
 {
+	h = new Habitat[c.size];
+	for (int i = 0; i < size; i++)
+	{
+		h[i] = c.h[i];
+	}
 
+	float tempManyAnimal = 0.3 * c.size;
+	int manyAnimal = floor(tempManyAnimal); // perlu casting ke int ga?
+	a = new Animal[manyAnimal];
+	
 }
 
 Cage::~Cage()
 {
-
+	delete [] h;
+	delete [] a;
 }
 
 Cage& Cage::operator=(const Cage& c)

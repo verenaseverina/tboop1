@@ -51,6 +51,14 @@ public:
 	 */
 	bool isEmpty();
 
+	/**
+	 * @brief Method isInQueue
+	 * Mencari apakah Cell c ada di Queue
+	 * @param c adalah Cell yang ingin dicari 
+	 * @return boolean yang menunjukkan apakah Cell ada di Queue
+	 */
+	bool isInQueue(Cell c);
+
 private:
 	Cell* mem;
 	const int size;

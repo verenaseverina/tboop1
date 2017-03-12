@@ -56,3 +56,22 @@ bool Queue::isEmpty()
 {
 	return (Head == Tail);
 }
+
+bool Queue::isInQueue(Cell c)
+{
+	int i = Head;
+	bool found = false;
+	while ((i <= Tail) && (!found))
+	{
+		if (mem[i] == c)
+		{
+			found = true;
+		}
+		else
+		{
+			i++;
+		}
+	}
+
+	return found;
+}

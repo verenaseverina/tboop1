@@ -33,6 +33,8 @@ public:
 	 */
 	Cage& operator=(const Cage& c);
 
+	void addAnimal(char animal, int x, int y); // parameternya ini? ada posisinya iya atau ngga?
+
 
 private:
 	Habitat* h;
