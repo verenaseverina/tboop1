@@ -3,11 +3,16 @@
 #ifndef ZOO_H
 #define ZOO_H
 
+#include <vector>
+#include "../State.h"
+#include "Cage.h"
+#include "Cell.h"
+
 class Zoo
 {
 public:
 	//Constructor Zoo
-	Zoo(State);
+	Zoo();
 	
 	Zoo(const Zoo&);
 	
@@ -15,15 +20,22 @@ public:
 	
 	~Zoo();
 	
+	void GetAllCage(State& s);
+	
+	vector<Habitat> GetCage(Habitat h);
+	
+	bool InCage(vector<Habitat> &v, Habitat h);
+	
+	bool InCage(vector<Habitat> &v, Facility f);
+	
+	int GetHeight();
+	
+	int GetWidth();
+	
 	//Elemen constructor
 	//Pindahin semua State ke map
-	void DefineCell(State);
-	//
-	void DefineCages();
-
-	
 private:
-	Cage* cages;
+	//Cage* cages;
 	Cell** map;
 	int height;
 	int width;
