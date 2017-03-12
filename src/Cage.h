@@ -12,7 +12,7 @@ public:
 	 * @brief Constructor.
 	 * Menciptakan Cage kosong.
 	 */
-	Cage(char c, int row, int col);
+	Cage(int _size);
 
 	/**
 	 * @brief CopyConstructor.

@@ -20,6 +20,8 @@ public:
 	void DefineCell(State);
 	//
 	void DefineCages();
+
+	
 private:
 	Cage* cages;
 	Cell** map;

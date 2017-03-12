@@ -1,47 +1,15 @@
-#include <iostream>
-#include <fstream>
-#include <string>
+#include "State.h"
 
 using namespace std;
 
-const int maxcharsperline = 512;
-const int maxtokensperline = 30;
-const char* const DELIMITER = " x";
-
-typedef struct {
-	char** map;
-	int width;
-	int height;
-} State;
-
-void readStateFile(State* mapstate);
-
-int main()
-{
-	State mapstate;
-
-	readStateFile(&mapstate);
-
-	for (int i = 0; i < mapstate.height; i++)
-	{
-		for (int j = 0; j < mapstate.width; j++)
-		{
-			cout << mapstate.map[i][j];
-		}
-		cout << endl;
-	}
-
-	return 0;
-}
-
-void readStateFile(State* mapstate)
+State::State()
 {
 	ifstream inputFile("map.txt");
 	ofstream outputFile("cek.txt");
 
 	int baris = 0;
-	(*mapstate).width = 0;
-	(*mapstate).height = 0;
+	width = 0;
+	height = 0;
 
 	if (outputFile.is_open())
 	{
@@ -53,7 +21,7 @@ void readStateFile(State* mapstate)
 				char buf[maxcharsperline];
 				inputFile.getline(buf, maxcharsperline);
 				int n = 0;
-				const char* token[maxtokensperline] = {};
+				const char* token[maxtokensperline];
 				token[0] = strtok(buf, DELIMITER);
 				if (token[0])
 				{
@@ -71,24 +39,24 @@ void readStateFile(State* mapstate)
 					outputFile << token[i] << " ";
 				}
 				outputFile << endl;
-				(*mapstate).height = stoi(token[0]);
-				(*mapstate).width = stoi(token[1]);
+				height = stoi(token[0]);
+				width = stoi(token[1]);
 
 				// buat matriks map sesuai dengan width dan height
-				(*mapstate).map = new char* [(*mapstate).height];
-				for (int k = 0; k < (*mapstate).height; k++)
+				map = new char* [height];
+				for (int k = 0; k < height; k++)
 				{
-					(*mapstate).map[k] = new char [(*mapstate).width];
+					map[k] = new char [width];
 				}
 			}
-			else if (baris <= (*mapstate).height)
+			else if (baris <= height)
 			{
 				char buf[maxcharsperline];
 				inputFile.getline(buf, maxcharsperline);
 				outputFile << buf << endl;
-				for (int l = 0; l < (*mapstate).width; l++)
+				for (int l = 0; l < width; l++)
 				{
-					(*mapstate).map[baris-1][l] = buf[l];
+					map[baris-1][l] = buf[l];
 				}
 			}
 			else
@@ -98,7 +66,8 @@ void readStateFile(State* mapstate)
 				outputFile << buf << endl;
 			}
 			/* else{} siapa tau mau taro legendanya di map.txt */
-			baris++;		}
+			baris++;
+		}
 		outputFile.close();
 	}
 }

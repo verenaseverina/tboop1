@@ -44,6 +44,13 @@ public:
 	 */
 	Cell Del();
 
+	/**
+	 * @brief Method isEmpty
+	 * Mengecek apakah Queue kosong atau tidak
+	 * @return boolean yang menunjukkan Queue kosong atau tidak
+	 */
+	bool isEmpty();
+
 private:
 	Cell* mem;
 	const int size;

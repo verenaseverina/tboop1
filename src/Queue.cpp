@@ -51,3 +51,8 @@ Cell Queue::Del()
 	Head++;
 	return retval;
 }
+
+bool Queue::isEmpty()
+{
+	return (Head == Tail);
+}
