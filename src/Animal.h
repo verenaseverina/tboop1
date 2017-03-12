@@ -44,8 +44,8 @@ protected:
     int x;
     int y;
     int cageID;
-	int myWeight;
-	int howMuchIEat; // ini dihitung dari myWeight
+	float myWeight;
+	float howMuchIEat; // ini dihitung dari myWeight
 	char whatIEat;
 	bool isTame;
 };
