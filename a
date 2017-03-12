@@ -1,0 +1,174 @@
+[33mcommit fffae5a0357e261edc6935b95db03345492f4592[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Sun Mar 12 17:34:33 2017 +0700
+
+    cobain aja
+
+[33mcommit 1234b39b961784b283805c0f33f447bd22433e4c[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Sun Mar 12 17:21:24 2017 +0700
+
+    Benerin cage
+
+[33mcommit bae4581873b54ed51d55ae0437b62d426bf518fe[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Sun Mar 12 15:05:50 2017 +0700
+
+    4 sekawannya cage dah bisa yay
+
+[33mcommit a5216d736f8ef51ff5c1863d031abed8f02340ac[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Sun Mar 12 15:00:24 2017 +0700
+
+    ngubah queue of cell jadi queue of habitat
+
+[33mcommit 5f7abe89c1446286face50fcffc8ef1277dbdf77[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Sun Mar 12 14:52:08 2017 +0700
+
+    nambahin isInQueue
+
+[33mcommit d77a74eeeb4b3f7409f897ff0e652168b4ae3b94[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Sun Mar 12 09:51:17 2017 +0700
+
+    Parsing.cpp diubah jadi State.cpp
+
+[33mcommit ff457bf9f3dc7c9f2305a365252c857c8da7824d[m
+Author: Winarto <yowinarto@gmail.com>
+Date:   Sat Mar 11 20:26:12 2017 +0700
+
+    Implementasi Animal.cpp
+
+[33mcommit 5f9e8431c5227eb97a1ff68c2ff1ad1e073481ab[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Sat Mar 11 11:03:10 2017 +0700
+
+    ditambahin Queue.h sama Queue.cpp
+
+[33mcommit 6be2c939f8431c90ec874de5a9538887de1bad93[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Sat Mar 11 09:30:43 2017 +0700
+
+    nambahin ada error
+
+[33mcommit 23c31bbbcb6db502e17c8aaf6ecf6d88ba524520[m
+Author: kukuhbr <kukuhis777@gmail.com>
+Date:   Fri Mar 10 18:52:42 2017 +0700
+
+    edit zoo
+
+[33mcommit 5b31f989d0e9bd393c62cbb5d333b25558570581[m
+Merge: da108ea e7a3dd3
+Author: kukuhbr <kukuhis777@gmail.com>
+Date:   Fri Mar 10 00:00:14 2017 +0700
+
+    Merge branch 'master' of https://github.com/verenaseverina/tboop1
+
+[33mcommit da108eabcb64c7de888c8c109afa0451ee170c9d[m
+Author: kukuhbr <kukuhis777@gmail.com>
+Date:   Thu Mar 9 23:57:49 2017 +0700
+
+    membuat prototype Zoo.cpp dan Zoo.h namun masih sangat susah hidup ini bagaikan daun yang jatuh.
+
+[33mcommit e7a3dd36729d7b7e2855e19259a63d788a197669[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Thu Mar 9 23:38:03 2017 +0700
+
+    Benerin cage.h
+
+[33mcommit a94ceaa748f7dbee9f2cf4839aa881c534e3ce9f[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Thu Mar 9 23:32:12 2017 +0700
+
+    benerin ada error lagi
+
+[33mcommit 11eca3dc0e5363578e0b3e373518d7769f3e34e0[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Thu Mar 9 23:30:37 2017 +0700
+
+    Benerin ada error
+
+[33mcommit 979b413ef5d0a8310634a245f3c57c6585f08e1a[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Sat Mar 4 00:31:37 2017 +0700
+
+    Udah ada makefile yay tapi ga tau udah bener belom
+
+[33mcommit e9e098aedcf9f601d5e3b6a801015044c1442542[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Fri Mar 3 20:19:45 2017 +0700
+
+    udah dicek dan parsingnya bisa jalan dan udah disimpen ke matriks map
+
+[33mcommit 58e3ea5c32ca4c2e91209e6c3297643e263e5c06[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Fri Mar 3 20:09:11 2017 +0700
+
+    ngerapiin yang tadi
+
+[33mcommit b02f35fb8a5fdb6dbf329293b446a13823af23b4[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Fri Mar 3 20:07:55 2017 +0700
+
+    yay parsingnya udah ga segfault
+
+[33mcommit 9b0ffce0c4600ac282891371d510c42be875435a[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Fri Mar 3 19:41:49 2017 +0700
+
+     benering parsing.cpp tapi masih ada yang salah
+
+[33mcommit 65eae2073a0e3952232b393bd37b1633bccd37f6[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Thu Mar 2 10:37:31 2017 +0700
+
+    diubah animal sama cage
+
+[33mcommit e2797bab25dce9f7d84c3684a30f70b99a304274[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Thu Mar 2 09:37:36 2017 +0700
+
+    Animal punya atribut habitat
+
+[33mcommit a55a40a3abf08c22295a8d6cb588c37e3fd83da0[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Thu Mar 2 09:08:06 2017 +0700
+
+    ngerapiin
+
+[33mcommit 228116a7ef79332c4fd801958035873d6126aae8[m
+Author: Winarto <yowinarto@gmail.com>
+Date:   Wed Mar 1 23:23:04 2017 +0700
+
+    Added habitat & facility prototype
+
+[33mcommit fac8c3fd84f6d97bfa6e53576992f96d8b46f303[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Wed Mar 1 22:44:44 2017 +0700
+
+    parsing.cpp sama animal.h tapi masih ngaco kayaknya
+
+[33mcommit 5bac2bb2747c0089259193341302188ad675b1cc[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Wed Mar 1 09:07:36 2017 +0700
+
+    Ditambahin Cage.h
+
+[33mcommit ce9dbae193791c19afe1e11e8d3fb3cfd80beaec[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Tue Feb 28 19:17:25 2017 +0700
+
+    Ditambahkan Cell.cpp
+
+[33mcommit d2a3cd9a9d81c126c83d40792fd9fccbb0dcd0ed[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Mon Feb 27 00:31:04 2017 +0700
+
+    ditambahin Cell.h
+
+[33mcommit 29e940457af1e97294afbdde2e8652673c697ebb[m
+Author: verenaseverina <verenaseverina@gmail.com>
+Date:   Sat Feb 25 11:38:23 2017 +0700
+
+    first commit
