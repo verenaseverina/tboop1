@@ -1,23 +1,23 @@
-// File: Tiger.h
+// File: Kangaroo.h
 
 
 #include <string>
 #include "../LandAnimal.h"
-#ifndef TIGER_H
-#define TIGER_H
+#ifndef KANGAROO_H
+#define KANGAROO_H
 
 using namespace std;
 
-class Tiger : public LandAnimal 
+class Kangaroo : public LandAnimal 
 {
 	public:
 		/**
 	 	* @brief Constructor.
 	 	* Menciptakan Tiger.
 	 	*/
-		Tiger(int x, int y, int id);
+		Kangaroo(int x, int y, int id);
 
-		Tiger& operator=(const Tiger& a);
+		Kangaroo& operator=(const Kangaroo& a);
 
 		void interact();
 
