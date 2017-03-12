@@ -21,6 +21,6 @@ class Dolphin : public WaterAnimal
 
 		void interact();
 
-}
+};
 
 #endif

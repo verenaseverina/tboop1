@@ -22,6 +22,6 @@ class Penguin : public LWAnimal
 		void interact();
 
 		void move(int);
-}
+};
 
 #endif

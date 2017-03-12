@@ -22,7 +22,7 @@ class Crocodile : public LWAnimal
 		void interact();
 
 		void move(int);
-}
+};
 
 #endif
 

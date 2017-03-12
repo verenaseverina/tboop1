@@ -48,5 +48,6 @@ protected:
 	float howMuchIEat; // ini dihitung dari myWeight
 	char whatIEat;
 	bool isTame;
+	char* hab;
 };
 #endif

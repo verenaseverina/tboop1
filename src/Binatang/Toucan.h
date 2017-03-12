@@ -22,6 +22,6 @@ class Toucan : public AirAnimal
 		void interact();
 
 		void move(int);
-}
+};
 
 #endif

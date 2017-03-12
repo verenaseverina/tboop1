@@ -22,6 +22,6 @@ class Kangaroo : public LandAnimal
 		void interact();
 
 		void move(int);
-}
+};
 
 #endif

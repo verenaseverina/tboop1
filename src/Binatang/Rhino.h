@@ -22,6 +22,6 @@ class Rhino : public LandAnimal
 		void interact();
 
 		void move(int);
-}
+};
 
 #endif

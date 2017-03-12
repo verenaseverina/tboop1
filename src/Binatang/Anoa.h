@@ -22,6 +22,6 @@ class Anoa : public LandAnimal
 		void interact();
 
 		void move(int);
-}
+};
 
 #endif

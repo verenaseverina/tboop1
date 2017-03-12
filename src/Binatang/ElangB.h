@@ -22,6 +22,6 @@ class ElangB : public AirAnimal
 		void interact();
 
 		void move(int);
-}
+};
 
 #endif

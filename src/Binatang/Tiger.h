@@ -22,6 +22,6 @@ class Tiger : public LandAnimal
 		void interact();
 
 		void move(int);
-}
+};
 
 #endif

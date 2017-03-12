@@ -22,6 +22,6 @@ class Kelelawar : public AirAnimal
 		void interact();
 
 		void move(int);
-}
+};
 
 #endif
