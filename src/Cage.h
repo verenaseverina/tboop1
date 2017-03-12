@@ -62,12 +62,18 @@ public:
 	 * @return boolean apakah ada animal pada Habitat yang dicek 
 	 */
 	bool containAnimal(int x, int y);
+	
+	/**
+	 * @brief Method isFull
+	 * Mengecek apakah Cage penuh dengan Animal
+	 * @return boolean apakah Cage penuh dengan Animal
+	 */
+	bool isFull();
 
 private:
 	Habitat* h;
 	Animal** a;
 	int size;
-	int id;
 	static int Neff;
 };
 #endif

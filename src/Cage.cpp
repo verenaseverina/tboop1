@@ -120,7 +120,7 @@ bool Cage::containAnimal(int x, int y)
 	bool found = false;
 	int i = 0;
 
-	while ((i < tempManyAnimal) && (!found))
+	while ((i < manyAnimal) && (!found))
 	{
 		if ((x == a[i]->GetX()) && (y == a[i]->GetY()))
 		{
@@ -133,4 +133,11 @@ bool Cage::containAnimal(int x, int y)
 	}
 
 	return found;
+}
+
+bool Cage::isFull()
+{
+	float tempManyAnimal = 0.3 * size;
+	int manyAnimal = floor(tempManyAnimal);
+	return (manyAnimal == Neff);
 }
