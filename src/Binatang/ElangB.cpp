@@ -11,7 +11,7 @@ ElangB::ElangB(int x, int y, int id) : AirAnimal(x,y,id)
     isTame = true;
 }
 
-void ElangB::interact()
+string ElangB::interact()
 {
 	return this->interaction;
 }

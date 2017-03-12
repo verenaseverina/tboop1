@@ -19,9 +19,8 @@ class Toucan : public AirAnimal
 
 		Toucan& operator=(const Toucan& a);
 
-		void interact();
+		string interact();
 
-		void move(int);
 };
 
 #endif

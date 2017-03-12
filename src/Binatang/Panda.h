@@ -19,9 +19,8 @@ class Panda : public LandAnimal
 
 		Panda& operator=(const Panda& a);
 
-		void interact();
+		string interact();
 
-		void move(int);
 };
 
 #endif

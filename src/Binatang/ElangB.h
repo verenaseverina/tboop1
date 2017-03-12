@@ -19,9 +19,8 @@ class ElangB : public AirAnimal
 
 		ElangB& operator=(const ElangB& a);
 
-		void interact();
+		string interact();
 
-		void move(int);
 };
 
 #endif

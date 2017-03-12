@@ -19,9 +19,8 @@ class Crocodile : public LWAnimal
 
 		Crocodile& operator=(const Crocodile& a);
 
-		void interact();
+		string interact();
 
-		void move(int);
 };
 
 #endif

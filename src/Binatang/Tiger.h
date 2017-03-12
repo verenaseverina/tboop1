@@ -19,9 +19,8 @@ class Tiger : public LandAnimal
 
 		Tiger& operator=(const Tiger& a);
 
-		void interact();
+		string interact();
 
-		void move(int);
 };
 
 #endif

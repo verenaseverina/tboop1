@@ -19,9 +19,8 @@ class Anoa : public LandAnimal
 
 		Anoa& operator=(const Anoa& a);
 
-		void interact();
+		string interact();
 
-		void move(int);
 };
 
 #endif

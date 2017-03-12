@@ -19,7 +19,7 @@ class Whale : public WaterAnimal
 
 		Whale& operator=(const Whale& a);
 
-		void interact();
+		string interact();
 
 };
 

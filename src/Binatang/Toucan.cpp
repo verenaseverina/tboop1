@@ -11,7 +11,7 @@ Toucan::Toucan(int x, int y, int id) : AirAnimal(x,y,id)
     isTame = true;
 }
 
-void Toucan::interact()
+string Toucan::interact()
 {
 	return this->interaction;
 }

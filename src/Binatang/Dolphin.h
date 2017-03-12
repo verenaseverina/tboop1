@@ -19,7 +19,7 @@ class Dolphin : public WaterAnimal
 
 		Dolphin& operator=(const Dolphin& a);
 
-		void interact();
+		string interact();
 
 };
 

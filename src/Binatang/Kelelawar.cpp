@@ -11,7 +11,7 @@ Kelelawar::Kelelawar(int x, int y, int id) : AirAnimal(x,y,id)
     isTame = true;
 }
 
-void Kelelawar::interact()
+string Kelelawar::interact()
 {
 	return this->interaction;
 }

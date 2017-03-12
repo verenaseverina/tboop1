@@ -11,7 +11,7 @@ Panda::Panda(int x, int y, int id) : LandAnimal(x,y,id)
     isTame = true;
 }
 
-void Panda::interact()
+string Panda::interact()
 {
 	return this->interaction;
 }

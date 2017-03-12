@@ -11,7 +11,7 @@ Anoa::Anoa(int x, int y, int id) : LandAnimal(x,y,id)
     isTame = true;
 }
 
-void Anoa::interact()
+string Anoa::interact()
 {
 	return this->interaction;
 }

@@ -11,7 +11,7 @@ Whale::Whale(int x, int y, int id) : WaterAnimal(x,y,id)
     isTame = true;
 }
 
-void Whale::interact()
+string Whale::interact()
 {
 	return this->interaction;
 }

@@ -11,7 +11,7 @@ Kangaroo::Kangaroo(int x, int y, int id) : LandAnimal(x,y,id)
     isTame = true;
 }
 
-void Kangaroo::interact()
+string Kangaroo::interact()
 {
 	return this->interaction;
 }

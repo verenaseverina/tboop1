@@ -11,7 +11,7 @@ Rhino::Rhino(int x, int y, int id) : LandAnimal(x,y,id)
     isTame = false;
 }
 
-void Rhino::interact()
+string Rhino::interact()
 {
 	return this->interaction;
 }

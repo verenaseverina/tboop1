@@ -11,7 +11,7 @@ Penguin::Penguin(int x, int y, int id) : LWAnimal(x,y,id)
     isTame = true;
 }
 
-void Penguin::interact()
+string Penguin::interact()
 {
 	return this->interaction;
 }

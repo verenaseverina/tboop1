@@ -34,7 +34,7 @@ public:
 	 */
 	Animal& operator=(const Animal& a);
 
-	virtual void interact() = 0;
+	virtual string interact() = 0;
 
 	void move(int);
 

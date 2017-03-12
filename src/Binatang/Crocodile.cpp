@@ -11,7 +11,7 @@ Crocodile::Crocodile(int x, int y, int id) : LWAnimal(x,y,id)
     isTame = true;
 }
 
-void Crocodile::interact()
+string Crocodile::interact()
 {
 	return this->interaction;
 }

@@ -19,7 +19,7 @@ class Shark : public WaterAnimal
 
 		Shark& operator=(const Shark& a);
 
-		void interact();
+		string interact();
 
 };
 

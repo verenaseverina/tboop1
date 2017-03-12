@@ -19,9 +19,8 @@ class Kangaroo : public LandAnimal
 
 		Kangaroo& operator=(const Kangaroo& a);
 
-		void interact();
+		string interact();
 
-		void move(int);
 };
 
 #endif

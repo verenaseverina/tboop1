@@ -11,7 +11,7 @@ Dolphin::Dolphin(int x, int y, int id) : WaterAnimal(x,y,id)
     isTame = true;
 }
 
-void Dolphin::interact()
+string Dolphin::interact()
 {
 	return this->interaction;
 }

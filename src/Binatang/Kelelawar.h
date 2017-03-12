@@ -19,9 +19,8 @@ class Kelelawar : public AirAnimal
 
 		Kelelawar& operator=(const Kelelawar& a);
 
-		void interact();
+		string interact();
 
-		void move(int);
 };
 
 #endif

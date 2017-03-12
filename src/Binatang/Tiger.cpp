@@ -11,7 +11,7 @@ Tiger::Tiger(int x, int y, int id) : LandAnimal(x,y,id)
     isTame = false;
 }
 
-void Tiger::interact()
+string Tiger::interact()
 {
 	return this->interaction;
 }

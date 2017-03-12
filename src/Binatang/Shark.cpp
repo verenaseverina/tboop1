@@ -10,8 +10,7 @@ Shark::Shark(int x, int y, int id) : WaterAnimal(x,y,id)
     whatIEat = 'c';
     isTame = false;
 }
-
-void Shark::interact()
+string Shark::interact()
 {
 	return this->interaction;
 }

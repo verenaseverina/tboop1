@@ -19,9 +19,8 @@ class Hippopotamus : public LWAnimal
 
 		Hippopotamus& operator=(const Hippopotamus& a);
 
-		void interact();
+		string interact();
 
-		void move(int);
 };
 
 #endif

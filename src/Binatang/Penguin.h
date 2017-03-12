@@ -19,9 +19,8 @@ class Penguin : public LWAnimal
 
 		Penguin& operator=(const Penguin& a);
 
-		void interact();
-
-		void move(int);
+		string interact();
+		
 };
 
 #endif

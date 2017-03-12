@@ -27,7 +27,7 @@ public:
 	 */
 	LWAnimal& operator=(const LWAnimal& a);
 
-	virtual void interact()=0;
+	virtual string interact()=0;
 
 	void move(int);
 
