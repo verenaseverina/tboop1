@@ -2,20 +2,20 @@
 
 #include "Habitat.h"
 #include "Animal.h"
-#include "Tiger.h"
-#include "Panda.h"
-#include "Anoa.h"
-#include "Rhino.h"
-#include "Kangaroo.h"
-#include "Dolphin.h"
-#include "Whale.h"
-#include "Shark.h"
-#include "Bat.h"
-#include "Eagle.h"
-#include "Toucan.h"
-#include "Penguin.h"
-#include "Crocodile.h"
-#include "Hippo.h"
+#include "Binatang/Tiger.h"
+#include "Binatang/Panda.h"
+#include "Binatang/Anoa.h"
+#include "Binatang/Rhino.h"
+#include "Binatang/Kangaroo.h"
+#include "Binatang/Dolphin.h"
+#include "Binatang/Whale.h"
+#include "Binatang/Shark.h"
+#include "Binatang/Kelelawar.h"
+#include "Binatang/ElangB.h"
+#include "Binatang/Toucan.h"
+#include "Binatang/Penguin.h"
+#include "Binatang/Crocodile.h"
+#include "Binatang/Hippopotamus.h"
 #include <math.h>
 #ifndef CAGE_H
 #define CAGE_H
@@ -47,12 +47,27 @@ public:
 	 */
 	Cage& operator=(const Cage& c);
 
+	/**
+	 * @brief Method addAnimal
+	 * Menambahkan animal ke dalam array of animal
+	 * @param animal jenis animal yang ingin dimasukkan ke dalam Cage
+	 */
 	void addAnimal(char animal);
+
+	/**
+	 * @brief Method containAnimals
+	 * Mengecek apakah terdapat animal pada Habitat tersebut
+	 * @param x adalah absis dari Habitat yang ingin dicek
+	 * @param y adalah ordinat dari Habitat yang ingin dicek
+	 * @return boolean apakah ada animal pada Habitat yang dicek 
+	 */
+	bool containAnimal(int x, int y);
 
 private:
 	Habitat* h;
 	Animal** a;
 	int size;
+	int id;
 	static int Neff;
 };
 #endif

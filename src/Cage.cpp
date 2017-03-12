@@ -1,4 +1,6 @@
 #include "Cage.h"
+#include <bits/stdc++.h>
+using namespace std;
 
 int Neff = -1;
 
@@ -63,34 +65,45 @@ Cage& Cage::operator=(const Cage& c)
 	return *this;
 }
 
-void Cage::addAnimal(char animal)
-{
+void Cage::addAnimal(char animal, int i)
+{	
+	int posid;
+	srand(time(NULL));
+	repeat
+	{
+		posid = rand() % size;
+	} until (!containAnimal(h[posid].cell_id_row, h[posid].cell_id_col));
+
 	switch(animal)
 	{
 		case 'H' :
-			a[Neff++] = new Tiger;
+			a[Neff++] = new Tiger(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		case 'B' :
-			a[Neff++] = new Panda;
+			a[Neff++] = new Panda(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		case 'A' :
-			a[Neff++] = new Anoa;
+			a[Neff++] = new Anoa(h[posid].cell_id_row, h[posid].cell_id_col, i);
+		case 'R' :
+			a[Neff++] = new Rhino(h[posid].cell_id_row, h[posid].cell_id_col, i);
+		case 'D' :
+			a[Neff++] = new Kangaroo(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		case 'L' :
-			a[Neff++] = new Dolphin;
+			a[Neff++] = new Dolphin(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		case 'W' :
-			a[Neff++] = new Whale;
+			a[Neff++] = new Whale(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		case 'S' :
-			a[Neff++] = new Shark;
+			a[Neff++] = new Shark(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		case 'K' :
-			a[Neff++] = new Bat;
+			a[Neff++] = new Bat(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		case 'E' :
-			a[Neff++] = new Eagle;
+			a[Neff++] = new Eagle(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		case 'T' :
-			a[Neff++] = new Toucan;
+			a[Neff++] = new Toucan(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		case 'P' :
-			a[Neff++] = new Penguin;
+			a[Neff++] = new Penguin(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		case 'C' :
-			a[Neff++] = new Crocodile;
+			a[Neff++] = new Crocodile(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		case 'N' :
-			a[Neff++] = new Hippopotamus;
+			a[Neff++] = new Hippo(h[posid].cell_id_row, h[posid].cell_id_col, i);
 		//case '' :
 		//case '' :
 		//case '' :
@@ -98,4 +111,26 @@ void Cage::addAnimal(char animal)
 		//case '' :
 		//case '' :
 	}
+}
+
+bool Cage::containAnimal(int x, int y)
+{
+	float tempManyAnimal = 0.3 * size;
+	int manyAnimal = floor(tempManyAnimal);
+	bool found = false;
+	int i = 0;
+
+	while ((i < tempManyAnimal) && (!found))
+	{
+		if ((x == a[i].x) && (y == a[i].y))
+		{
+			found = true;
+		}
+		else
+		{
+			i++;
+		}
+	}
+
+	return found;
 }
