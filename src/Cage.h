@@ -2,7 +2,7 @@
 
 #include "Habitat.h"
 #include "Animal.h"
-#include "Parsing.h"
+#include <math.h>
 #ifndef CAGE_H
 #define CAGE_H
 
@@ -12,7 +12,7 @@ public:
 	 * @brief Constructor.
 	 * Menciptakan Cage kosong.
 	 */
-	Cage(int _size);
+	Cage(int _size, Habitat* buf);
 
 	/**
 	 * @brief CopyConstructor.
@@ -38,7 +38,7 @@ public:
 
 private:
 	Habitat* h;
-	Animal* a;
+	Animal** a;
 	int size;
 };
 #endif

@@ -10,7 +10,7 @@ Cage::Cage(int _size, Habitat* buf) : size(_size)
 	
 	float tempManyAnimal = 0.3 * size;
 	int manyAnimal = floor(tempManyAnimal); // perlu casting ke int ga?
-	a = new Animal[manyAnimal];
+	a = new Animal*[manyAnimal];
 }
 
 Cage::Cage(const Cage& c) : size(c.size)
@@ -24,7 +24,7 @@ Cage::Cage(const Cage& c) : size(c.size)
 
 	float tempManyAnimal = 0.3 * c.size;
 	int manyAnimal = floor(tempManyAnimal); // perlu casting ke int ga?
-	a = new Animal[manyAnimal];
+	a = new Animal*[manyAnimal];
 
 	for (i = 0; i < manyAnimal; i++)
 	{
@@ -51,7 +51,7 @@ Cage& Cage::operator=(const Cage& c)
 
 	float tempManyAnimal = 0.3 * c.size;
 	int manyAnimal = floor(tempManyAnimal); // perlu casting ke int ga?
-	a = new Animal[manyAnimal];
+	a = new Animal*[manyAnimal];
 
 	for (i = 0; i < manyAnimal; i++)
 	{
