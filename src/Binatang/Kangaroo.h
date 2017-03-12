@@ -23,3 +23,5 @@ class Kangaroo : public LandAnimal
 
 		void move(int);
 }
+
+#endif

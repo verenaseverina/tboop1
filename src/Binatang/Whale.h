@@ -22,3 +22,5 @@ class Whale : public WaterAnimal
 		void interact();
 
 }
+
+#endif

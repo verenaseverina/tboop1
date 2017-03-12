@@ -23,3 +23,5 @@ class Kelelawar : public AirAnimal
 
 		void move(int);
 }
+
+#endif

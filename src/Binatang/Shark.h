@@ -22,3 +22,5 @@ class Shark : public WaterAnimal
 		void interact();
 
 }
+
+#endif

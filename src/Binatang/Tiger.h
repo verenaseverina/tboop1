@@ -23,3 +23,5 @@ class Tiger : public LandAnimal
 
 		void move(int);
 }
+
+#endif

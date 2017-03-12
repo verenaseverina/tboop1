@@ -23,3 +23,5 @@ class Rhino : public LandAnimal
 
 		void move(int);
 }
+
+#endif

@@ -23,3 +23,5 @@ class ElangB : public AirAnimal
 
 		void move(int);
 }
+
+#endif

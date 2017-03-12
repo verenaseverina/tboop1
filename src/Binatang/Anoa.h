@@ -23,3 +23,5 @@ class Anoa : public LandAnimal
 
 		void move(int);
 }
+
+#endif

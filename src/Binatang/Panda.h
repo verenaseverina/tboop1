@@ -23,3 +23,5 @@ class Panda : public LandAnimal
 
 		void move(int);
 }
+
+#endif
