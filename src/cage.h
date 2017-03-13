@@ -18,6 +18,12 @@
 #include "Binatang/penguin.h"
 #include "Binatang/crocodile.h"
 #include "Binatang/hippopotamus.h"
+#include "Binatang/ostrich.h"
+#include "Binatang/kasuwari.h"
+#include "Binatang/kiwi.h"
+#include "Binatang/flying_fish.h"
+#include "Binatang/pelikan.h"
+#include "Binatang/cormorants.h"
 #include <math.h>
 #include <vector>
 
