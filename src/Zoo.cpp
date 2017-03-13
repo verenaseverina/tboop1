@@ -23,7 +23,8 @@ using namespace std;
 					map[i][j] = new Facility(smap[i][j],i,j);
 			}
 		}
-		GetAllCage(s);
+		GetCage(map[1][3]);
+		//GetAllCage(s);
 	}
 
 	Zoo::~Zoo(){
@@ -56,8 +57,9 @@ using namespace std;
 					}
 					if(!recorded)
 					{
+						//cout << cagebuffer.size();
 						cagebuffer.resize(n);
-						cagebuffer[n]=GetCage(map[i][j]);
+						//cagebuffer[n]=GetCage(map[i][j]);
 						n++;
 					}
 				}
@@ -77,15 +79,16 @@ using namespace std;
 		cage[0]=hab;
 		int i=0;
 		int j=0;
-
+		cout << cage[0].GetCellContent()<< endl;
+		cout << hab->GetCellContent() << endl;
 		while(i<(signed)cage.size())
 		{
 			h=cage[i];
-			if(map[h.GetCellRow()-1][h.GetCellCol()]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i-1][j]))
+			if(map[h.GetCellRow()-1][h.GetCellCol()]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i-1][j])&&(hab->GetCellRow()-1>=0))
 			{
-				cage.resize(cage.size()+1);
-				j++;
-				cage[j]=h;
+				//cage.resize(cage.size()+1);
+				Habitat b(map[h.GetCellRow()-1][h.GetCellCol()]->GetCellContent(),h.GetCellRow()-1,h.GetCellCol());				
+				cage.push_back(b);
 			}
 			if(map[h.GetCellRow()][h.GetCellCol()+1]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i][j+1]))
 			{
