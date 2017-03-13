@@ -3,12 +3,12 @@
 
 Crocodile::Crocodile(int x, int y, int id) : LWAnimal(x,y,id)
 {
-	interaction = "Kiiiaaa";
+	interaction = "Rrrrr";
    	srand(time(NULL));
-    myWeight = 20 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(90-20)));
-    howMuchIEat = 7.23*myWeight/100;
-    whatIEat = 'h';
-    isTame = true;
+    myWeight = 400  + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(700-400)));
+    howMuchIEat = 2*myWeight/700;
+    whatIEat = 'c';
+    isTame = false;
 }
 
 string Crocodile::interact()

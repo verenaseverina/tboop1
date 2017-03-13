@@ -3,10 +3,10 @@
 
 Kangaroo::Kangaroo(int x, int y, int id) : LandAnimal(x,y,id)
 {
-	interaction = "Cuitttt";
+	interaction = "Jummpp";
    	srand(time(NULL));
-    myWeight = 110 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(200-110)));
-    howMuchIEat = (0.04 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.09-0.04)))) * myWeight;
+    myWeight = 18 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(100-18)));
+    howMuchIEat = 0.35 * myWeight/100;
     whatIEat = 'h';
     isTame = true;
 }

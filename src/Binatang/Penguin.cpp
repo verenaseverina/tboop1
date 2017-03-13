@@ -3,11 +3,11 @@
 
 Penguin::Penguin(int x, int y, int id) : LWAnimal(x,y,id)
 {
-	interaction = "Kiiiaaa";
+	interaction = "Sqqqaaa";
    	srand(time(NULL));
-    myWeight = 20 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(90-20)));
-    howMuchIEat = 7.23*myWeight/100;
-    whatIEat = 'h';
+    myWeight = 27 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(41-27)));
+    howMuchIEat = 0.9*myWeight/27;
+    whatIEat = 'c';
     isTame = true;
 }
 

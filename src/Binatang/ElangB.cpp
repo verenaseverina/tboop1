@@ -5,9 +5,9 @@ ElangB::ElangB(int x, int y, int id) : AirAnimal(x,y,id)
 {
 	interaction = "Kiiiaaa";
    	srand(time(NULL));
-    myWeight = 20 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(90-20)));
-    howMuchIEat = 7.23*myWeight/100;
-    whatIEat = 'h';
+    myWeight = 4 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6-4)));
+    howMuchIEat = 0.4535*myWeight/4;
+    whatIEat = 'c';
     isTame = true;
 }
 
