@@ -63,6 +63,7 @@ public:
 
 protected:
 	string interaction;
+	char content;
     int x;
     int y;
     int cageID;

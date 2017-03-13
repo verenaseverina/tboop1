@@ -4,6 +4,7 @@
 Crocodile::Crocodile(int x, int y, int id) : LWAnimal(x,y,id)
 {
 	interaction = "Rrrrr";
+    content='C';
    	srand(time(NULL));
     myWeight = 400  + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(700-400)));
     howMuchIEat = 2*myWeight/700;

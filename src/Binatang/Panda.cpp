@@ -4,6 +4,7 @@
 Panda::Panda(int x, int y, int id) : LandAnimal(x,y,id)
 {
 	interaction = "Mmmm";
+    content='B';
    	srand(time(NULL));
     myWeight = 70 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(100-70)));
     howMuchIEat = 38*myWeight/100;

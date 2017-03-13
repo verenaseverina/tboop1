@@ -4,6 +4,7 @@
 Toucan::Toucan(int x, int y, int id) : AirAnimal(x,y,id)
 {
 	interaction = "Kwwaakk";
+    content='T';
    	srand(time(NULL));
     myWeight = 0.592 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.760-0.592)));
     howMuchIEat = 0.5*myWeight;
