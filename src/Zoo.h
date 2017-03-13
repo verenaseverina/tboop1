@@ -7,7 +7,8 @@
 #include "../State.h"
 #include "Cage.h"
 #include "Cell.h"
-
+#include "Habitat.h"
+#include "Facility.h"
 class Zoo
 {
 public:
@@ -35,8 +36,10 @@ public:
 	//Elemen constructor
 	//Pindahin semua State ke map
 private:
-	//Cage* cages;
+	vector<Cage> cages;
 	Cell** map;
 	int height;
 	int width;
 }
+
+#endif
