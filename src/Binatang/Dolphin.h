@@ -1,8 +1,8 @@
-// File: Dolphin.h
+// File: dolphin.h
 
 
 #include <string>
-#include "../WaterAnimal.h"
+#include "../water_animal.h"
 #ifndef DOLPHIN_H
 #define DOLPHIN_H
 
@@ -10,32 +10,32 @@ using namespace std;
 
 class Dolphin : public WaterAnimal 
 {
-	public:
-		/**
-	 	* @brief Constructor.
-	 	* Menciptakan Dolphin.
-	 	*/
-		Dolphin(int x, int y, int id);
-		/**
-		 * @brief Overloading Operator "="
-		 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
-		 * @param a adalah Dolphin yang hendak disalin
-		 */
+  public:
+    /**
+     * @brief Constructor.
+     * Menciptakan Dolphin.
+     */
+    Dolphin(int x, int y, int id);
+    /**
+     * @brief Overloading Operator "="
+     * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
+     * @param a adalah Dolphin yang hendak disalin
+     */
 
-		Dolphin& operator=(const Dolphin& a);
-		/**
-		 * @brief Function interact
-		 * Interact pada binatang berupa string
-		 */
-		string interact();
+    Dolphin& operator=(const Dolphin& a);
+    /**
+     * @brief Function interact
+     * Interact pada binatang berupa string
+     */
+    string interact();
 
-		char GetContent();
+    char GetContent();
 
-		float GetWeight();
+    float GetWeight();
 
-		float GetEat();
+    float GetEat();
 
-		int GetWEat();
+    char GetWEat();
 
 };
 

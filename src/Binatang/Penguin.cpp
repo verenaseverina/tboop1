@@ -1,4 +1,4 @@
-#include "Penguin.h"
+#include "penguin.h"
 #include <cstdlib>
 
 Penguin::Penguin(int x, int y, int id) : LWAnimal(x,y,id)
@@ -6,20 +6,20 @@ Penguin::Penguin(int x, int y, int id) : LWAnimal(x,y,id)
 	interaction = "Sqqqaaa";
     content='P';
    	srand(time(NULL));
-    myWeight = 27 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(41-27)));
-    howMuchIEat = 0.9*myWeight/27;
-    whatIEat = 'c';
-    isTame = true;
+    my_weight = 27 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(41-27)));
+    how_much_i_eat = 0.9 * my_weight / 27;
+    what_i_eat = 'c';
+    is_tame = true;
 }
 Penguin& Penguin::operator=(const Penguin& a)
 {
     LWAnimal::operator=(a);
     content=a.content;
     interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    my_weight = a.my_weight;
+    how_much_i_eat = a.how_much_i_eat;
+    what_i_eat = a.what_i_eat;
+    is_tame = a.is_tame;
     return *this;
 }
 
@@ -35,15 +35,15 @@ string Penguin::interact()
 
 float Penguin::GetWeight()
 {
-    return myWeight;
+    return my_weight;
 }
 
 float Penguin::GetEat()
 {
-    return howMuchIEat;
+    return how_much_i_eat;
 }
 
-int Penguin::GetWEat()
+char Penguin::GetWEat()
 {
-    return whatIEat;
+    return what_i_eat;
 }

@@ -1,4 +1,4 @@
-#include "Shark.h"
+#include "shark.h"
 #include <cstdlib>
 
 Shark::Shark(int x, int y, int id) : WaterAnimal(x,y,id)
@@ -6,20 +6,20 @@ Shark::Shark(int x, int y, int id) : WaterAnimal(x,y,id)
 	interaction = "Wett";
     content='S';
    	srand(time(NULL));
-    myWeight = 21500 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(30000-21500)));
-    howMuchIEat = 0.0667 * myWeight;
-    whatIEat = 'c';
-    isTame = false;
+    my_weight = 21500 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(30000-21500)));
+    how_much_i_eat = 0.0667 * my_weight;
+    what_i_eat = 'c';
+    is_tame = false;
 }
 Shark& Shark::operator=(const Shark& a)
 {
     WaterAnimal::operator=(a);
     content=a.content;
     interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    my_weight = a.my_weight;
+    how_much_i_eat = a.how_much_i_eat;
+    what_i_eat = a.what_i_eat;
+    is_tame = a.is_tame;
     return *this;
 }
 
@@ -35,15 +35,15 @@ string Shark::interact()
 
 float Shark::GetWeight()
 {
-    return myWeight;
+    return my_weight;
 }
 
 float Shark::GetEat()
 {
-    return howMuchIEat;
+    return how_much_i_eat;
 }
 
-int Shark::GetWEat()
+char Shark::GetWEat()
 {
-    return whatIEat;
+    return what_i_eat;
 }

@@ -1,4 +1,4 @@
-#include "Toucan.h"
+#include "toucan.h"
 #include <cstdlib>
 
 Toucan::Toucan(int x, int y, int id) : AirAnimal(x,y,id)
@@ -6,20 +6,20 @@ Toucan::Toucan(int x, int y, int id) : AirAnimal(x,y,id)
 	interaction = "Kwwaakk";
     content='T';
    	srand(time(NULL));
-    myWeight = 0.592 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.760-0.592)));
-    howMuchIEat = 0.5*myWeight;
-    whatIEat = 'o';
-    isTame = true;
+    my_weight = 0.592 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.760-0.592)));
+    how_much_i_eat = 0.5*my_weight;
+    what_i_eat = 'o';
+    is_tame = true;
 }
 Toucan& Toucan::operator=(const Toucan& a)
 {
     AirAnimal::operator=(a);
     content=a.content;
     interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    my_weight = a.my_weight;
+    how_much_i_eat = a.how_much_i_eat;
+    what_i_eat = a.what_i_eat;
+    is_tame = a.is_tame;
     return *this;
 }
 
@@ -35,15 +35,15 @@ string Toucan::interact()
 
 float Toucan::GetWeight()
 {
-    return myWeight;
+    return my_weight;
 }
 
 float Toucan::GetEat()
 {
-    return howMuchIEat;
+    return how_much_i_eat;
 }
 
-int Toucan::GetWEat()
+char Toucan::GetWEat()
 {
-    return whatIEat;
+    return what_i_eat;
 }

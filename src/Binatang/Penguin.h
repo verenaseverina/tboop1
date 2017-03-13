@@ -1,8 +1,8 @@
-// File: Penguin.h
+// File: penguin.h
 
 
 #include <string>
-#include "../LWAnimal.h"
+#include "../land_water_animal.h"
 #ifndef PENGUIN_H
 #define PENGUIN_H
 
@@ -34,7 +34,7 @@ class Penguin : public LWAnimal
 
 		float GetEat();
 
-		int GetWEat();
+		char GetWEat();
 		
 };
 

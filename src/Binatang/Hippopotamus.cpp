@@ -1,50 +1,50 @@
-#include "Hippopotamus.h"
+#include "hippopotamus.h"
 #include <cstdlib>
 
 Hippopotamus::Hippopotamus(int x, int y, int id) : LWAnimal(x,y,id)
 {
-	interaction = "Grooowwll";
-    content='N';
-   	srand(time(NULL));
-    myWeight = 1400 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(3200-1400)));
-    howMuchIEat = 40*myWeight/2400;
-    whatIEat = 'h';
-    isTame = true;
+  interaction = "Grooowwll";
+  content='N';
+     srand(time(NULL));
+  my_weight = 1400 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(3200-1400)));
+  how_much_i_eat = 40 * my_weight / 2400;
+  what_i_eat = 'h';
+  is_tame = true;
 }
 
 Hippopotamus& Hippopotamus::operator=(const Hippopotamus& a)
 {
-    LWAnimal::operator=(a);
-    content=a.content;
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
-    return *this;
+  LWAnimal::operator=(a);
+  content = a.content;
+  interaction = a.interaction;
+  my_weight = a.my_weight;
+  how_much_i_eat = a.how_much_i_eat;
+  what_i_eat = a.what_i_eat;
+  is_tame = a.is_tame;
+  return *this;
 }
 
 char Hippopotamus::GetContent()
 {
-    return content;
+  return content;
 }
 
 string Hippopotamus::interact()
 {
-    return interaction;
+  return interaction;
 }
 
 float Hippopotamus::GetWeight()
 {
-    return myWeight;
+  return my_weight;
 }
 
 float Hippopotamus::GetEat()
 {
-    return howMuchIEat;
+  return how_much_i_eat;
 }
 
-int Hippopotamus::GetWEat()
+char Hippopotamus::GetWEat()
 {
-    return whatIEat;
+  return what_i_eat;
 }

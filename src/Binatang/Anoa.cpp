@@ -1,50 +1,50 @@
-#include "Anoa.h"
+#include "anoa.h"
 #include <cstdlib>
 
 Anoa::Anoa(int x, int y, int id) : LandAnimal(x,y,id)
 {
-	interaction = "Grrrr";
-    content='A';
-   	srand(time(NULL));
-    myWeight = 150 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(300-150)));
-    howMuchIEat = 5*myWeight/100;
-    whatIEat = 'h';
-    isTame = true;
+  interaction = "Grrrr";
+  content = 'A';
+  srand(time(NULL));
+  my_weight = 150 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (300 - 150)));
+  how_much_i_eat = 5 * my_weight / 100;
+  what_i_eat = 'h';
+  is_tame = true;
 }
 
 Anoa& Anoa::operator=(const Anoa& a)
 {
-	LandAnimal::operator=(a);
-    content=a.content;
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
-    return *this;
+  LandAnimal::operator=(a);
+  content = a.content;
+  interaction = a.interaction;
+  my_weight = a.my_weight;
+  how_much_i_eat = a.how_much_i_eat;
+  what_i_eat = a.what_i_eat;
+  is_tame = a.is_tame;
+  return *this;
 }
 
 char Anoa::GetContent()
 {
-    return content;
+  return content;
 }
 
 string Anoa::interact()
 {
-    return interaction;
+  return interaction;
 }
 
 float Anoa::GetWeight()
 {
-    return myWeight;
+  return my_weight;
 }
 
 float Anoa::GetEat()
 {
-    return howMuchIEat;
+  return how_much_i_eat;
 }
 
-int Anoa::GetWEat()
+char Anoa::GetWEat()
 {
-    return whatIEat;
+  return what_i_eat;
 }

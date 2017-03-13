@@ -1,8 +1,8 @@
-// File: Toucan.h
+// File: toucan.h
 
 
 #include <string>
-#include "../AirAnimal.h"
+#include "../air_animal.h"
 #ifndef TOUCAN_H
 #define TOUCAN_H
 
@@ -34,7 +34,7 @@ class Toucan : public AirAnimal
 
 		float GetEat();
 
-		int GetWEat();
+		char GetWEat();
 
 };
 

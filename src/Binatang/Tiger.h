@@ -1,8 +1,8 @@
-// File: Tiger.h
+// File: tiger.h
 
 
 #include <string>
-#include "../LandAnimal.h"
+#include "../land_animal.h"
 #ifndef TIGER_H
 #define TIGER_H
 
@@ -34,7 +34,7 @@ class Tiger : public LandAnimal
 
 		float GetEat();
 
-		int GetWEat();
+		char GetWEat();
 
 };
 

@@ -1,8 +1,8 @@
-// File: Kelelawar.h
+// File: kelelawar.h
 
 
 #include <string>
-#include "../AirAnimal.h"
+#include "../air_animal.h"
 #ifndef KELELAWAR_H
 #define KELELAWAR_H
 
@@ -34,7 +34,7 @@ class Kelelawar : public AirAnimal
 
 		float GetEat();
 
-		int GetWEat();
+		char GetWEat();
 
 };
 

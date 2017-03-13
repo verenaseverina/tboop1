@@ -1,8 +1,8 @@
-// File: Whale.h
+// File: whale.h
 
 
 #include <string>
-#include "../WaterAnimal.h"
+#include "../water_animal.h"
 #ifndef WHALE_H
 #define WHALE_H
 
@@ -30,7 +30,7 @@ class Whale : public WaterAnimal
 
 		float GetEat();
 
-		int GetWEat();
+		char GetWEat();
 
 };
 

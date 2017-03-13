@@ -34,7 +34,7 @@ class Panda : public LandAnimal
 
 		float GetEat();
 
-		int GetWEat();
+		char GetWEat();
 
 };
 

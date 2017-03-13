@@ -1,4 +1,4 @@
-#include "Tiger.h"
+#include "tiger.h"
 #include <cstdlib>
 
 Tiger::Tiger(int x, int y, int id) : LandAnimal(x,y,id)
@@ -6,10 +6,10 @@ Tiger::Tiger(int x, int y, int id) : LandAnimal(x,y,id)
 	interaction = "Roooarrrr";
     content='H';
    	srand(time(NULL));
-    myWeight = 90 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(310-90)));
-    howMuchIEat = 0;
-    whatIEat = 'c';
-    isTame = false;
+    my_weight = 90 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(310-90)));
+    how_much_i_eat = 0;
+    what_i_eat = 'c';
+    is_tame = false;
 }
 
 Tiger& Tiger::operator=(const Tiger& a)
@@ -17,10 +17,10 @@ Tiger& Tiger::operator=(const Tiger& a)
     LandAnimal::operator=(a);
     content=a.content;
     interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    my_weight = a.my_weight;
+    how_much_i_eat = a.how_much_i_eat;
+    what_i_eat = a.what_i_eat;
+    is_tame = a.is_tame;
     return *this;
 }
 
@@ -36,15 +36,15 @@ string Tiger::interact()
 
 float Tiger::GetWeight()
 {
-    return myWeight;
+    return my_weight;
 }
 
 float Tiger::GetEat()
 {
-    return howMuchIEat;
+    return how_much_i_eat;
 }
 
-int Tiger::GetWEat()
+char Tiger::GetWEat()
 {
-    return whatIEat;
+    return what_i_eat;
 }

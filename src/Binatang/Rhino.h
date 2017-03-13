@@ -1,8 +1,8 @@
-// File: Rhino.h
+// File: rhino.h
 
 
 #include <string>
-#include "../LandAnimal.h"
+#include "../land_animal.h"
 #ifndef RHINO_H
 #define RHINO_H
 
@@ -34,7 +34,7 @@ class Rhino : public LandAnimal
 
 		float GetEat();
 
-		int GetWEat();
+		char GetWEat();
 
 };
 

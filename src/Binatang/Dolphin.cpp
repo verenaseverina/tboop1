@@ -1,50 +1,50 @@
-#include "Dolphin.h"
+#include "dolphin.h"
 #include <cstdlib>
 
 Dolphin::Dolphin(int x, int y, int id) : WaterAnimal(x,y,id)
 {
-	interaction = "Cuitttt";
-    content='L';
-   	srand(time(NULL));
-    myWeight = 110 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(200-110)));
-    howMuchIEat = (0.04 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.09-0.04)))) * myWeight;
-    whatIEat = 'c';
-    isTame = true;
+  interaction = "Cuitttt";
+  content='L';
+  srand(time(NULL));
+  my_weight = 110 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(200-110)));
+  how_much_i_eat = (0.04 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.09-0.04)))) * my_weight;
+  what_i_eat = 'c';
+  is_tame = true;
 }
 
 Dolphin& Dolphin::operator=(const Dolphin& a)
 {
-    WaterAnimal::operator=(a);
-    content=a.content;
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
-    return *this;
+  WaterAnimal::operator=(a);
+  content=a.content;
+  interaction = a.interaction;
+  my_weight = a.my_weight;
+  how_much_i_eat = a.how_much_i_eat;
+  what_i_eat = a.what_i_eat;
+  is_tame = a.is_tame;
+  return *this;
 }
 
 char Dolphin::GetContent()
 {
-    return content;
+  return content;
 }
 
 string Dolphin::interact()
 {
-    return interaction;
+  return interaction;
 }
 
 float Dolphin::GetWeight()
 {
-    return myWeight;
+  return my_weight;
 }
 
 float Dolphin::GetEat()
 {
-    return howMuchIEat;
+  return how_much_i_eat;
 }
 
-int Dolphin::GetWEat()
+char Dolphin::GetWEat()
 {
-    return whatIEat;
+  return what_i_eat;
 }

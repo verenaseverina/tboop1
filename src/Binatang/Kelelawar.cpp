@@ -1,4 +1,4 @@
-#include "Kelelawar.h"
+#include "kelelawar.h"
 #include <cstdlib>
 
 Kelelawar::Kelelawar(int x, int y, int id) : AirAnimal(x,y,id)
@@ -6,10 +6,10 @@ Kelelawar::Kelelawar(int x, int y, int id) : AirAnimal(x,y,id)
 	interaction = "Kiiiaaa";
     content='K';
    	srand(time(NULL));
-    myWeight = 1.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(1.4-1.2)));
-    howMuchIEat = myWeight;
-    whatIEat = 'o';
-    isTame = true;
+    my_weight = 1.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(1.4-1.2)));
+    how_much_i_eat = my_weight;
+    what_i_eat = 'o';
+    is_tame = true;
 }
 
 Kelelawar& Kelelawar::operator=(const Kelelawar& a)
@@ -17,10 +17,10 @@ Kelelawar& Kelelawar::operator=(const Kelelawar& a)
     AirAnimal::operator=(a);
     content=a.content;
     interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    my_weight = a.my_weight;
+    how_much_i_eat = a.how_much_i_eat;
+    what_i_eat = a.what_i_eat;
+    is_tame = a.is_tame;
     return *this;
 }
 
@@ -36,15 +36,15 @@ string Kelelawar::interact()
 
 float Kelelawar::GetWeight()
 {
-    return myWeight;
+    return my_weight;
 }
 
 float Kelelawar::GetEat()
 {
-    return howMuchIEat;
+    return how_much_i_eat;
 }
 
-int Kelelawar::GetWEat()
+char Kelelawar::GetWEat()
 {
-    return whatIEat;
+    return what_i_eat;
 }

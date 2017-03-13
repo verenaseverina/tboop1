@@ -1,27 +1,28 @@
-// File: crocodile.h
+// File: elang_botak.h
 
 
 #include <string>
-#include "../land_water_Animal.h"
-#ifndef CROCODILE_H
-#define CROCODILE_H
+#include "../air_animal.h"
+#ifndef ELANGB_H
+#define ELANGB_H
 
 using namespace std;
 
-class Crocodile : public LWAnimal 
+class ElangB : public AirAnimal 
 {
   public:
     /**
 	 * @brief Constructor.
-	 * Menciptakan Crocodile.
+	 * Menciptakan ElangB.
 	 */
-    Crocodile(int x, int y, int id);
+    ElangB(int x, int y, int id);
     /**
      * @brief Overloading Operator "="
      * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
-     * @param a adalah Crocodile yang hendak disalin
+     * @param a adalah ElangB yang hendak disalin
      */
-    Crocodile& operator=(const Crocodile& a);
+
+    ElangB& operator=(const ElangB& a);
     /**
      * @brief Function interact
      * Interact pada binatang berupa string
@@ -39,4 +40,3 @@ class Crocodile : public LWAnimal
 };
 
 #endif
-

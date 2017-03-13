@@ -1,8 +1,8 @@
-// File: Shark.h
+// File: shark.h
 
 
 #include <string>
-#include "../WaterAnimal.h"
+#include "../water_animal.h"
 #ifndef SHARK_H
 #define SHARK_H
 
@@ -34,7 +34,7 @@ class Shark : public WaterAnimal
 
 		float GetEat();
 
-		int GetWEat();
+		char GetWEat();
 
 };
 
