@@ -88,6 +88,11 @@ int Cage::GetSize()
 	return size;
 }
 
+Animal** Cage::GetAnimal()
+{
+	return a;
+}
+
 void Cage::addAnimal(char animal, int i)
 {	
 	int posid;

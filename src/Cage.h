@@ -62,6 +62,13 @@ public:
 	 * @return size dari Cage
 	 */
 	int GetSize();
+
+	/**
+	 * @brief Getter Array of pointer to Animal
+	 * Mengambil array of pointer to Animal
+	 * @return array of pointer to Animal
+	 */
+	int GetAnimal();
 	
 	/**
 	 * @brief Method addAnimal
