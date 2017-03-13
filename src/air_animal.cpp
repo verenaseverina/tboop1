@@ -3,8 +3,8 @@
 
 AirAnimal::AirAnimal(int x, int y,int id) : Animal(x,y,id)
 {
-  hab=new char[size];
-  hab[0]='`';
+  hab = new char[size];
+  hab[0] = '`';
 }
 
 AirAnimal::~AirAnimal()
@@ -12,12 +12,12 @@ AirAnimal::~AirAnimal()
   delete [] hab;
 }
 
-AirAnimal& AirAnimal::operator=(const AirAnimal& a)
+AirAnimal& AirAnimal::operator= (const AirAnimal& a)
 {
-  Animal::operator=(a);
+  Animal::operator= (a);
   delete [] hab;
-  hab=new char[size];
-  hab[0]='o';
+  hab = new char[size];
+  hab[0] = 'o';
   return *this;
 }
 

@@ -3,8 +3,8 @@
 
 LandAnimal::LandAnimal(int x, int y,int id) : Animal(x,y,id)
 {
-  hab=new char[size];
-  hab[0]='x';
+  hab = new char[size];
+  hab[0] = 'x';
 }
 
 LandAnimal::~LandAnimal()
@@ -16,8 +16,8 @@ LandAnimal& LandAnimal::operator=(const LandAnimal& a)
 {
   Animal::operator=(a);
   delete [] hab;
-  hab=new char[size];
-  hab[0]='^';
+  hab = new char[size];
+  hab[0] = '^';
   return *this;
 }
 

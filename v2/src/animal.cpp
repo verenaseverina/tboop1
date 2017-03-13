@@ -4,15 +4,15 @@ Animal::Animal(int _x,int _y, int id,char con){
   x = _x;
   y = _y;
   cage_id = id;
-  content=con;
+  content = con;
 
   switch(animal)
   {
     case 'H' :
       {
-        size=1;
-        hab=new char[size];
-        hab[0]='x';
+        size = 1;
+        hab = new char[size];
+        hab[0] = 'x';
 
         interaction = "Roooarrrr";
         srand(time(NULL));
@@ -24,9 +24,9 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'B' :
       {
-        size=1;
-        hab=new char[size];
-        hab[0]='o';
+        size = 1;
+        hab = new char[size];
+        hab[0] = 'o';
                 
         interaction = "Mmmm";
         srand(time(NULL));
@@ -38,9 +38,9 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'A' :
       {              
-        size=1;
-        hab=new char[size];
-        hab[0]='o';
+        size = 1;
+        hab = new char[size];
+        hab[0] = 'o';
 
         interaction = "Grrrr";
         srand(time(NULL));
@@ -52,9 +52,9 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'R' :
       {
-        size=1;
-        hab=new char[size];
-        hab[0]='x';
+        size = 1;
+        hab = new char[size];
+        hab[0] = 'x';
                
         interaction = "Woooo";
         srand(time(NULL));
@@ -66,9 +66,9 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'D' :
       {
-        size=1;
-        hab=new char[size];
-        hab[0]='x';
+        size = 1;
+        hab = new char[size];
+        hab[0] = 'x';
 
         interaction = "Jummpp";
         srand(time(NULL));
@@ -80,9 +80,9 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'L' :
       {
-        size=1;
-        hab=new char[size];
-        hab[0]='#';
+        size = 1;
+        hab = new char[size];
+        hab[0] = '#';
 
         interaction = "Cuitttt";
         srand(time(NULL));
@@ -94,9 +94,9 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'W' :
       {
-        size=1;
-        hab=new char[size];
-        hab[0]='#';
+        size = 1;
+        hab = new char[size];
+        hab[0] = '#';
 
         interaction = "Wet";
         srand(time(NULL));
@@ -108,9 +108,9 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'S' :
       {
-        size=1;
-        hab=new char[size];
-        hab[0]='#';
+        size = 1;
+        hab = new char[size];
+        hab[0] = '#';
 
         interaction = "Wett";
         srand(time(NULL));
@@ -122,9 +122,9 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'K' :
       {
-        size=1;
-        hab=new char[size];
-        hab[0]='o';
+        size = 1;
+        hab = new char[size];
+        hab[0] = 'o';
 
         interaction = "Kiiiaaa";
         srand(time(NULL));
@@ -136,9 +136,9 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'E' :
       {
-        size=1;
-        hab=new char[size];
-        hab[0]='o';
+        size = 1;
+        hab = new char[size];
+        hab[0] = 'o';
 
         interaction = "Kiiiaaa";
         srand(time(NULL));
@@ -149,9 +149,9 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'T' :
       {
-        size=1;
-        hab=new char[size];
-        hab[0]='o';
+        size = 1;
+        hab = new char[size];
+        hab[0] = 'o';
 
         interaction = "Kwwaakk";
         srand(time(NULL));
@@ -163,10 +163,10 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'P' :
       {
-        size=2;
-        hab=new char[size];
-        hab[0]='#';
-        hab[1]='x';
+        size = 2;
+        hab = new char[size];
+        hab[0] = '#';
+        hab[1] = 'x';
 
         interaction = "Sqqqaaa";
         srand(time(NULL));
@@ -178,10 +178,10 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'C' :
       {
-        size=2;
-        hab=new char[size];
-        hab[0]='x';
-        hab[1]='#';
+        size = 2;
+        hab = new char[size];
+        hab[0] = 'x';
+        hab[1] = '#';
 
         interaction = "Rrrrr";
         srand(time(NULL));
@@ -193,10 +193,10 @@ Animal::Animal(int _x,int _y, int id,char con){
       }
     case 'N' :
       {
-        size=2;
-        hab=new char[size];
-        hab[0]='x';
-        hab[1]='#';
+        size = 2;
+        hab = new char[size];
+        hab[0] = 'x';
+        hab[1] = '#';
 
         interaction = "Grooowwll";
         srand(time(NULL));
@@ -210,15 +210,15 @@ Animal::Animal(int _x,int _y, int id,char con){
 }
 
 Animal& Animal::operator=(const Animal& a){
-  x= a.x;
+  x = a.x;
   y = a.y;
-  content=a.content;
+  content = a.content;
     
-  size=a.size;
-  hab=new char[size];
-  for (int i=0;i<size;i++)
+  size = a.size;
+  hab = new char[size];
+  for (int i = 0;i<size;i++)
   {
-    hab[i]=a.hab[i];
+    hab[i] = a.hab[i];
   }
 
   cage_id = a.cage_id;
@@ -235,22 +235,22 @@ void Animal::move(int dir){
   {
     case 1: //top
     {
-      y -= 1;
+      y -=  1;
       break;
     }
     case 2: //right
     {
-      x += 1;
+      x +=  1;
       break;
     }
     case 3: //down
     {
-      y += 1;
+      y +=  1;
       break;
     }
     case 4: //left
     {
-      x -= 1;
+      x -=  1;
       break;
     }
   }
