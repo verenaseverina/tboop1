@@ -4,8 +4,8 @@ using namespace std;
 
 State::State()
 {
-	ifstream inputFile("../map.txt");
-	ofstream outputFile("../cek.txt");
+	ifstream inputFile("map.txt");
+	ofstream outputFile("cek.txt");
 
 	int baris = 0;
 	width = 0;
@@ -14,7 +14,6 @@ State::State()
 	{
 		while (!inputFile.eof())
 		{
-	cout << "tes";	
 			if (baris == 0)
 			{
 				// membaca width dan height map dari peta
@@ -41,7 +40,6 @@ State::State()
 				outputFile << endl;
 				height = stoi(token[0]);
 				width = stoi(token[1]);
-				outputFile << "Height :" << height;
 
 				// buat matriks map sesuai dengan width dan height
 				map = new char* [height];

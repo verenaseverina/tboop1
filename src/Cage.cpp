@@ -39,12 +39,12 @@ Cage::Cage(const Cage& c) : size(c.size)
 Cage::~Cage()
 {
 	delete [] h;
-	float tempManyAnimal = 0.3 * size;
+	/*float tempManyAnimal = 0.3 * size;
 	int manyAnimal = floor(tempManyAnimal);
 	for (int i = 0; i < manyAnimal; i++)
 	{
 		delete [] a[i];
-	}
+	} */
 	delete [] a;
 }
 
