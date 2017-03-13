@@ -21,11 +21,11 @@ Darat-Air
 - Hippopotamus (N)
 
 Darat-Udara
-- 
-- 
-- 
+- Ostrich (O)
+- Kasuwari (Y)
+- Kiwi (I)
 
 Udara-Air
-- 
-- 
-- 
+- Flying Fish (F)
+- Pelikan (Z)
+- Cormorants (M)
