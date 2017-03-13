@@ -30,7 +30,11 @@ public:
 	 * Interact pada binatang berupa string
 	 */
 	virtual string interact()=0;
-
+	/**
+	 * @brief Procedure move
+	 * Pergerakan binatang dari point ke point yang dituju berdasarkan int yang dipilih
+	 * @param int dir adalah pilihan swicth untuk 1.moveup 2.moveright 3.movedown 4.moveleft
+	 */
 	void move(int);
 
 protected:
