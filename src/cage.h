@@ -1,25 +1,25 @@
-// File: Cage.h
+// File: cage.h
 
-#include "Habitat.h"
-#include "Animal.h"
-#include "Binatang/Tiger.h"
-#include "Binatang/Panda.h"
-#include "Binatang/Anoa.h"
-#include "Binatang/Rhino.h"
-#include "Binatang/Kangaroo.h"
-#include "Binatang/Dolphin.h"
-#include "Binatang/Whale.h"
-#include "Binatang/Shark.h"
-#include "Binatang/Kelelawar.h"
-#include "Binatang/ElangB.h"
-#include "Binatang/Toucan.h"
-#include "Binatang/Penguin.h"
-#include "Binatang/Crocodile.h"
-#include "Binatang/Hippopotamus.h"
-#include <math.h>
-#include <vector>
 #ifndef CAGE_H
 #define CAGE_H
+#include "habitat.h"
+#include "animal.h"
+#include "Binatang/tiger.h"
+#include "Binatang/panda.h"
+#include "Binatang/anoa.h"
+#include "Binatang/rhino.h"
+#include "Binatang/kangaroo.h"
+#include "Binatang/dolphin.h"
+#include "Binatang/whale.h"
+#include "Binatang/shark.h"
+#include "Binatang/kelelawar.h"
+#include "Binatang/elangB.h"
+#include "Binatang/toucan.h"
+#include "Binatang/penguin.h"
+#include "Binatang/crocodile.h"
+#include "Binatang/hippopotamus.h"
+#include <math.h>
+#include <vector>
 
 using namespace std;
 

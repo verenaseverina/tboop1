@@ -1,8 +1,8 @@
 //file habitat.h
 
-#include "Cell.h"
 #ifndef HABITAT_H
 #define HABITAT_H
+#include "cell.h"
 
 class Habitat : public Cell{
   public:

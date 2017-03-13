@@ -1,4 +1,4 @@
-#include "Habitat.h"
+#include "habitat.h"
 
 Habitat::Habitat() : Cell(-1,-1)
 {

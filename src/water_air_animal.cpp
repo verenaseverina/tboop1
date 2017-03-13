@@ -1,4 +1,4 @@
-#include "WAAnimal.h"
+#include "water_air_animal.h"
 
 
 WAAnimal::WAAnimal(int x, int y,int id) : Animal(x,y,id)

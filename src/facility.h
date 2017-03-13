@@ -1,9 +1,9 @@
-//file Facility.h
+//file facility.h
 
 #ifndef FACILITY_H
 #define FACILITY_H
 
-#include "Cell.h"
+#include "cell.h"
 
 class Facility : public Cell{
   public:

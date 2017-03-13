@@ -1,9 +1,9 @@
-// File: Renderable.h
-#include "Zoo.h"
-#include <bits/stdc++.h>
-
+// File: renderable.h
 #ifndef RENDERABLE_H
 #define RENDERABLE_H
+
+#include "zoo.h"
+#include <bits/stdc++.h>
 
 class Renderable {
 public:

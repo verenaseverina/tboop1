@@ -1,10 +1,10 @@
-// File: Animal.h
+// File: water_air_animal.h
 
 
+#ifndef WATER_AIR_ANIMAL_H
+#define WATER_AIR_ANIMAL_H
 #include <string>
-#include "Animal.h"
-#ifndef WAANIMAL_H
-#define WAANIMAL_H
+#include "animal.h"
 using namespace std;
 
 class WAAnimal : public Animal {

@@ -1,4 +1,4 @@
-#include "LWAnimal.h"
+#include "land_water_animal.h"
 
 
 LWAnimal::LWAnimal(int x, int y,int id) : Animal(x,y,id)

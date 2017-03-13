@@ -1,11 +1,11 @@
-// File: State.h
+// File: state.h
 
+#ifndef STATE_H
+#define STATE_H
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <cstring>
-#ifndef STATE_H
-#define STATE_H
 
 class State {
 public:
