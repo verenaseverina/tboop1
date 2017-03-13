@@ -38,7 +38,7 @@ public:
 	 */
 	void move(int);
 
-		int GetSize();
+	int GetSize();
 
 
 protected:
