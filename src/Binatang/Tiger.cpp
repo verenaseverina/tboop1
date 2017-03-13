@@ -19,11 +19,37 @@ string Tiger::interact()
 
 Tiger& Tiger::operator=(const Tiger& a)
 {
-	LandAnimal::operator=(a);
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    LandAnimal::operator=(a);
+    content=a.GetContent();
+    interaction = a.interact();
+    myWeight = a.GetWeight();
+    howMuchIEat = a.GetEat();
+    whatIEat = a.GetWEat();
+    isTame = a.GetTame();
     return *this;
+}
+
+char Tiger::GetContent()
+{
+    return content;
+}
+
+string Tiger::interact()
+{
+    return interaction;
+}
+
+float Tiger::GetWeight()
+{
+    return myWeight;
+}
+
+float Tiger::GetEat()
+{
+    return howMuchIEat;
+}
+
+int Tiger::GetWEat()
+{
+    return whatIEat;
 }

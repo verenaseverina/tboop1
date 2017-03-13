@@ -19,11 +19,37 @@ string Kangaroo::interact()
 
 Kangaroo& Kangaroo::operator=(const Kangaroo& a)
 {
-	LandAnimal::operator=(a);
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    LandAnimal::operator=(a);
+    content=a.GetContent();
+    interaction = a.interact();
+    myWeight = a.GetWeight();
+    howMuchIEat = a.GetEat();
+    whatIEat = a.GetWEat();
+    isTame = a.GetTame();
     return *this;
+}
+
+char Kangaroo::GetContent()
+{
+    return content;
+}
+
+string Kangaroo::interact()
+{
+    return interaction;
+}
+
+float Kangaroo::GetWeight()
+{
+    return myWeight;
+}
+
+float Kangaroo::GetEat()
+{
+    return howMuchIEat;
+}
+
+int Kangaroo::GetWEat()
+{
+    return whatIEat;
 }

@@ -18,11 +18,37 @@ string Shark::interact()
 
 Shark& Shark::operator=(const Shark& a)
 {
-	WaterAnimal::operator=(a);
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    WaterAnimal::operator=(a);
+    content=a.GetContent();
+    interaction = a.interact();
+    myWeight = a.GetWeight();
+    howMuchIEat = a.GetEat();
+    whatIEat = a.GetWEat();
+    isTame = a.GetTame();
     return *this;
+}
+
+char Shark::GetContent()
+{
+    return content;
+}
+
+string Shark::interact()
+{
+    return interaction;
+}
+
+float Shark::GetWeight()
+{
+    return myWeight;
+}
+
+float Shark::GetEat()
+{
+    return howMuchIEat;
+}
+
+int Shark::GetWEat()
+{
+    return whatIEat;
 }

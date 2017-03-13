@@ -19,11 +19,37 @@ string Penguin::interact()
 
 Penguin& Penguin::operator=(const Penguin& a)
 {
-	LWAnimal::operator=(a);
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    LWAnimal::operator=(a);
+    content=a.GetContent();
+    interaction = a.interact();
+    myWeight = a.GetWeight();
+    howMuchIEat = a.GetEat();
+    whatIEat = a.GetWEat();
+    isTame = a.GetTame();
     return *this;
+}
+
+char Penguin::GetContent()
+{
+    return content;
+}
+
+string Penguin::interact()
+{
+    return interaction;
+}
+
+float Penguin::GetWeight()
+{
+    return myWeight;
+}
+
+float Penguin::GetEat()
+{
+    return howMuchIEat;
+}
+
+int Penguin::GetWEat()
+{
+    return whatIEat;
 }

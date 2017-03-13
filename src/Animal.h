@@ -45,6 +45,9 @@ public:
 	 * @param int dir adalah pilihan swicth untuk 1.moveup 2.moveright 3.movedown 4.moveleft
 	 */
 	void move(int);
+
+	int GetID();
+
 	/**
 	* @brief Function GetX()
 	* Getter x

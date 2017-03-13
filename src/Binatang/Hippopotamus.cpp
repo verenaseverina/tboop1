@@ -19,11 +19,37 @@ string Hippopotamus::interact()
 
 Hippopotamus& Hippopotamus::operator=(const Hippopotamus& a)
 {
-	LWAnimal::operator=(a);
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    LWAnimal::operator=(a);
+    content=a.GetContent();
+    interaction = a.interact();
+    myWeight = a.GetWeight();
+    howMuchIEat = a.GetEat();
+    whatIEat = a.GetWEat();
+    isTame = a.GetTame();
     return *this;
+}
+
+char Hippopotamus::GetContent()
+{
+    return content;
+}
+
+string Hippopotamus::interact()
+{
+    return interaction;
+}
+
+float Hippopotamus::GetWeight()
+{
+    return myWeight;
+}
+
+float Hippopotamus::GetEat()
+{
+    return howMuchIEat;
+}
+
+int Hippopotamus::GetWEat()
+{
+    return whatIEat;
 }

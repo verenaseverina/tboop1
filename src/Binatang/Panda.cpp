@@ -19,11 +19,37 @@ string Panda::interact()
 
 Panda& Panda::operator=(const Panda& a)
 {
-	LandAnimal::operator=(a);
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    LandAnimal::operator=(a);
+    content=a.GetContent();
+    interaction = a.interact();
+    myWeight = a.GetWeight();
+    howMuchIEat = a.GetEat();
+    whatIEat = a.GetWEat();
+    isTame = a.GetTame();
     return *this;
+}
+
+char Panda::GetContent()
+{
+    return content;
+}
+
+string Panda::interact()
+{
+    return interaction;
+}
+
+float Panda::GetWeight()
+{
+    return myWeight;
+}
+
+float Panda::GetEat()
+{
+    return howMuchIEat;
+}
+
+int Panda::GetWEat()
+{
+    return whatIEat;
 }

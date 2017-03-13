@@ -17,13 +17,39 @@ string Kelelawar::interact()
 	return this->interaction;
 }
 
-Kelelawar& Kelelawar::operator=(const Kelelawar& a)
+Kelalawar& Kelalawar::operator=(const Kelalawar& a)
 {
-	AirAnimal::operator=(a);
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    AirAnimal::operator=(a);
+    content=a.GetContent();
+    interaction = a.interact();
+    myWeight = a.GetWeight();
+    howMuchIEat = a.GetEat();
+    whatIEat = a.GetWEat();
+    isTame = a.GetTame();
     return *this;
+}
+
+char Kelalawar::GetContent()
+{
+    return content;
+}
+
+string Kelalawar::interact()
+{
+    return interaction;
+}
+
+float Kelalawar::GetWeight()
+{
+    return myWeight;
+}
+
+float Kelalawar::GetEat()
+{
+    return howMuchIEat;
+}
+
+int Kelalawar::GetWEat()
+{
+    return whatIEat;
 }

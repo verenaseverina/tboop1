@@ -19,11 +19,37 @@ string ElangB::interact()
 
 ElangB& ElangB::operator=(const ElangB& a)
 {
-	AirAnimal::operator=(a);
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    AirAnimal::operator=(a);
+    content=a.GetContent();
+    interaction = a.interact();
+    myWeight = a.GetWeight();
+    howMuchIEat = a.GetEat();
+    whatIEat = a.GetWEat();
+    isTame = a.GetTame();
     return *this;
+}
+
+char ElangB::GetContent()
+{
+    return content;
+}
+
+string ElangB::interact()
+{
+    return interaction;
+}
+
+float ElangB::GetWeight()
+{
+    return myWeight;
+}
+
+float ElangB::GetEat()
+{
+    return howMuchIEat;
+}
+
+int ElangB::GetWEat()
+{
+    return whatIEat;
 }

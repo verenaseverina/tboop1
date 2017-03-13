@@ -19,11 +19,37 @@ string Crocodile::interact()
 
 Crocodile& Crocodile::operator=(const Crocodile& a)
 {
-	LWAnimal::operator=(a);
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    LWAnimal::operator=(a);
+    content=a.GetContent();
+    interaction = a.interact();
+    myWeight = a.GetWeight();
+    howMuchIEat = a.GetEat();
+    whatIEat = a.GetWEat();
+    isTame = a.GetTame();
     return *this;
+}
+
+char Crocodile::GetContent()
+{
+    return content;
+}
+
+string Crocodile::interact()
+{
+    return interaction;
+}
+
+float Crocodile::GetWeight()
+{
+    return myWeight;
+}
+
+float Crocodile::GetEat()
+{
+    return howMuchIEat;
+}
+
+int Crocodile::GetWEat()
+{
+    return whatIEat;
 }

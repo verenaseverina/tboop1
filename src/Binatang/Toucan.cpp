@@ -19,11 +19,37 @@ string Toucan::interact()
 
 Toucan& Toucan::operator=(const Toucan& a)
 {
-	AirAnimal::operator=(a);
-    interaction = a.interaction;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
+    AirAnimal::operator=(a);
+    content=a.GetContent();
+    interaction = a.interact();
+    myWeight = a.GetWeight();
+    howMuchIEat = a.GetEat();
+    whatIEat = a.GetWEat();
+    isTame = a.GetTame();
     return *this;
+}
+
+char Toucan::GetContent()
+{
+    return content;
+}
+
+string Toucan::interact()
+{
+    return interaction;
+}
+
+float Toucan::GetWeight()
+{
+    return myWeight;
+}
+
+float Toucan::GetEat()
+{
+    return howMuchIEat;
+}
+
+int Toucan::GetWEat()
+{
+    return whatIEat;
 }

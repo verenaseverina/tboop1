@@ -27,6 +27,16 @@ class Penguin : public LWAnimal
 		 * Interact pada binatang berupa string
 		 */
 		string interact();
+
+		char GetContent();
+
+		string interact();
+
+		float GetWeight();
+
+		float GetEat();
+
+		int GetWEat();
 		
 };
 
