@@ -39,7 +39,7 @@ using namespace std;
 				{
 					bool recorded=false;
 					int x=0;
-					while(!recorded&&x<cagebuffer.size())
+					while((!recorded) && (x<(signed)cagebuffer.size()))
 					{
 						recorded=InCage(cagebuffer[x],map[i][j]);
 						x++;
@@ -54,7 +54,7 @@ using namespace std;
 			}
 		}
 		cages.resize(cagebuffer.size());
-		for(int i=0;i<cagebuffer.size();i++)
+		for(int i=0;i<(signed)cagebuffer.size();i++)
 		{
 			cages[i]=cagebuffer[i];
 		}
@@ -67,7 +67,7 @@ using namespace std;
 		int i=0;
 		int j=0;
 
-		while(i<cage.size())
+		while(i<(signed)cage.size())
 		{
 			h=cage[i];
 			if(map[h.GetCellRow()-1][h.GetCellCol()]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i-1][j]))
@@ -96,7 +96,7 @@ using namespace std;
 			}
 			i++;
 		}
-		
+		return cage;
 		
 	}
 	
@@ -106,7 +106,7 @@ using namespace std;
 		{
 			bool found=false;
 			int i=0; int j;
-			while(!found && i<v.size())
+			while(!found && i<(signed)v.size())
 			{
 				if(c->GetCellRow()==v[i].GetCellRow() && c->GetCellCol()==v[i].GetCellCol())
 					found=true;
@@ -114,7 +114,7 @@ using namespace std;
 			}
 			return(found);
 		}
-		else if(c->GetCellContent()=='F')
+		else 
 		{
 			return(false);
 		}
