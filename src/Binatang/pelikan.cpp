@@ -7,7 +7,7 @@ Pelikan::Pelikan(int x, int y, int id) : WAAnimal(x,y,id)
     content='Z';
    	srand(time(NULL));
     my_weight = 2.8 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(15-2.8)));
-    how_much_i_eat = 26.67 * myWeight / 100 ;
+    how_much_i_eat = 26.67 * my_weight / 100 ;
     what_i_eat = 'c';
     is_tame = true;
 }

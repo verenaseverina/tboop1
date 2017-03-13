@@ -32,14 +32,14 @@ Cage::Cage(const Cage& c) : size(c.size) {
 }
 
 Cage::~Cage() {
-  delete h;
+  //delete h;
   /*float temp_many_animal = 0.3 * size;
   int many_animal = floor(temp_many_animal);
   for (int i = 0; i < many_animal; i++)
   {
     delete a[i];
   }*/
-  delete a;
+  //delete a;
 }
 
 Cage& Cage::operator=(const Cage& c) {
@@ -85,7 +85,7 @@ void Cage::AddAnimal(char animal, int i) {
   srand(time(NULL));
   do {
     posid = rand() % size;
-  } while (!containAnimal(h[posid].GetCellRow(), h[posid].GetCellCol()));
+  } while (!ContainAnimal(h[posid].GetCellRow(), h[posid].GetCellCol()));
 
   switch(animal) {
   	case 'H' : {

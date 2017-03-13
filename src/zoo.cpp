@@ -23,8 +23,7 @@ Zoo::Zoo() {
       }
     }
   }
-  GetCage(map[1][3]);
-  //GetAllCage(s);
+  GetAllCage(s);
 }
 
 Zoo::~Zoo() {
@@ -38,9 +37,9 @@ Zoo::~Zoo() {
 }
 
 void Zoo::GetAllCage(State& s) {
-  vector<vector<Habitat>> cage_buffer;
+  vector<vector<Habitat>> cage_buffer(1);
   char** smap=s.GetMap();
-  int n=0;
+  int n=1;
   for(int i=0;i<height;i++) {
     for(int j=0;j<width;j++) {
       if(IsHabitat(smap[i][j])) {
@@ -49,19 +48,17 @@ void Zoo::GetAllCage(State& s) {
         while((!recorded) && (x<(signed)cage_buffer.size())) {
           recorded=InCage(cage_buffer[x],map[i][j]);
           x++;
-          
+         }
         if(!recorded) {
-          //cout << cage_buffer.size();
           cage_buffer.resize(n);
-          //cage_buffer[n]=GetCage(map[i][j]);
+          cage_buffer[n-1]=GetCage(map[i][j]);
           n++;
         }
       }
     }
   }
-  //cages.resize(10);
   for(int i=0;i<(signed)cage_buffer.size();i++) {
-    Cage cgbuf((int)cage_buffer.size(),cage_buffer[i]);
+    Cage cgbuf(cage_buffer.size(),cage_buffer[i]);
     cages.push_back(cgbuf);
   }
 }
@@ -70,30 +67,36 @@ vector<Habitat> Zoo::GetCage(Cell* hab) {
   Habitat h;
   cage[0]=hab;
   int i=0;
-  int j=0;
-  cout << cage[0].GetCellContent()<< endl;
-  cout << hab->GetCellContent() << endl;
-  while(i<(signed)cage.size()) {
+  while(i<(signed)cage.size())
+  {
     h=cage[i];
-    if(map[h.GetCellRow()-1][h.GetCellCol()]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i-1][j])&&(hab->GetCellRow()-1>=0)) {
-      //cage.resize(cage.size()+1);
-      Habitat b(map[h.GetCellRow()-1][h.GetCellCol()]->GetCellContent(),h.GetCellRow()-1,h.GetCellCol());				
-      cage.push_back(b);
+    if(h.GetCellRow()-1>=0){
+      if(map[h.GetCellRow()-1][h.GetCellCol()]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[h.GetCellRow()-1][h.GetCellCol()]))
+      {
+        Habitat b(hab->GetCellContent(),h.GetCellRow()-1,h.GetCellCol());				
+        cage.push_back(b);
+      }
     }
-    if(map[h.GetCellRow()][h.GetCellCol()+1]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i][j+1])) {
-      cage.resize(cage.size()+1);
-      j++;
-      cage[j]=h;
+    if(h.GetCellCol()+1<width){
+      if(map[h.GetCellRow()][h.GetCellCol()+1]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[h.GetCellRow()][h.GetCellCol()+1]))
+      {
+        Habitat b(hab->GetCellContent(),h.GetCellRow(),h.GetCellCol()+1);			
+        cage.push_back(b);
+      }
     }
-    if(map[h.GetCellRow()+1][h.GetCellCol()]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i+1][j])) {
-      cage.resize(cage.size()+1);
-      j++;
-      cage[j]=h;
+    if(h.GetCellRow()+1<height){
+      if(map[h.GetCellRow()+1][h.GetCellCol()]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[h.GetCellRow()+1][h.GetCellCol()]))
+      {
+        Habitat b(hab->GetCellContent(),h.GetCellRow()+1,h.GetCellCol());				
+        cage.push_back(b);
+      }
     }
-    if(map[h.GetCellRow()][h.GetCellCol()-1]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i][j-1])) {
-      cage.resize(cage.size()+1);
-      j++;
-      cage[j]=h;
+    if(h.GetCellCol()-1>=0){
+      if(map[h.GetCellRow()][h.GetCellCol()-1]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[h.GetCellRow()][h.GetCellCol()-1]))
+      {
+        Habitat b(hab->GetCellContent(),h.GetCellRow(),h.GetCellCol()-1);				
+        cage.push_back(b);
+      }
     }
     i++;
   }
@@ -268,7 +271,7 @@ void Zoo::MasukkanAnimal() {
     } while (arr[x]==false);
   }
   if (x!=-2) {
-    cages[x].addAnimal(input_user,x);
+    cages[x].AddAnimal(input_user,x);
   }
   delete [] arr;
 }
@@ -278,10 +281,10 @@ void Zoo::CekCage(bool* arr,Animal* H) {
     int i=0;
     while(i<(signed)cages.size()) {
       if ((arr[i]==false)&&((*H).GetHab()[j]==cages[i].GetAnimal()[0][0].GetHab()[j])) {					
-        if(cages[i].isEmpty()) {
+        if(cages[i].IsEmpty()) {
           arr[i]=true;
         }
-        else if((!cages[i].isFull())&&((*H).GetTame()==cages[i].GetAnimal()[0][0].GetTame())) {
+        else if((!cages[i].IsFull())&&((*H).GetTame()==cages[i].GetAnimal()[0][0].GetTame())) {
           arr[i]=true;
         }
       }

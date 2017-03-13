@@ -2,7 +2,7 @@
 
 
 #include <string>
-#include "../land_water_Animal.h"
+#include "../land_water_animal.h"
 #ifndef CROCODILE_H
 #define CROCODILE_H
 

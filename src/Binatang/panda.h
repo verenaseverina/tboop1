@@ -2,7 +2,7 @@
 
 
 #include <string>
-#include "../LandAnimal.h"
+#include "../land_animal.h"
 #ifndef PANDA_H
 #define PANDA_H
 

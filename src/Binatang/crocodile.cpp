@@ -7,7 +7,7 @@ Crocodile::Crocodile(int x, int y, int id) : LWAnimal(x,y,id)
   content = 'C';
   srand(time(NULL));
   my_weight = 400  + static_cast <float> (rand()) / ( static_cast <float> (RAND_MAX / (700 - 400)));
-  how_much_i_eat = 2 * myWeight / 700;
+  how_much_i_eat = 2 * my_weight / 700;
   what_i_eat = 'c';
   is_tame = false;
 }

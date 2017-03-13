@@ -44,7 +44,7 @@ float Cormorants::GetEat()
   return how_much_i_eat;
 }
 
-int Cormorants::GetWEat()
+char Cormorants::GetWEat()
 {
   return what_i_eat;
 }

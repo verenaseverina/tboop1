@@ -9,9 +9,8 @@ Habitat::Habitat(char _content, int x, int y) : Cell(x,y) {
 }
 
 Habitat& Habitat::operator=(Cell* c) {
-  char x=c->GetCellContent();
-  int y=c->GetCellRow();
-  int z=c->GetCellCol();
-  Habitat* H = new Habitat(x,y,z);
-  return *H;
+  content=c->GetCellContent();
+  cell_id_row=c->GetCellRow();
+  cell_id_col=c->GetCellCol();
+  return *this;
 }

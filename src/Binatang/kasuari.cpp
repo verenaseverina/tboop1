@@ -1,7 +1,7 @@
-#include "kasuwari.h"
+#include "kasuari.h"
 #include <cstdlib>
 
-Kasuwari::Kasuwari(int x, int y, int id) : LAAnimal(x,y,id)
+Kasuari::Kasuari(int x, int y, int id) : LAAnimal(x,y,id)
 {
 	interaction = "Arrrrkkkk";
     content='Y';
@@ -12,7 +12,7 @@ Kasuwari::Kasuwari(int x, int y, int id) : LAAnimal(x,y,id)
     is_tame = true;
 }
 
-Kasuwari& Kasuwari::operator=(const Kasuwari& a)
+Kasuari& Kasuari::operator=(const Kasuari& a)
 {
     LAAnimal::operator=(a);
     content=a.content;
@@ -24,27 +24,27 @@ Kasuwari& Kasuwari::operator=(const Kasuwari& a)
     return *this;
 }
 
-char Kasuwari::GetContent()
+char Kasuari::GetContent()
 {
     return content;
 }
 
-string Kasuwari::interact()
+string Kasuari::interact()
 {
     return interaction;
 }
 
-float Kasuwari::GetWeight()
+float Kasuari::GetWeight()
 {
     return my_weight;
 }
 
-float Kasuwari::GetEat()
+float Kasuari::GetEat()
 {
     return how_much_i_eat;
 }
 
-char Kasuwari::GetWEat()
+char Kasuari::GetWEat()
 {
     return what_i_eat;
 }

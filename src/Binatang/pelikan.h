@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class Pelikan : public LandAnimal 
+class Pelikan : public WAAnimal 
 {
 	public:
 		/**

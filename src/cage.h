@@ -19,7 +19,7 @@
 #include "Binatang/crocodile.h"
 #include "Binatang/hippopotamus.h"
 #include "Binatang/ostrich.h"
-#include "Binatang/kasuwari.h"
+#include "Binatang/kasuari.h"
 #include "Binatang/kiwi.h"
 #include "Binatang/flying_fish.h"
 #include "Binatang/pelikan.h"
