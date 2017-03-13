@@ -39,7 +39,7 @@ Zoo::~Zoo(){
 
 void Zoo::GetAllCage(State& s)
 {
-  vector<vector<Habitat>> cagebuffer;
+  vector<vector<Habitat>> cage_buffer;
   char** smap=s.GetMap();
   int n=0;
   for(int i=0;i<height;i++)
@@ -50,25 +50,25 @@ void Zoo::GetAllCage(State& s)
       {
         bool recorded=false;
         int x=0;
-        while((!recorded) && (x<(signed)cagebuffer.size()))
+        while((!recorded) && (x<(signed)cage_buffer.size()))
         {
-          recorded=InCage(cagebuffer[x],map[i][j]);
+          recorded=InCage(cage_buffer[x],map[i][j]);
           x++;
           
         if(!recorded)
         {
-          //cout << cagebuffer.size();
-          cagebuffer.resize(n);
-          //cagebuffer[n]=GetCage(map[i][j]);
+          //cout << cage_buffer.size();
+          cage_buffer.resize(n);
+          //cage_buffer[n]=GetCage(map[i][j]);
           n++;
         }
       }
     }
   }
   //cages.resize(10);
-  for(int i=0;i<(signed)cagebuffer.size();i++)
+  for(int i=0;i<(signed)cage_buffer.size();i++)
   {
-    Cage cgbuf((int)cagebuffer.size(),cagebuffer[i]);
+    Cage cgbuf((int)cage_buffer.size(),cage_buffer[i]);
     cages.push_back(cgbuf);
   }
 }
@@ -166,7 +166,7 @@ void Zoo::MasukkanAnimal()
 {
   int size = cages.size();
   cout<<"Nama-Nama Binatang dan kodenya" << endl;
-   cout<<"- Tiger (H)"<<endl;
+  cout<<"- Tiger (H)"<<endl;
   cout<<"- Panda (B)"<<endl;
   cout<<"- Anoa (A)"<<endl;
   cout<<"- Rhino (R)"<<endl;
@@ -182,13 +182,13 @@ void Zoo::MasukkanAnimal()
   cout<<"- Hippopotamus (N)"<<endl;
   cout<<endl;
 
-  char inputuser;
+  char input_user;
   cout<<"Masukkan kode binatang yang ingin dimasukkan kedalam kandang : "<<endl;
-  cin>>inputuser;
+  cin>>input_user;
 
   bool* arr= new bool [size];
   arr={false};
-  switch(inputuser)
+  switch(input_user)
   {
     case 'H' :
       {
@@ -308,7 +308,7 @@ void Zoo::MasukkanAnimal()
   }
   if (x!=-2)
   {
-    cages[x].addAnimal(inputuser,x);
+    cages[x].addAnimal(input_user,x);
   }
   delete [] arr;
 }
