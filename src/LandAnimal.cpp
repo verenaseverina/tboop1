@@ -18,6 +18,7 @@ LandAnimal& LandWnimal::operator=(const LandAnimal& a)
 	delete [] hab;
 	hab=new char[size];
 	hab[0]='x';
+	return *this;
 }
 
 int LandAnimal::GetSize()

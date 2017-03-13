@@ -17,6 +17,7 @@ WAAnimal& WAWnimal::operator=(const WAAnimal& a)
 	delete [] hab;
 	hab=new char[size];
 	hab[0]='#';
+	return *this;
 }
 
 int WaterAnimal::GetSize()

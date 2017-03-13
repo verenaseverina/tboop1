@@ -20,6 +20,7 @@ LWAnimal& LWAnimal::operator=(const LWAnimal& a)
 	hab=new char[size];
 	hab[0]='x';
 	hab[1]='#';
+	return *this;
 }
 
 int LWAnimal::GetSize()

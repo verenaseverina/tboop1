@@ -20,6 +20,7 @@ LAAnimal& LAAnimal::operator=(const LAAnimal& a)
 	hab=new char[size];
 	hab[0]='x';
 	hab[1]='o';
+	return *this;
 }
 
 int LAAnimal::GetSize()
