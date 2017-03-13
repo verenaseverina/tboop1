@@ -121,6 +121,11 @@ using namespace std;
 		}
 	}
 	
+	Cel*** Zoo::GetMap()
+	{
+		return map;
+	}
+
 	int Zoo::GetHeight()
 	{
 		return(height);

@@ -8,9 +8,9 @@ void Renderable::Render(Zoo& virtualzoo)
 	{
 		for (int j = 0; j < virtualzoo.GetWidth(); j++)
 		{
-			if ()
+			if (IsThereAnimal(virtualzoo,))
 			{
-
+				//print animalnya di sini;
 			}
 			else
 			{
@@ -21,7 +21,7 @@ void Renderable::Render(Zoo& virtualzoo)
 	}
 }
 
-bool Renderable::IsCage(Zoo& virtualzoo, int x, int y)
+bool Renderable::IsThereAnimal(Zoo& virtualzoo, int x, int y)
 {
 	int i = 0, j = 0;
 	bool found = false;
@@ -29,7 +29,7 @@ bool Renderable::IsCage(Zoo& virtualzoo, int x, int y)
 	{
 		while ((j < cages[i].GetSize()) && (!found))
 		{
-			if ()
+			if ((cages[i].GetAnimal()[j]->GetX() == x) && (cages[i].GetAnimal()[j]->GetY() == y))
 			{
 				found = true;
 			}

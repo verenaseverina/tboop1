@@ -62,6 +62,13 @@ public:
 	bool InCage(vector<Habitat>& v, Cell* c);
 	
 	/**
+	 * @brief Getter Map
+	 * Mengembalikan matriks map dari Zoo
+	 * @return matriks map dari Zoo
+	 */
+	Cel*** GetMap();
+
+	/**
 	 * @brief Method GetHeight
 	 * Mengembalikan tinggi dari zoo
 	 */
