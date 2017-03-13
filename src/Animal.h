@@ -12,7 +12,6 @@ public:
 	 * Menciptakan Animal kosong.
 	 */
 	Animal(int _x, int _y, int id);
-
 	/**
 	 * @brief CopyConstructor.
 	 * Membuat salinan dari Animal lain ke objek

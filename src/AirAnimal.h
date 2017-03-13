@@ -15,12 +15,10 @@ public:
 	 * @param x adalah absis, y adalah oordinat, id adalah idcage
 	 */
 	AirAnimal(int x, int y, int id);
-
 	/**
 	 * @brief Destructor.
 	 */
 	~AirAnimal();
-
 	/**
 	 * @brief Overloading Operator "="
 	 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
@@ -38,7 +36,10 @@ public:
 	 * @param int dir adalah pilihan swicth untuk 1.moveup 2.moveright 3.movedown 4.moveleft
 	 */
 	void move(int);
-
+	/**
+	 *  @brief Getter Size
+	 *  Mengembalikan ukuran size habitat yang bisa ditinggali oleh hewan (1/2)
+	 */
 	int GetSize();
 
 
