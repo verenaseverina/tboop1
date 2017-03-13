@@ -149,15 +149,6 @@ using namespace std;
 	{
 		return(c=='#'||c=='_'||c=='R');
 	}
-	//void Zoo::SelectAnimal(char animal)
-	//
-	// Pilih animal
-	// Cari cage yang sesuai sama karakter animalnya
-	// Cek masih muat ga di cage itu
-	// Akan panggil fungsi addAnimal
-
-
-/*
 	void Zoo::MasukkanAnimal()
 	{
 		cout<<"Nama-Nama Binatang dan kodenya"
@@ -311,4 +302,4 @@ using namespace std;
 				}
 			}
 		}
-	}*/
+	}

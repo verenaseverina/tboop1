@@ -81,18 +81,32 @@ public:
 	 *  @param c adalah karakter pada map yang akan diperiksa
 	 *  @return boolean apakah karakter termasuk habitat
 	 */
-	bool Zoo::IsHabitat(char c);
+	bool IsHabitat(char c);
 	/**
 	 *  @brief Method IsFacility
 	 *  Membandingkan apakah suatu karakter c termasuk facility
 	 *  @param c adalah karakter pada map yang akan diperiksa
 	 *  @return boolean apakah karakter termasuk facility
 	 */
-	bool Zoo::IsFacility(char c);
+	bool IsFacility(char c);
 	//Elemen constructor
 	//Pindahin semua State ke map
 	//void MasukkanAnimal();
 	//void CekCage(int* arr,Animal H);
+	/**
+	 *  @brief Method MasukkanAnimal
+	 *  
+	 *  @details More details
+	 */
+	void MasukkanAnimal();
+	/**
+	 *  @brief Method CekCage
+	 *  
+	 *  @param Animal 
+	 *  @param int* 
+	 *  @details More details
+	 */
+	void CekCage(int*, Animal);
 private:
 	vector<Cage> cages;
 	Cell*** map;
