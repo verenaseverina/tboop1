@@ -63,5 +63,5 @@ int Renderable::FindAnimal(Zoo& virtualzoo, int i, int x, int y)
 		}
 	}
 
-	int k;
+	return k;
 }

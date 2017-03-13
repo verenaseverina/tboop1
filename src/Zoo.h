@@ -60,6 +60,12 @@ public:
 	 */
 	Cel*** GetMap();
 	/**
+	 * @brief Getter Cages
+	 * Mengembalikan atribut Cages dari Zoo
+	 * @return vektor Cages dari Zoo
+	 */
+	vector<Cage> GetCages();
+	/**
 	 * @brief Method GetHeight
 	 * Mengembalikan tinggi dari zoo
 	 */

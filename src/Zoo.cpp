@@ -126,6 +126,11 @@ using namespace std;
 		return map;
 	}
 
+	vector<Cage> Zoo::GetCages()
+	{
+		return cages;
+	}
+
 	int Zoo::GetHeight()
 	{
 		return(height);
