@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 //using namespace std;
 
-int Cage::Neff = -1;
+int Cage::neff = -1;
 
 Cage::Cage(int _size, vector<Habitat> &buf) : size(buf.size())
 {
@@ -12,9 +12,9 @@ Cage::Cage(int _size, vector<Habitat> &buf) : size(buf.size())
 		h[i] = buf[i];
 	}
 	
-	float tempManyAnimal = 0.3 * size;
-	int manyAnimal = floor(tempManyAnimal);
-	a = new Animal*[manyAnimal];
+	float temp_many_animal = 0.3 * size;
+	int many_animal = floor(temp_many_animal);
+	a = new Animal*[many_animal];
 }
 
 Cage::Cage(const Cage& c) : size(c.size)
@@ -26,11 +26,11 @@ Cage::Cage(const Cage& c) : size(c.size)
 		h[i] = c.h[i];
 	}
 
-	float tempManyAnimal = 0.3 * c.size;
-	int manyAnimal = floor(tempManyAnimal);
-	a = new Animal*[manyAnimal];
+	float temp_many_animal = 0.3 * c.size;
+	int many_animal = floor(temp_many_animal);
+	a = new Animal*[many_animal];
 
-	for (i = 0; i < manyAnimal; i++)
+	for (i = 0; i < many_animal; i++)
 	{
 		a[i] = c.a[i];
 	}
@@ -39,9 +39,9 @@ Cage::Cage(const Cage& c) : size(c.size)
 Cage::~Cage()
 {
 	delete h;
-	/*float tempManyAnimal = 0.3 * size;
-	int manyAnimal = floor(tempManyAnimal);
-	for (int i = 0; i < manyAnimal; i++)
+	/*float temp_many_animal = 0.3 * size;
+	int many_animal = floor(temp_many_animal);
+	for (int i = 0; i < many_animal; i++)
 	{
 		delete a[i];
 	}*/
@@ -59,11 +59,11 @@ Cage& Cage::operator=(const Cage& c)
 		h[i] = c.h[i];
 	}
 
-	float tempManyAnimal = 0.3 * c.size;
-	int manyAnimal = floor(tempManyAnimal);
-	a = new Animal*[manyAnimal];
+	float temp_many_animal = 0.3 * c.size;
+	int many_animal = floor(temp_many_animal);
+	a = new Animal*[many_animal];
 
-	for (i = 0; i < manyAnimal; i++)
+	for (i = 0; i < many_animal; i++)
 	{
 		a[i] = c.a[i];
 	}
@@ -93,7 +93,7 @@ Animal** Cage::GetAnimal()
 	return a;
 }
 
-void Cage::addAnimal(char animal, int i)
+void Cage::AddAnimal(char animal, int i)
 {	
 	int posid;
 	srand(time(NULL));
@@ -105,46 +105,46 @@ void Cage::addAnimal(char animal, int i)
 	switch(animal)
 	{
 		case 'H' :
-			a[Neff++] = new Tiger(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Tiger(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'B' :
-			a[Neff++] = new Panda(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Panda(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'A' :
-			a[Neff++] = new Anoa(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Anoa(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'R' :
-			a[Neff++] = new Rhino(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Rhino(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'D' :
-			a[Neff++] = new Kangaroo(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Kangaroo(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'L' :
-			a[Neff++] = new Dolphin(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Dolphin(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'W' :
-			a[Neff++] = new Whale(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Whale(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'S' :
-			a[Neff++] = new Shark(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Shark(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'K' :
-			a[Neff++] = new Kelelawar(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Kelelawar(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'E' :
-			a[Neff++] = new ElangB(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new ElangB(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'T' :
-			a[Neff++] = new Toucan(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Toucan(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'P' :
-			a[Neff++] = new Penguin(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Penguin(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'C' :
-			a[Neff++] = new Crocodile(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Crocodile(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		case 'N' :
-			a[Neff++] = new Hippopotamus(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
+			a[neff++] = new Hippopotamus(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 			break;
 		//case '' :
 		//case '' :
@@ -155,14 +155,14 @@ void Cage::addAnimal(char animal, int i)
 	}
 }
 
-bool Cage::containAnimal(int x, int y)
+bool Cage::ContainAnimal(int x, int y)
 {
-	float tempManyAnimal = 0.3 * size;
-	int manyAnimal = floor(tempManyAnimal);
+	float temp_many_animal = 0.3 * size;
+	int many_animal = floor(temp_many_animal);
 	bool found = false;
 	int i = 0;
 
-	while ((i < manyAnimal) && (!found))
+	while ((i < many_animal) && (!found))
 	{
 		if ((x == a[i]->GetX()) && (y == a[i]->GetY()))
 		{
@@ -177,14 +177,14 @@ bool Cage::containAnimal(int x, int y)
 	return found;
 }
 
-bool Cage::isFull()
+bool Cage::IsFull()
 {
-	float tempManyAnimal = 0.3 * size;
-	int manyAnimal = floor(tempManyAnimal);
-	return (manyAnimal == Neff);
+	float temp_many_animal = 0.3 * size;
+	int many_animal = floor(temp_many_animal);
+	return (many_animal == neff);
 }
 
-bool Cage::isEmpty()
+bool Cage::IsEmpty()
 {
-	return (Neff == -1);
+	return (neff == -1);
 }

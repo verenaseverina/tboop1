@@ -76,7 +76,7 @@ public:
 	 * Menambahkan animal ke dalam array of animal
 	 * @param animal jenis animal yang ingin dimasukkan ke dalam Cage
 	 */
-	void addAnimal(char animal, int i);
+	void AddAnimal(char animal, int i);
 
 	/**
 	 * @brief Method containAnimals
@@ -85,27 +85,27 @@ public:
 	 * @param y adalah ordinat dari Habitat yang ingin dicek
 	 * @return boolean apakah ada animal pada Habitat yang dicek 
 	 */
-	bool containAnimal(int x, int y);
+	bool ContainAnimal(int x, int y);
 	
 	/**
 	 * @brief Method isFull
 	 * Mengecek apakah Cage penuh dengan Animal
 	 * @return boolean apakah Cage penuh dengan Animal
 	 */
-	bool isFull();
+	bool IsFull();
 
 	/**
 	 * @brief Method isEmpty
 	 * Mengecek apakah Cage tidak memiliki Animal
 	 * @return boolean apakah Cage memiliki Animal
 	 */
-	bool isEmpty();
+	bool IsEmpty();
 
 
 private:
 	Habitat* h;
 	Animal** a;
 	int size;
-	static int Neff;
+	static int neff;
 };
 #endif
