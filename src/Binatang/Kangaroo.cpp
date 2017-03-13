@@ -15,3 +15,14 @@ string Kangaroo::interact()
 {
 	return this->interaction;
 }
+
+Kangaroo& Kangaroo::operator=(const Kangaroo& a)
+{
+	LandAnimal::operator=(a);
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
+    return *this;
+}

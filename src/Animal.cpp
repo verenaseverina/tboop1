@@ -7,15 +7,9 @@ Animal::Animal(int _x,int _y, int id){
 }
 
 Animal& Animal::operator=(const Animal& a){
-    interaction = a.interaction;
-    animal_id = a.animal_id;
-    x = a.x;
+    x= a.x;
     y = a.y;
-    myWeight = a.myWeight;
-    howMuchIEat = a.howMuchIEat;
-    whatIEat = a.whatIEat;
-    isTame = a.isTame;
-    return *this;
+    cageID = a.cageID;
 }
 
 void Animal::move(int dir){

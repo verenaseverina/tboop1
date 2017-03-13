@@ -15,3 +15,14 @@ string ElangB::interact()
 {
 	return this->interaction;
 }
+
+ElangB& ElangB::operator=(const ElangB& a)
+{
+	AirAnimal::operator=(a);
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
+    return *this;
+}

@@ -15,3 +15,14 @@ string Dolphin::interact()
 {
 	return this->interaction;
 }
+
+Dolphin& Dolphin::operator=(const Dolphin& a)
+{
+	WaterAnimal::operator=(a);
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
+    return *this;
+}

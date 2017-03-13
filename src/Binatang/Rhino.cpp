@@ -15,3 +15,14 @@ string Rhino::interact()
 {
 	return this->interaction;
 }
+
+Rhino& Rhino::operator=(const Rhino& a)
+{
+	LandAnimal::operator=(a);
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
+    return *this;
+}

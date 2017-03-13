@@ -15,3 +15,14 @@ string Crocodile::interact()
 {
 	return this->interaction;
 }
+
+Crocodile& Crocodile::operator=(const Crocodile& a)
+{
+	LWAnimal::operator=(a);
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
+    return *this;
+}

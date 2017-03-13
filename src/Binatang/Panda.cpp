@@ -15,3 +15,14 @@ string Panda::interact()
 {
 	return this->interaction;
 }
+
+Panda& Panda::operator=(const Panda& a)
+{
+	LandAnimal::operator=(a);
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
+    return *this;
+}

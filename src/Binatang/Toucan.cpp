@@ -15,3 +15,14 @@ string Toucan::interact()
 {
 	return this->interaction;
 }
+
+Toucan& Toucan::operator=(const Toucan& a)
+{
+	AirAnimal::operator=(a);
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
+    return *this;
+}

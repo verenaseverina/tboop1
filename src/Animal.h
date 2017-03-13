@@ -44,7 +44,6 @@ public:
 
 protected:
 	string interaction;
-	int animal_id;
     int x;
     int y;
     int cageID;

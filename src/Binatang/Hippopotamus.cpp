@@ -15,3 +15,14 @@ string Hippopotamus::interact()
 {
 	return this->interaction;
 }
+
+Hippopotamus& Hippopotamus::operator=(const Hippopotamus& a)
+{
+	LWAnimal::operator=(a);
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
+    return *this;
+}

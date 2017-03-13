@@ -15,3 +15,14 @@ string Kelelawar::interact()
 {
 	return this->interaction;
 }
+
+Kelelawar& Kelelawar::operator=(const Kelelawar& a)
+{
+	AirAnimal::operator=(a);
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
+    return *this;
+}
