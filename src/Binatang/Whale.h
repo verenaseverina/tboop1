@@ -24,6 +24,16 @@ class Whale : public WaterAnimal
 		 */
 		string interact();
 
+		char GetContent();
+
+		string interact();
+
+		float GetWeight();
+
+		float GetEat();
+
+		int GetWEat();
+
 };
 
 #endif

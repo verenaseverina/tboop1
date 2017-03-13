@@ -28,6 +28,16 @@ class Toucan : public AirAnimal
 		 */
 		string interact();
 
+		char GetContent();
+
+		string interact();
+
+		float GetWeight();
+
+		float GetEat();
+
+		int GetWEat();
+
 };
 
 #endif

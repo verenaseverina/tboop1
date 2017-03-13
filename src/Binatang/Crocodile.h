@@ -29,6 +29,16 @@ class Crocodile : public LWAnimal
 		 */
 		string interact();
 
+		char GetContent();
+
+		string interact();
+
+		float GetWeight();
+
+		float GetEat();
+
+		int GetWEat();
+
 };
 
 #endif
