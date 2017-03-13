@@ -11,7 +11,7 @@ class LWAnimal : public Animal {
 public:
 	/**
 	 * @brief Constructor.
-	 * Menciptakan Animal kosong.
+	 * Menciptakan Land Water Animal kosong.
 	 */
 	LWAnimal(int x, int y,int id);
 

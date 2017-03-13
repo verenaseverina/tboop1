@@ -10,7 +10,7 @@ class WaterAnimal : public Animal {
 public:
 	/**
 	 * @brief Constructor.
-	 * Menciptakan Animal kosong.
+	 * Menciptakan Water Animal kosong.
 	 */
 	WaterAnimal(int x, int y,int id);
 

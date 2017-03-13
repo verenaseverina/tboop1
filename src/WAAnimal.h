@@ -11,7 +11,7 @@ class WAAnimal : public Animal {
 public:
 	/**
 	 * @brief Constructor.
-	 * Menciptakan Animal kosong.
+	 * Menciptakan Water Air Animal kosong.
 	 */
 	WAAnimal(int x, int y,int id);
 
