@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 //using namespace std;
 
-int Neff = -1;
+int Cage::Neff = -1;
 
 Cage::Cage(int _size, vector<Habitat> &buf) : size(buf.size())
 {

@@ -26,6 +26,16 @@ using namespace std;
 		GetAllCage(s);
 	}
 
+	Zoo::~Zoo(){
+		for(int i=0;i<width;i++){
+			for(int j=0;j<height;j++){
+				delete map[i][j];			
+			}
+			delete map[i];		
+		}
+		delete map;
+	}
+
 	void Zoo::GetAllCage(State& s)
 	{
 		vector<vector<Habitat>> cagebuffer;
@@ -121,7 +131,7 @@ using namespace std;
 		}
 	}
 	
-	Cel*** Zoo::GetMap()
+	Cell*** Zoo::GetMap()
 	{
 		return map;
 	}
@@ -149,7 +159,7 @@ using namespace std;
 	{
 		return(c=='#'||c=='_'||c=='R');
 	}
-	void Zoo::MasukkanAnimal()
+/*	void Zoo::MasukkanAnimal()
 	{
 		cout<<"Nama-Nama Binatang dan kodenya"
 		cout<<"- Tiger (H)"<<endl;
@@ -282,7 +292,7 @@ using namespace std;
 		Cage[x].addAnimal(inputuser,x);
 	}
 
-	void Zoo::CekCage(int* arr,Animal H)
+	void Zoo::CekCage(int* arr,Animal* H)
 	{
 		for (int j=0;j<H.GetSize();j++)
 		{				
@@ -302,4 +312,4 @@ using namespace std;
 				}
 			}
 		}
-	}
+	}*/

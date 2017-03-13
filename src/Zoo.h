@@ -4,7 +4,7 @@
 #define ZOO_H
 
 #include <vector>
-#include "../State.h"
+#include "State.h"
 #include "Cage.h"
 #include "Cell.h"
 #include "Habitat.h"
@@ -17,18 +17,6 @@ public:
 	 * Menginisialisasi map dan cage.
 	 */
 	Zoo();
-	/**
-	 * @brief Copy Constructor.
-	 * Membuat salinan dari Zoo lain ke objek
-	 * @param z adalah Zoo yang hendak disalin
-	 */	
-	Zoo(const Zoo& z);
-	/**
-     * @brief Overloading Operator "="
-     * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit wise
-	 * @param z adalah Zoo yang hendak disalin
-	 */
-	Zoo& operator= (Zoo& z);
 	/**
      * @brief Destructor
      * Melakukan dealokasi pada cage dan map
@@ -106,7 +94,7 @@ public:
 	 *  @param int* 
 	 *  @details More details
 	 */
-	void CekCage(int*, Animal);
+	void CekCage(int*, Animal*);
 private:
 	vector<Cage> cages;
 	Cell*** map;

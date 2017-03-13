@@ -27,7 +27,7 @@ int Renderable::IsThereAnimal(Zoo& virtualzoo, int x, int y)
 	int i = 0, j = 0;
 	bool found = false;
 	int cage = -999;
-	while ((i < virtualzoo.GetCages().size()) && (!found))
+	while ((i < (signed)virtualzoo.GetCages().size()) && (!found))
 	{
 		while ((j < virtualzoo.GetCages()[i].GetSize()) && (!found))
 		{

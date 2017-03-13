@@ -63,6 +63,8 @@ public:
 
 	char* GetHab();
 
+	virtual char GetContent() = 0;
+
 protected:
 	string interaction;
 	char content;

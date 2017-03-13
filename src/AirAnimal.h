@@ -42,6 +42,7 @@ public:
 	 */
 	int GetSize();
 
+	virtual char GetContent()=0;
 
 protected:
 	const int size=1;

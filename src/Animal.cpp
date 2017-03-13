@@ -54,3 +54,7 @@ char* Animal::GetHab()
 {
     return hab;
 }
+
+char Animal::GetContent(){
+	return content;
+}

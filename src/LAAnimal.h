@@ -37,9 +37,8 @@ public:
 	 * @param int dir adalah pilihan swicth untuk 1.moveup 2.moveright 3.movedown 4.moveleft
 	 */
 	void move(int);
-
 	int GetSize();
-
+	virtual char GetContent() = 0;
 
 protected:
 	const int size=2;
