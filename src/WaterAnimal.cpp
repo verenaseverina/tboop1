@@ -11,7 +11,7 @@ WaterAnimal::~WaterAnimal()
 	delete [] hab;
 }
 
-WAAnimal& WAWnimal::operator=(const WAAnimal& a)
+WaterAnimal& WaterAnimal::operator=(const WaterAnimal& a)
 {
 	Animal::operator=(a);
 	delete [] hab;
