@@ -24,7 +24,7 @@ public:
 	 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
 	 * @param a adalah Animal yang hendak disalin
 	 */
-	WaterAnimal& operator=(const WaterAnimal& a);
+	virtual WaterAnimal& operator=(const WaterAnimal& a);
 	/**
 	 * @brief Function interact
 	 * Interact pada binatang berupa string
@@ -36,6 +36,8 @@ public:
 	 * @param int dir adalah pilihan swicth untuk 1.moveup 2.moveright 3.movedown 4.moveleft
 	 */
 	void move(int);
+
+	int GetSize();
 
 protected:
 	const int size=1;

@@ -25,7 +25,7 @@ public:
 	 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
 	 * @param a adalah Animal yang hendak disalin
 	 */
-	LandAnimal& operator=(const LandAnimal& a);
+	virtual LandAnimal& operator=(const LandAnimal& a);
 	/**
 	 * @brief Function interact
 	 * Interact pada binatang berupa string
@@ -33,6 +33,8 @@ public:
 	virtual string interact()=0;
 
 	void move(int);
+
+	int GetSize();
 
 protected:
 	const int size=1;

@@ -32,7 +32,7 @@ public:
 	 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit wise
 	 * @param a adalah Animal yang hendak disalin
 	 */
-	Animal& operator=(const Animal& a);
+	virtual Animal& operator=(const Animal& a);
 
 	/**
 	* @brief Function interact
@@ -56,6 +56,10 @@ public:
 	* Getter y
 	*/
 	int GetY();
+
+	bool GetTame();
+
+	char* GetHab();
 
 protected:
 	string interaction;

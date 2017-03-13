@@ -21,3 +21,8 @@ LWAnimal& LWAnimal::operator=(const LWAnimal& a)
 	hab[0]='x';
 	hab[1]='#';
 }
+
+int LWAnimal::GetSize()
+{
+	return size;
+}
