@@ -1,9 +1,9 @@
-// File: Cage.h
+// File: cage.h
 
 #ifndef CAGE_H
 #define CAGE_H
-#include "Habitat.h"
-#include "Animal.h"
+#include "habitat.h"
+#include "animal.h"
 #include <math.h>
 
 using namespace std;

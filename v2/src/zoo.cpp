@@ -1,4 +1,4 @@
-//File: Zoo.cpp
+//File: zoo.cpp
 #include <iostream>
 #include "Zoo.h"
 using namespace std;

@@ -1,4 +1,4 @@
-#include "Animal.h"
+#include "animal.h"
 
 Animal::Animal(int _x,int _y, int id,char con){
     x = _x;
