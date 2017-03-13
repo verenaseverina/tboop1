@@ -17,6 +17,7 @@
 #include "Binatang/Crocodile.h"
 #include "Binatang/Hippopotamus.h"
 #include <math.h>
+#include <vector>
 #ifndef CAGE_H
 #define CAGE_H
 
@@ -68,7 +69,7 @@ public:
 	 * Mengambil array of pointer to Animal
 	 * @return array of pointer to Animal
 	 */
-	int GetAnimal();
+	Animal** GetAnimal();
 	
 	/**
 	 * @brief Method addAnimal
@@ -99,6 +100,7 @@ public:
 	 * @return boolean apakah Cage memiliki Animal
 	 */
 	bool isEmpty();
+
 
 private:
 	Habitat* h;

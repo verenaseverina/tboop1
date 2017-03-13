@@ -75,6 +75,8 @@ public:
 	
 	//Elemen constructor
 	//Pindahin semua State ke map
+	//void MasukkanAnimal();
+	//void CekCage(int* arr,Animal H);
 private:
 	vector<Cage> cages;
 	Cell*** map;

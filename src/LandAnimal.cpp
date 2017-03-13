@@ -12,7 +12,7 @@ LandAnimal::~LandAnimal()
 	delete [] hab;
 }
 
-LandAnimal& LandWnimal::operator=(const LandAnimal& a)
+LandAnimal& LandAnimal::operator=(const LandAnimal& a)
 {
 	Animal::operator=(a);
 	delete [] hab;

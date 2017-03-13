@@ -14,6 +14,6 @@ Habitat& Habitat::operator=(Cell* c)
 		char x=c->GetCellContent();
 		int y=c->GetCellRow();
 		int z=c->GetCellCol();
-		Habitat H = new Habitat(x,y,z);
+		Habitat* H = new Habitat(x,y,z);
 		return *H;
 	}

@@ -12,7 +12,7 @@ class Habitat : public Cell{
       *Mengisi content pada Cell
     */
     Habitat(char _content,int x, int y);
-	Habitat operator=(Cell* c);
+	Habitat& operator=(Cell* c);
 };
 
 #endif
