@@ -31,8 +31,6 @@ class Crocodile : public LWAnimal
 
 		char GetContent();
 
-		string interact();
-
 		float GetWeight();
 
 		float GetEat();

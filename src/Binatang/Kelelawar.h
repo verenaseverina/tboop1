@@ -30,8 +30,6 @@ class Kelelawar : public AirAnimal
 
 		char GetContent();
 
-		string interact();
-
 		float GetWeight();
 
 		float GetEat();

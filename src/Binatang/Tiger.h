@@ -30,8 +30,6 @@ class Tiger : public LandAnimal
 
 		char GetContent();
 
-		string interact();
-
 		float GetWeight();
 
 		float GetEat();

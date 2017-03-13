@@ -12,20 +12,15 @@ ElangB::ElangB(int x, int y, int id) : AirAnimal(x,y,id)
     isTame = true;
 }
 
-string ElangB::interact()
-{
-	return this->interaction;
-}
-
 ElangB& ElangB::operator=(const ElangB& a)
 {
     AirAnimal::operator=(a);
-    content=a.GetContent();
-    interaction = a.interact();
-    myWeight = a.GetWeight();
-    howMuchIEat = a.GetEat();
-    whatIEat = a.GetWEat();
-    isTame = a.GetTame();
+    content=a.content;
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
     return *this;
 }
 

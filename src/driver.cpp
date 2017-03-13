@@ -1,4 +1,4 @@
-#include "Zoo.cpp"
+#include "Zoo.h"
 
 int main(){
 	return 0;

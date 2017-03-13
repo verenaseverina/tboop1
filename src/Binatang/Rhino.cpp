@@ -11,21 +11,15 @@ Rhino::Rhino(int x, int y, int id) : LandAnimal(x,y,id)
     whatIEat = 'h';
     isTame = false;
 }
-
-string Rhino::interact()
-{
-	return this->interaction;
-}
-
 Rhino& Rhino::operator=(const Rhino& a)
 {
     LandAnimal::operator=(a);
-    content=a.GetContent();
-    interaction = a.interact();
-    myWeight = a.GetWeight();
-    howMuchIEat = a.GetEat();
-    whatIEat = a.GetWEat();
-    isTame = a.GetTame();
+    content=a.content;
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
     return *this;
 }
 

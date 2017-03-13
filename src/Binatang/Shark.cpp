@@ -11,20 +11,15 @@ Shark::Shark(int x, int y, int id) : WaterAnimal(x,y,id)
     whatIEat = 'c';
     isTame = false;
 }
-string Shark::interact()
-{
-	return this->interaction;
-}
-
 Shark& Shark::operator=(const Shark& a)
 {
     WaterAnimal::operator=(a);
-    content=a.GetContent();
-    interaction = a.interact();
-    myWeight = a.GetWeight();
-    howMuchIEat = a.GetEat();
-    whatIEat = a.GetWEat();
-    isTame = a.GetTame();
+    content=a.content;
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
     return *this;
 }
 

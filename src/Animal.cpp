@@ -7,9 +7,10 @@ Animal::Animal(int _x,int _y, int id){
 }
 
 Animal& Animal::operator=(const Animal& a){
-    x= a.GetX();
-    y = a.GetY();
-    cageID = a.GetID();
+    x= a.x;
+    y = a.y;
+    cageID = a.cageID;
+	return *this;
 }
 
 void Animal::move(int dir){

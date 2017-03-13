@@ -30,8 +30,6 @@ class Shark : public WaterAnimal
 
 		char GetContent();
 
-		string interact();
-
 		float GetWeight();
 
 		float GetEat();

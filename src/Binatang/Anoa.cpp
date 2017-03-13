@@ -12,20 +12,15 @@ Anoa::Anoa(int x, int y, int id) : LandAnimal(x,y,id)
     isTame = true;
 }
 
-string Anoa::interact()
-{
-	return this->interaction;
-}
-
 Anoa& Anoa::operator=(const Anoa& a)
 {
 	LandAnimal::operator=(a);
-    content=a.GetContent();
-    interaction = a.interact();
-    myWeight = a.GetWeight();
-    howMuchIEat = a.GetEat();
-    whatIEat = a.GetWEat();
-    isTame = a.GetTame();
+    content=a.content;
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
     return *this;
 }
 

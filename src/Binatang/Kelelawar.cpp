@@ -12,44 +12,39 @@ Kelelawar::Kelelawar(int x, int y, int id) : AirAnimal(x,y,id)
     isTame = true;
 }
 
-string Kelelawar::interact()
-{
-	return this->interaction;
-}
-
-Kelalawar& Kelalawar::operator=(const Kelalawar& a)
+Kelelawar& Kelelawar::operator=(const Kelelawar& a)
 {
     AirAnimal::operator=(a);
-    content=a.GetContent();
-    interaction = a.interact();
-    myWeight = a.GetWeight();
-    howMuchIEat = a.GetEat();
-    whatIEat = a.GetWEat();
-    isTame = a.GetTame();
+    content=a.content;
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
     return *this;
 }
 
-char Kelalawar::GetContent()
+char Kelelawar::GetContent()
 {
     return content;
 }
 
-string Kelalawar::interact()
+string Kelelawar::interact()
 {
     return interaction;
 }
 
-float Kelalawar::GetWeight()
+float Kelelawar::GetWeight()
 {
     return myWeight;
 }
 
-float Kelalawar::GetEat()
+float Kelelawar::GetEat()
 {
     return howMuchIEat;
 }
 
-int Kelalawar::GetWEat()
+int Kelelawar::GetWEat()
 {
     return whatIEat;
 }

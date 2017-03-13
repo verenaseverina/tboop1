@@ -12,20 +12,15 @@ Dolphin::Dolphin(int x, int y, int id) : WaterAnimal(x,y,id)
     isTame = true;
 }
 
-string Dolphin::interact()
-{
-	return this->interaction;
-}
-
 Dolphin& Dolphin::operator=(const Dolphin& a)
 {
     WaterAnimal::operator=(a);
-    content=a.GetContent();
-    interaction = a.interact();
-    myWeight = a.GetWeight();
-    howMuchIEat = a.GetEat();
-    whatIEat = a.GetWEat();
-    isTame = a.GetTame();
+    content=a.content;
+    interaction = a.interaction;
+    myWeight = a.myWeight;
+    howMuchIEat = a.howMuchIEat;
+    whatIEat = a.whatIEat;
+    isTame = a.isTame;
     return *this;
 }
 

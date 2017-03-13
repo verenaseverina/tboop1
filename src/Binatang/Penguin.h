@@ -30,8 +30,6 @@ class Penguin : public LWAnimal
 
 		char GetContent();
 
-		string interact();
-
 		float GetWeight();
 
 		float GetEat();
