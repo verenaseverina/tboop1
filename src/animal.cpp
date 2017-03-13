@@ -3,13 +3,13 @@
 Animal::Animal(int _x,int _y, int id){
     x = _x;
     y = _y;
-    cageID = id;
+    cage_id = id;
 }
 
 Animal& Animal::operator=(const Animal& a){
     x= a.x;
     y = a.y;
-    cageID = a.cageID;
+    cage_id = a.cage_id;
 	return *this;
 }
 
@@ -32,7 +32,7 @@ void Animal::move(int dir){
 
 int Animal::GetID()
 {
-    return cageID;
+    return cage_id;
 }
 
 int Animal::GetX()
@@ -47,7 +47,7 @@ int Animal::GetY()
 
 bool Animal::GetTame()
 {
-    return isTame;
+    return is_tame;
 }
 
 char* Animal::GetHab()

@@ -4,29 +4,29 @@ using namespace std;
 
 State::State()
 {
-	ifstream inputFile("map.txt");
-	ofstream outputFile("cek.txt");
+	ifstream input_file("map.txt");
+	ofstream output_file("cek.txt");
 
 	int baris = 0;
 	width = 0;
 	height = 0;
-	if (outputFile.is_open())
+	if (output_file.is_open())
 	{
-		while (!inputFile.eof())
+		while (!input_file.eof())
 		{
 			if (baris == 0)
 			{
 				// membaca width dan height map dari peta
-				char buf[maxcharsperline];
-				inputFile.getline(buf, maxcharsperline);
+				char buf[max_chars_perline];
+				input_file.getline(buf, max_chars_perline);
 				int n = 0;
-				const char* token[maxtokensperline];
-				token[0] = strtok(buf, DELIMITER);
+				const char* token[max_tokens_perline];
+				token[0] = strtok(buf, delimiter);
 				if (token[0])
 				{
-					for (n = 1; n < maxtokensperline; n++)
+					for (n = 1; n < max_tokens_perline; n++)
 					{
-						token[n] = strtok(0, DELIMITER);
+						token[n] = strtok(0, delimiter);
 							if (!token[n])
 							{
 								break;
@@ -35,9 +35,9 @@ State::State()
 				}	
 				for (int i = 0; i < n; i++)
 				{
-					outputFile << token[i] << " ";
+					output_file << token[i] << " ";
 				}
-				outputFile << endl;
+				output_file << endl;
 				height = stoi(token[0]);
 				width = stoi(token[1]);
 
@@ -50,9 +50,9 @@ State::State()
 			}
 			else if (baris <= height)
 			{
-				char buf[maxcharsperline];
-				inputFile.getline(buf, maxcharsperline);
-				outputFile << buf << endl;
+				char buf[max_chars_perline];
+				input_file.getline(buf, max_chars_perline);
+				output_file << buf << endl;
 				for (int l = 0; l < width; l++)
 				{
 					map[baris-1][l] = buf[l];
@@ -60,15 +60,15 @@ State::State()
 			}
 			else
 			{
-				char buf[maxcharsperline];
-				inputFile.getline(buf, maxcharsperline);
-				outputFile << buf << endl;
+				char buf[max_chars_perline];
+				input_file.getline(buf, max_chars_perline);
+				output_file << buf << endl;
 			}
 			/* else{} siapa tau mau taro legendanya di map.txt */
 			baris++;
 		}
-		inputFile.close();
-		outputFile.close();
+		input_file.close();
+		output_file.close();
 	}
 }
 

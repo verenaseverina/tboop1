@@ -40,9 +40,9 @@ private:
 	char** map;
 	int width;
 	int height;
-	const int maxcharsperline = 512;
-	const int maxtokensperline = 30;
-	const char* const DELIMITER = " x";
+	const int max_chars_perline = 512;
+	const int max_tokens_perline = 30;
+	const char* const delimiter = " x";
 };
 #endif
 
