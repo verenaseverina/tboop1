@@ -80,6 +80,6 @@ private:
 	Cell*** map;
 	int height;
 	int width;
-}
+};
 
 #endif
