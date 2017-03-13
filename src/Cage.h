@@ -20,13 +20,15 @@
 #ifndef CAGE_H
 #define CAGE_H
 
+using namespace std;
+
 class Cage {
 public:
 	/**
 	 * @brief Constructor.
 	 * Menciptakan Cage kosong.
 	 */
-	Cage(int _size, Habitat* buf);
+	Cage(int _size, vector<Habitat> &buf);
 
 	/**
 	 * @brief CopyConstructor.

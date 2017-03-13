@@ -4,9 +4,9 @@ using namespace std;
 
 int Neff = -1;
 
-Cage::Cage(int _size, Habitat* buf) : size(_size)
+Cage::Cage(int _size, vector<Habitat> buf) : size(buf.size())
 {
-	h = new Habitat[size];
+	h = new Habitat[buf.size()];
 	for (int i = 0; i < size; i++)
 	{
 		h[i] = buf[i];
