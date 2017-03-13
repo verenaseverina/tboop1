@@ -3,7 +3,7 @@
 Animal::Animal(int _x,int _y, int id,char con){
     x = _x;
     y = _y;
-    cageID = id;
+    cage_id = id;
     content=con;
 
     switch(animal)
@@ -16,10 +16,10 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Roooarrrr";
                 srand(time(NULL));
-                myWeight = 90 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(310-90)));
-                howMuchIEat = 0;
-                whatIEat = 'c';
-                isTame = false;
+                my_weight = 90 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(310-90)));
+                how_much_i_eat = 0;
+                what_i_eat = 'c';
+                is_tame = false;
             }
         case 'B' :
             {
@@ -29,10 +29,10 @@ Animal::Animal(int _x,int _y, int id,char con){
                 
                 interaction = "Mmmm";
                 srand(time(NULL));
-                myWeight = 70 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(100-70)));
-                howMuchIEat = 38*myWeight/100;
-                whatIEat = 'h';
-                isTame = true;
+                my_weight = 70 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(100-70)));
+                how_much_i_eat = 38*my_weight/100;
+                what_i_eat = 'h';
+                is_tame = true;
             }
         case 'A' :
             {              
@@ -42,10 +42,10 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Grrrr";
                 srand(time(NULL));
-                myWeight = 150 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(300-150)));
-                howMuchIEat = 5*myWeight/100;
-                whatIEat = 'h';
-                isTame = true;
+                my_weight = 150 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(300-150)));
+                how_much_i_eat = 5*my_weight/100;
+                what_i_eat = 'h';
+                is_tame = true;
             }
         case 'R' :
             {
@@ -55,10 +55,10 @@ Animal::Animal(int _x,int _y, int id,char con){
                
                 interaction = "Woooo";
                 srand(time(NULL));
-                myWeight = 900 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2300-900)));
-                howMuchIEat = 7.23*myWeight/100;
-                whatIEat = 'h';
-                isTame = false;
+                my_weight = 900 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2300-900)));
+                how_much_i_eat = 7.23*my_weight/100;
+                what_i_eat = 'h';
+                is_tame = false;
             }
         case 'D' :
             {
@@ -68,10 +68,10 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Jummpp";
                 srand(time(NULL));
-                myWeight = 18 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(100-18)));
-                howMuchIEat = 0.35 * myWeight/100;
-                whatIEat = 'h';
-                isTame = true;
+                my_weight = 18 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(100-18)));
+                how_much_i_eat = 0.35 * my_weight/100;
+                what_i_eat = 'h';
+                is_tame = true;
             }
         case 'L' :
             {
@@ -81,10 +81,10 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Cuitttt";
                 srand(time(NULL));
-                myWeight = 110 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(200-110)));
-                howMuchIEat = (0.04 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.09-0.04)))) * myWeight;
-                whatIEat = 'c';
-                isTame = true;
+                my_weight = 110 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(200-110)));
+                how_much_i_eat = (0.04 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.09-0.04)))) * my_weight;
+                what_i_eat = 'c';
+                is_tame = true;
             }
         case 'W' :
             {
@@ -94,10 +94,10 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Wet";
                 srand(time(NULL));
-                myWeight = 14000 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(16000-14000)));
-                howMuchIEat = 0.0667 * myWeight;
-                whatIEat = 'c';
-                isTame = true;
+                my_weight = 14000 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(16000-14000)));
+                how_much_i_eat = 0.0667 * my_weight;
+                what_i_eat = 'c';
+                is_tame = true;
             }
         case 'S' :
             {
@@ -107,10 +107,10 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Wett";
                 srand(time(NULL));
-                myWeight = 21500 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(30000-21500)));
-                howMuchIEat = 0.0667 * myWeight;
-                whatIEat = 'c';
-                isTame = false;
+                my_weight = 21500 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(30000-21500)));
+                how_much_i_eat = 0.0667 * my_weight;
+                what_i_eat = 'c';
+                is_tame = false;
             }
         case 'K' :
             {
@@ -120,10 +120,10 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Kiiiaaa";
                 srand(time(NULL));
-                myWeight = 1.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(1.4-1.2)));
-                howMuchIEat = myWeight;
-                whatIEat = 'o';
-                isTame = true;
+                my_weight = 1.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(1.4-1.2)));
+                how_much_i_eat = my_weight;
+                what_i_eat = 'o';
+                is_tame = true;
             }
         case 'E' :
             {
@@ -133,9 +133,9 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Kiiiaaa";
                 srand(time(NULL));
-                myWeight = 4 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6-4)));
-                howMuchIEat = 0.4535*myWeight/4;
-                whatIEat = 'c';
+                my_weight = 4 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6-4)));
+                how_much_i_eat = 0.4535*my_weight/4;
+                what_i_eat = 'c';
             }
         case 'T' :
             {
@@ -145,10 +145,10 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Kwwaakk";
                 srand(time(NULL));
-                myWeight = 0.592 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.760-0.592)));
-                howMuchIEat = 0.5*myWeight;
-                whatIEat = 'o';
-                isTame = true;
+                my_weight = 0.592 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.760-0.592)));
+                how_much_i_eat = 0.5*my_weight;
+                what_i_eat = 'o';
+                is_tame = true;
             }
         case 'P' :
             {
@@ -159,10 +159,10 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Sqqqaaa";
                 srand(time(NULL));
-                myWeight = 27 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(41-27)));
-                howMuchIEat = 0.9*myWeight/27;
-                whatIEat = 'c';
-                isTame = true;
+                my_weight = 27 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(41-27)));
+                how_much_i_eat = 0.9*my_weight/27;
+                what_i_eat = 'c';
+                is_tame = true;
             }
         case 'C' :
             {
@@ -173,10 +173,10 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Rrrrr";
                 srand(time(NULL));
-                myWeight = 400  + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(700-400)));
-                howMuchIEat = 2*myWeight/700;
-                whatIEat = 'c';
-                isTame = false;
+                my_weight = 400  + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(700-400)));
+                how_much_i_eat = 2*my_weight/700;
+                what_i_eat = 'c';
+                is_tame = false;
             }
         case 'N' :
             {
@@ -187,32 +187,32 @@ Animal::Animal(int _x,int _y, int id,char con){
 
                 interaction = "Grooowwll";
                 srand(time(NULL));
-                myWeight = 1400 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(3200-1400)));
-                howMuchIEat = 40*myWeight/2400;
-                whatIEat = 'h';
-                isTame = true;
+                my_weight = 1400 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(3200-1400)));
+                how_much_i_eat = 40*my_weight/2400;
+                what_i_eat = 'h';
+                is_tame = true;
             }
     }
 }
 
 Animal& Animal::operator=(const Animal& a){
-    x= a.GetX();
-    y = a.GetY();
-    content=a.GetContent();
+    x= a.x;
+    y = a.y;
+    content=a.content;
     
-    size=a.GetSize();
+    size=a.size;
     hab=new char[size];
     for (int i=0;i<size;i++)
     {
-        hab[i]=a.GetHab()[i];
+        hab[i]=a.hab[i];
     }
 
-    cageID = a.GetID();
-    interaction = a.interact();
-    myWeight = a.GetWeight();
-    howMuchIEat = a.GetEat();
-    whatIEat = a.GetWEat();
-    isTame = a.GetTame();
+    cage_id = a.cage_id;
+    interaction = a.interaction;
+    my_weight = a.my_weight;
+    how_much_i_eat = a.how_much_i_eat;
+    what_i_eat = a.what_i_eat;
+    is_tame = a.is_tame;
     return *this;
 }
 
@@ -250,22 +250,22 @@ string Animal::interact()
 
 float Animal::GetWeight()
 {
-    return myWeight;
+    return my_weight;
 }
 
 float Animal::GetEat()
 {
-    return howMuchIEat;
+    return how_much_i_eat;
 }
 
 int Animal::GetID()
 {
-    return cageID;
+    return cage_id;
 }
 
 int Animal::GetWEat()
 {
-    return whatIEat;
+    return what_i_eat;
 }
 
 int Animal::GetX()
@@ -280,7 +280,7 @@ int Animal::GetY()
 
 bool Animal::GetTame()
 {
-    return isTame;
+    return is_tame;
 }
 
 char* Animal::GetHab()
