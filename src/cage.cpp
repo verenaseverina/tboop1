@@ -4,11 +4,9 @@
 
 int Cage::neff = -1;
 
-Cage::Cage(int _size, vector<Habitat> &buf) : size(buf.size())
-{
+Cage::Cage(int _size, vector<Habitat> &buf) : size(buf.size()) {
   h = new Habitat[buf.size()];
-  for (int i = 0; i < size; i++)
-  {
+  for (int i = 0; i < size; i++) {
     h[i] = buf[i];
   }
 	
@@ -17,12 +15,10 @@ Cage::Cage(int _size, vector<Habitat> &buf) : size(buf.size())
   a = new Animal*[many_animal];
 }
 
-Cage::Cage(const Cage& c) : size(c.size)
-{
+Cage::Cage(const Cage& c) : size(c.size) {
   h = new Habitat[c.size];
   int i;
-  for (i = 0; i < size; i++)
-  {
+  for (i = 0; i < size; i++) {
     h[i] = c.h[i];
   }
 
@@ -30,14 +26,12 @@ Cage::Cage(const Cage& c) : size(c.size)
   int many_animal = floor(temp_many_animal);
   a = new Animal*[many_animal];
 
-  for (i = 0; i < many_animal; i++)
-  {
+  for (i = 0; i < many_animal; i++) {
     a[i] = c.a[i];
   }
 }
 
-Cage::~Cage()
-{
+Cage::~Cage() {
   delete h;
   /*float temp_many_animal = 0.3 * size;
   int many_animal = floor(temp_many_animal);
@@ -48,14 +42,12 @@ Cage::~Cage()
   delete a;
 }
 
-Cage& Cage::operator=(const Cage& c)
-{
+Cage& Cage::operator=(const Cage& c) {
   delete [] h;
   delete [] a;
   h = new Habitat[c.size];
   int i;
-  for (i = 0; i < size; i++)
-  {
+  for (i = 0; i < size; i++) {
     h[i] = c.h[i];
   }
 
@@ -63,114 +55,92 @@ Cage& Cage::operator=(const Cage& c)
   int many_animal = floor(temp_many_animal);
   a = new Animal*[many_animal];
 
-  for (i = 0; i < many_animal; i++)
-  {
+  for (i = 0; i < many_animal; i++) {
     a[i] = c.a[i];
   }
 
   return *this;
 }
 
-Cage& Cage::operator=(const vector<Habitat>& v)
-{
+Cage& Cage::operator=(const vector<Habitat>& v) {
   delete [] h;
   h = new Habitat[v.size()];
-  for (int i = 0; i < size; i++)
-  {
+  for (int i = 0; i < size; i++) {
     h[i] = v[i];
   }
 
   return *this;
 }
 
-int Cage::GetSize()
-{
+int Cage::GetSize() {
   return size;
 }
 
-Animal** Cage::GetAnimal()
-{
+Animal** Cage::GetAnimal() {
   return a;
 }
 
-void Cage::AddAnimal(char animal, int i)
-{	
+void Cage::AddAnimal(char animal, int i) {	
   int posid;
   srand(time(NULL));
-  do
-  {
+  do {
     posid = rand() % size;
   } while (!containAnimal(h[posid].GetCellRow(), h[posid].GetCellCol()));
 
-  switch(animal)
-  {
-  	case 'H' :
-  	{
+  switch(animal) {
+  	case 'H' : {
   	  a[neff++] = new Tiger(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'B' :
-  	{
+  	case 'B' : {
   	  a[neff++] = new Panda(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'A' :
-  	{
+  	case 'A' : {
   	  a[neff++] = new Anoa(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'R' :
-  	{
+  	case 'R' : {
   	  a[neff++] = new Rhino(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'D' :
-  	{
+  	case 'D' : {
   	  a[neff++] = new Kangaroo(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'L' :
-  	{
+  	case 'L' : {
   	  a[neff++] = new Dolphin(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'W' :
-  	{
+  	case 'W' : {
   	  a[neff++] = new Whale(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'S' :
-  	{
+  	case 'S' : {
   	  a[neff++] = new Shark(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'K' :
-  	{
+  	case 'K' : {
   	  a[neff++] = new Kelelawar(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'E' :
-  	{
+  	case 'E' : {
   	  a[neff++] = new ElangB(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'T' :
-  	{
+  	case 'T' : {
   	  a[neff++] = new Toucan(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'P' :
-  	{
+  	case 'P' : {
   	  a[neff++] = new Penguin(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'C' :
-  	{
+  	case 'C' : {
   	  a[neff++] = new Crocodile(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
-  	case 'N' :
-  	{
+  	case 'N' : {
   	  a[neff++] = new Hippopotamus(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
   	  break;
   	}
@@ -183,21 +153,17 @@ void Cage::AddAnimal(char animal, int i)
   }
 }
 
-bool Cage::ContainAnimal(int x, int y)
-{
+bool Cage::ContainAnimal(int x, int y) {
   float temp_many_animal = 0.3 * size;
   int many_animal = floor(temp_many_animal);
   bool found = false;
   int i = 0;
 
-  while ((i < many_animal) && (!found))
-  {
-  	if ((x == a[i]->GetX()) && (y == a[i]->GetY()))
-  	{
+  while ((i < many_animal) && (!found)) {
+  	if ((x == a[i]->GetX()) && (y == a[i]->GetY())) {
   	  found = true;
   	}
-  	else
-  	{
+  	else {
   	  i++;
   	}
   }
@@ -205,14 +171,12 @@ bool Cage::ContainAnimal(int x, int y)
   return found;
 }
 
-bool Cage::IsFull()
-{
+bool Cage::IsFull() {
   float temp_many_animal = 0.3 * size;
   int many_animal = floor(temp_many_animal);
   return (many_animal == neff);
 }
 
-bool Cage::IsEmpty()
-{
+bool Cage::IsEmpty() {
   return (neff == -1);
 }

@@ -1,20 +1,17 @@
 #include "land_water_animal.h"
 
 
-LWAnimal::LWAnimal(int x, int y,int id) : Animal(x,y,id)
-{
+LWAnimal::LWAnimal(int x, int y,int id) : Animal(x,y,id) {
   hab = new char[size];
   hab[0] = '^';
   hab[1] = '~';
 }
 
-LWAnimal::~LWAnimal()
-{
+LWAnimal::~LWAnimal() {
   delete [] hab;
 }
 
-LWAnimal& LWAnimal::operator=(const LWAnimal& a)
-{
+LWAnimal& LWAnimal::operator=(const LWAnimal& a) {
   Animal::operator=(a);
   delete [] hab;
   hab = new char[size];
@@ -23,7 +20,6 @@ LWAnimal& LWAnimal::operator=(const LWAnimal& a)
   return *this;
 }
 
-int LWAnimal::GetSize()
-{
+int LWAnimal::GetSize() { 
   return size;
 }

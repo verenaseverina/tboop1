@@ -6,10 +6,8 @@ Animal::Animal(int _x,int _y, int id,char con){
   cage_id = id;
   content = con;
 
-  switch(animal)
-  {
-    case 'H' :
-      {
+  switch(animal) {
+    case 'H' : {
         size = 1;
         hab = new char[size];
         hab[0] = 'x';
@@ -22,8 +20,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = false;
         break;
       }
-    case 'B' :
-      {
+    case 'B' : {
         size = 1;
         hab = new char[size];
         hab[0] = 'o';
@@ -36,8 +33,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = true;
         break;
       }
-    case 'A' :
-      {              
+    case 'A' : {              
         size = 1;
         hab = new char[size];
         hab[0] = 'o';
@@ -50,8 +46,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = true;
         break;
       }
-    case 'R' :
-      {
+    case 'R' : {
         size = 1;
         hab = new char[size];
         hab[0] = 'x';
@@ -64,8 +59,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = false;
         break;
       }
-    case 'D' :
-      {
+    case 'D' : {
         size = 1;
         hab = new char[size];
         hab[0] = 'x';
@@ -78,8 +72,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = true;
         break;
       }
-    case 'L' :
-      {
+    case 'L' : {
         size = 1;
         hab = new char[size];
         hab[0] = '#';
@@ -92,8 +85,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = true;
         break;
       }
-    case 'W' :
-      {
+    case 'W' : {
         size = 1;
         hab = new char[size];
         hab[0] = '#';
@@ -106,8 +98,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = true;
         break;
       }
-    case 'S' :
-      {
+    case 'S' : {
         size = 1;
         hab = new char[size];
         hab[0] = '#';
@@ -120,8 +111,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = false;
         break;
       }
-    case 'K' :
-      {
+    case 'K' : {
         size = 1;
         hab = new char[size];
         hab[0] = 'o';
@@ -134,8 +124,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = true;
         break;
       }
-    case 'E' :
-      {
+    case 'E' : {
         size = 1;
         hab = new char[size];
         hab[0] = 'o';
@@ -147,8 +136,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         what_i_eat = 'c';
         break;
       }
-    case 'T' :
-      {
+    case 'T' : {
         size = 1;
         hab = new char[size];
         hab[0] = 'o';
@@ -161,8 +149,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = true;
         break;
       }
-    case 'P' :
-      {
+    case 'P' : {
         size = 2;
         hab = new char[size];
         hab[0] = '#';
@@ -176,8 +163,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = true;
         break;
       }
-    case 'C' :
-      {
+    case 'C' : {
         size = 2;
         hab = new char[size];
         hab[0] = 'x';
@@ -191,8 +177,7 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = false;
         break;
       }
-    case 'N' :
-      {
+    case 'N' : {
         size = 2;
         hab = new char[size];
         hab[0] = 'x';
@@ -209,15 +194,14 @@ Animal::Animal(int _x,int _y, int id,char con){
   }
 }
 
-Animal& Animal::operator=(const Animal& a){
+Animal& Animal::operator=(const Animal& a) {
   x = a.x;
   y = a.y;
   content = a.content;
     
   size = a.size;
   hab = new char[size];
-  for (int i = 0;i<size;i++)
-  {
+  for (int i = 0;i<size;i++) {
     hab[i] = a.hab[i];
   }
 
@@ -231,81 +215,65 @@ Animal& Animal::operator=(const Animal& a){
 }
 
 void Animal::move(int dir){
-  switch(dir)
-  {
-    case 1: //top
-    {
+  switch(dir) {
+    case 1: { //top 
       y -=  1;
       break;
     }
-    case 2: //right
-    {
+    case 2: { //right 
       x +=  1;
       break;
     }
-    case 3: //down
-    {
+    case 3: { //down 
       y +=  1;
       break;
     }
-    case 4: //left
-    {
+    case 4: { //left 
       x -=  1;
       break;
     }
   }
 }
 
-int Animal::GetSize()
-{
+int Animal::GetSize() {
   return size;
 }  
-char Animal::GetContent()
-{
+char Animal::GetContent() {
   return content;
 }
 
-string Animal::interact()
-{
+string Animal::interact() {
   return this->interaction;
 }
 
-float Animal::GetWeight()
-{
+float Animal::GetWeight() {
   return my_weight;
 }
 
-float Animal::GetEat()
-{
+float Animal::GetEat() {
   return how_much_i_eat;
 }
 
-int Animal::GetID()
-{
+int Animal::GetID() {
   return cage_id;
 }
 
-int Animal::GetWEat()
-{
+int Animal::GetWEat()  {
   return what_i_eat;
 }
 
-int Animal::GetX()
-{
+int Animal::GetX() {
   return x;
 }
 
-int Animal::GetY()
-{
+int Animal::GetY() {
   return y;
 }
 
-bool Animal::GetTame()
-{
+bool Animal::GetTame() {
   return is_tame;
 }
 
-char* Animal::GetHab()
-{
+char* Animal::GetHab() {
   return hab;
 }

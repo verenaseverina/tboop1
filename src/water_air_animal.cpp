@@ -1,20 +1,17 @@
 #include "water_air_animal.h"
 
 
-WAAnimal::WAAnimal(int x, int y,int id) : Animal(x,y,id)
-{
+WAAnimal::WAAnimal(int x, int y,int id) : Animal(x,y,id) {
   hab = new char[size];
   hab[0] = '#';
   hab[1] = 'o';
 }
 
-WAAnimal::~WAAnimal()
-{
+WAAnimal::~WAAnimal() {
   delete [] hab;
 }
 
-WAAnimal& WAAnimal::operator=(const WAAnimal& a)
-{
+WAAnimal& WAAnimal::operator=(const WAAnimal& a) {
   Animal::operator=(a);
   delete [] hab;
   hab = new char[size];
@@ -23,7 +20,6 @@ WAAnimal& WAAnimal::operator=(const WAAnimal& a)
   return *this;
 }
 
-int WAAnimal::GetSize()
-{
+int WAAnimal::GetSize() {
   return size;
 }

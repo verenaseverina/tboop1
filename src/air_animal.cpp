@@ -1,19 +1,16 @@
 #include "air_animal.h"
 
 
-AirAnimal::AirAnimal(int x, int y,int id) : Animal(x,y,id)
-{
+AirAnimal::AirAnimal(int x, int y,int id) : Animal(x,y,id) {
   hab = new char[size];
   hab[0] = '`';
 }
 
-AirAnimal::~AirAnimal()
-{
+AirAnimal::~AirAnimal() {
   delete [] hab;
 }
 
-AirAnimal& AirAnimal::operator= (const AirAnimal& a)
-{
+AirAnimal& AirAnimal::operator= (const AirAnimal& a) {
   Animal::operator= (a);
   delete [] hab;
   hab = new char[size];
@@ -21,7 +18,6 @@ AirAnimal& AirAnimal::operator= (const AirAnimal& a)
   return *this;
 }
 
-int AirAnimal::GetSize()
-{
+int AirAnimal::GetSize() {
   return size;
 }

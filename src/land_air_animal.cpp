@@ -1,20 +1,17 @@
 #include "land_air_animal.h"
 
 
-LAAnimal::LAAnimal(int x, int y,int id) : Animal(x,y,id)
-{
+LAAnimal::LAAnimal(int x, int y,int id) : Animal(x,y,id) {
   hab = new char[size];
   hab[0] = '^';
   hab[1] = '`';
 }
 
-LAAnimal::~LAAnimal()
-{
+LAAnimal::~LAAnimal() {
   delete [] hab;
 }
 
-LAAnimal& LAAnimal::operator=(const LAAnimal& a)
-{
+LAAnimal& LAAnimal::operator=(const LAAnimal& a) {
   Animal::operator=(a);
   delete [] hab;
   hab = new char[size];
@@ -23,7 +20,6 @@ LAAnimal& LAAnimal::operator=(const LAAnimal& a)
   return *this;
 }
 
-int LAAnimal::GetSize()
-{
+int LAAnimal::GetSize() {
   return size;
 }

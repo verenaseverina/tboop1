@@ -1,17 +1,14 @@
 #include "habitat.h"
 
-Habitat::Habitat() : Cell(-1,-1)
-{
+Habitat::Habitat() : Cell(-1,-1) {
   this->content = '0';
 }
 
-Habitat::Habitat(char _content, int x, int y) : Cell(x,y)
-{
+Habitat::Habitat(char _content, int x, int y) : Cell(x,y) {
   this->content = _content;
 }
 
-Habitat& Habitat::operator=(Cell* c)
-{
+Habitat& Habitat::operator=(Cell* c) {
   char x=c->GetCellContent();
   int y=c->GetCellRow();
   int z=c->GetCellCol();
