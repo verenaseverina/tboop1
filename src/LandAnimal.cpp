@@ -12,10 +12,15 @@ LandAnimal::~LandAnimal()
 	delete [] hab;
 }
 
-LandAnimal& LandAnimal::operator=(const LandAnimal& a)
+LandAnimal& LandWnimal::operator=(const LandAnimal& a)
 {
 	Animal::operator=(a);
 	delete [] hab;
 	hab=new char[size];
 	hab[0]='x';
+}
+
+int LandAnimal::GetSize()
+{
+	return size;
 }

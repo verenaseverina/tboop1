@@ -19,3 +19,8 @@ AirAnimal& AirAnimal::operator=(const AirAnimal& a)
 	hab=new char[size];
 	hab[0]='o';
 }
+
+int AirAnimal::GetSize()
+{
+	return size;
+}

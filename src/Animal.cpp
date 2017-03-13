@@ -38,3 +38,13 @@ int Animal::GetY()
 {
     return y;
 }
+
+bool Animal::GetTame()
+{
+    return isTame;
+}
+
+char* Animal::GetHab()
+{
+    return hab;
+}

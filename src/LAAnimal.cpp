@@ -21,3 +21,8 @@ LAAnimal& LAAnimal::operator=(const LAAnimal& a)
 	hab[0]='x';
 	hab[1]='o';
 }
+
+int LAAnimal::GetSize()
+{
+	return size;
+}
