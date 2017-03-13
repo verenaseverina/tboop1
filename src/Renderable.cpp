@@ -7,15 +7,15 @@ void Renderable::Render(Zoo& virtualzoo)
 	{
 		for (int j = 0; j < virtualzoo.GetWidth(); j++)
 		{
-			if (IsThereAnimal(virtualzoo, i, j) !+ -999)
+			if (IsThereAnimal(virtualzoo, i, j) != -999)
 			{
 				int idx = IsThereAnimal(virtualzoo, i, j);
 				int anidx = FindAnimal(virtualzoo,idx,i,j);
-				cout << virtualzoo.cages[idx].GetAnimal()[anidx]->GetContent();
+				cout << virtualzoo.GetCages()[idx].GetAnimal()[anidx]->GetContent();
 			}
 			else
 			{
-				cout << virtualzoo.GetMap()[i][j].GetContent();
+				cout << virtualzoo.GetMap()[i][j]->GetCellContent();
 			}
 		}
 		cout << endl;
@@ -27,11 +27,11 @@ int Renderable::IsThereAnimal(Zoo& virtualzoo, int x, int y)
 	int i = 0, j = 0;
 	bool found = false;
 	int cage = -999;
-	while ((i < virtualzoo.cages.size()) && (!found))
+	while ((i < virtualzoo.GetCages().size()) && (!found))
 	{
-		while ((j < virtualzoo.cages[i].GetSize()) && (!found))
+		while ((j < virtualzoo.GetCages()[i].GetSize()) && (!found))
 		{
-			if ((virtualzoo.cages[i].GetAnimal()[j]->GetX() == x) && (virtualzoo.cages[i].GetAnimal()[j]->GetY() == y))
+			if ((virtualzoo.GetCages()[i].GetAnimal()[j]->GetX() == x) && (virtualzoo.GetCages()[i].GetAnimal()[j]->GetY() == y))
 			{
 				found = true;
 				cage = i;
@@ -51,9 +51,9 @@ int Renderable::FindAnimal(Zoo& virtualzoo, int i, int x, int y)
 {
 	int k = 0;
 	bool found = false;
-	while ((k < virtualzoo.cages[i].GetSize()) && (!found))
+	while ((k < virtualzoo.GetCages()[i].GetSize()) && (!found))
 	{
-		if ((virtualzoo.cages[i].GetAnimal()[k]->GetX() == x) && (virtualzoo.cages[i].GetAnimal()[k]->GetY() == y))
+		if ((virtualzoo.GetCages()[i].GetAnimal()[k]->GetX() == x) && (virtualzoo.GetCages()[i].GetAnimal()[k]->GetY() == y))
 		{
 			found = true;
 		}

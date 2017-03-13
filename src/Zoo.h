@@ -58,7 +58,7 @@ public:
 	 * Mengembalikan matriks map dari Zoo
 	 * @return matriks map dari Zoo
 	 */
-	Cel*** GetMap();
+	Cell*** GetMap();
 	/**
 	 * @brief Getter Cages
 	 * Mengembalikan atribut Cages dari Zoo
