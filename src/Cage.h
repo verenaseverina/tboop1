@@ -70,6 +70,13 @@ public:
 	 */
 	bool isFull();
 
+	/**
+	 * @brief Method isEmpty
+	 * Mengecek apakah Cage tidak memiliki Animal
+	 * @return boolean apakah Cage memiliki Animal
+	 */
+	bool isEmpty();
+
 private:
 	Habitat* h;
 	Animal** a;

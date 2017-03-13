@@ -141,3 +141,8 @@ bool Cage::isFull()
 	int manyAnimal = floor(tempManyAnimal);
 	return (manyAnimal == Neff);
 }
+
+bool Cage::isEmpty()
+{
+	return (Neff == -1);
+}
