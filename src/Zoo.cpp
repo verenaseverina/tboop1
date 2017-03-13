@@ -17,9 +17,9 @@ using namespace std;
 		{
 			for(int j=0;j<height;j++)
 			{
-				if(smap[i][j]=='H')
+				if(IsHabitat(smap[i][j]))
 					map[i][j] = new Habitat(smap[i][j],i,j);
-				else if(smap[i][j]=='F')
+				else if(IsFacility(smap[i][j]))
 					map[i][j] = new Facility(smap[i][j],i,j);
 			}
 		}
@@ -35,7 +35,7 @@ using namespace std;
 		{
 			for(int j=0;j<height;j++)
 			{
-				if(smap[i][j]=='H')
+				if(IsHabitat(smap[i][j]))
 				{
 					bool recorded=false;
 					int x=0;
@@ -103,7 +103,7 @@ using namespace std;
 	
 	bool Zoo::InCage(vector<Habitat>& v, Cell* c)
 	{
-		if(c->GetCellContent()=='H')
+		if(IsHabitat(c->GetCellContent()))
 		{
 			bool found=false;
 			int i=0;
@@ -141,6 +141,14 @@ using namespace std;
 		return(width);
 	}
 	
+	bool Zoo::IsHabitat(char c)
+	{
+		return(c=='@'||c=='~'||c=='+');
+	}
+	bool Zoo::IsFacility(char c)
+	{
+		return(c=='#'||c=='_'||c=='R');
+	}
 	//void Zoo::SelectAnimal(char animal)
 	//
 	// Pilih animal

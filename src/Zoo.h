@@ -75,6 +75,20 @@ public:
 	 * Mengembalikan lebar dari zoo
 	 */
 	int GetWidth();
+	/**
+	 *  @brief Method IsHabitat
+	 *  Membandingkan apakah suatu karakter c termasuk habitat
+	 *  @param c adalah karakter pada map yang akan diperiksa
+	 *  @return boolean apakah karakter termasuk habitat
+	 */
+	bool Zoo::IsHabitat(char c);
+	/**
+	 *  @brief Method IsFacility
+	 *  Membandingkan apakah suatu karakter c termasuk facility
+	 *  @param c adalah karakter pada map yang akan diperiksa
+	 *  @return boolean apakah karakter termasuk facility
+	 */
+	bool Zoo::IsFacility(char c);
 	//Elemen constructor
 	//Pindahin semua State ke map
 	//void MasukkanAnimal();
