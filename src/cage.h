@@ -13,7 +13,7 @@
 #include "Binatang/whale.h"
 #include "Binatang/shark.h"
 #include "Binatang/kelelawar.h"
-#include "Binatang/elangB.h"
+#include "Binatang/elang_botak.h"
 #include "Binatang/toucan.h"
 #include "Binatang/penguin.h"
 #include "Binatang/crocodile.h"
