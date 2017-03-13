@@ -13,7 +13,7 @@ Cage::Cage(int _size, vector<Habitat> buf) : size(buf.size())
 	}
 	
 	float tempManyAnimal = 0.3 * size;
-	int manyAnimal = floor(tempManyAnimal); // perlu casting ke int ga?
+	int manyAnimal = floor(tempManyAnimal);
 	a = new Animal*[manyAnimal];
 }
 
@@ -27,7 +27,7 @@ Cage::Cage(const Cage& c) : size(c.size)
 	}
 
 	float tempManyAnimal = 0.3 * c.size;
-	int manyAnimal = floor(tempManyAnimal); // perlu casting ke int ga?
+	int manyAnimal = floor(tempManyAnimal);
 	a = new Animal*[manyAnimal];
 
 	for (i = 0; i < manyAnimal; i++)
@@ -39,6 +39,12 @@ Cage::Cage(const Cage& c) : size(c.size)
 Cage::~Cage()
 {
 	delete [] h;
+	float tempManyAnimal = 0.3 * size;
+	int manyAnimal = floor(tempManyAnimal);
+	for (int i = 0; i < manyAnimal; i++)
+	{
+		delete [] a[i];
+	}
 	delete [] a;
 }
 
@@ -54,7 +60,7 @@ Cage& Cage::operator=(const Cage& c)
 	}
 
 	float tempManyAnimal = 0.3 * c.size;
-	int manyAnimal = floor(tempManyAnimal); // perlu casting ke int ga?
+	int manyAnimal = floor(tempManyAnimal);
 	a = new Animal*[manyAnimal];
 
 	for (i = 0; i < manyAnimal; i++)
@@ -121,7 +127,7 @@ void Cage::addAnimal(char animal, int i)
 			a[Neff++] = new Crocodile(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
 		case 'N' :
 			a[Neff++] = new Hippopotamus(h[posid].GetCellRow(), h[posid].GetCellCol(), i);
-		//case '' :
+		case '' :
 		//case '' :
 		//case '' :
 		//case '' :
