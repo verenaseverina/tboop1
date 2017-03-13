@@ -12,6 +12,7 @@ public:
 	/**
 	 * @brief Constructor.
 	 * Menciptakan Animal kosong.
+	 * @param x adalah absis, y adalah oordinat, id adalah idcage
 	 */
 	AirAnimal(int x, int y, int id);
 
@@ -23,10 +24,13 @@ public:
 	/**
 	 * @brief Overloading Operator "="
 	 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
-	 * @param c adalah Animal yang hendak disalin
+	 * @param a adalah AirAnimal yang hendak disalin
 	 */
 	AirAnimal& operator=(const AirAnimal& a);
-
+	/**
+	 * @brief Function interact
+	 * Interact pada binatang berupa string
+	 */
 	virtual string interact()=0;
 
 	void move(int);

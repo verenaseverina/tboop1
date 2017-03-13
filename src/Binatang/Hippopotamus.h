@@ -16,9 +16,16 @@ class Hippopotamus : public LWAnimal
 	 	* Menciptakan Tiger.
 	 	*/
 		Hippopotamus(int x, int y, int id);
-
+		/**
+		 * @brief Overloading Operator "="
+		 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
+		 * @param a adalah Hippopotamus yang hendak disalin
+		 */
 		Hippopotamus& operator=(const Hippopotamus& a);
-
+		/**
+		 * @brief Function interact
+		 * Interact pada binatang berupa string
+		 */
 		string interact();
 
 };

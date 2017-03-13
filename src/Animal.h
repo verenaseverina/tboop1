@@ -34,12 +34,23 @@ public:
 	 */
 	Animal& operator=(const Animal& a);
 
+	/**
+	* @brief Function interact
+	* Interact pada binatang berupa string
+	*/
 	virtual string interact() = 0;
 
 	void move(int);
-
+	/**
+	* @brief Function GetX()
+	* Getter x
+	*/
 	int GetX();
-
+	
+	/**
+	* @brief Function GetY()
+	* Getter y
+	*/
 	int GetY();
 
 protected:

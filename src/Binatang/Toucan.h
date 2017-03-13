@@ -16,9 +16,16 @@ class Toucan : public AirAnimal
 	 	* Menciptakan Tiger.
 	 	*/
 		Toucan(int x, int y, int id);
-
+		/**
+		 * @brief Overloading Operator "="
+		 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
+		 * @param a adalah Toucan yang hendak disalin
+		 */
 		Toucan& operator=(const Toucan& a);
-
+		/**
+		 * @brief Function interact
+		 * Interact pada binatang berupa string
+		 */
 		string interact();
 
 };

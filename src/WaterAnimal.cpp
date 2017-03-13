@@ -10,3 +10,11 @@ WaterAnimal::~WaterAnimal()
 {
 	delete [] hab;
 }
+
+WAAnimal& WAWnimal::operator=(const WAAnimal& a)
+{
+	Animal::operator=(a);
+	delete [] hab;
+	hab=new char[size];
+	hab[0]='#';
+}

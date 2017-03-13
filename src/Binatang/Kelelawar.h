@@ -16,9 +16,16 @@ class Kelelawar : public AirAnimal
 	 	* Menciptakan Tiger.
 	 	*/
 		Kelelawar(int x, int y, int id);
-
+		/**
+		 * @brief Overloading Operator "="
+		 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
+		 * @param a adalah Kelelawar yang hendak disalin
+		 */
 		Kelelawar& operator=(const Kelelawar& a);
-
+		/**
+		 * @brief Function interact
+		 * Interact pada binatang berupa string
+		 */
 		string interact();
 
 };

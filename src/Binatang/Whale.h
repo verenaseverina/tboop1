@@ -18,7 +18,10 @@ class Whale : public WaterAnimal
 		Whale(int x, int y, int id);
 
 		Whale& operator=(const Whale& a);
-
+		/**
+		 * @brief Function interact
+		 * Interact pada binatang berupa string
+		 */
 		string interact();
 
 };

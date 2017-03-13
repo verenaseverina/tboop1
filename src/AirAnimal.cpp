@@ -11,3 +11,11 @@ AirAnimal::~AirAnimal()
 {
 	delete [] hab;
 }
+
+AirAnimal& AirAnimal::operator=(const AirAnimal& a)
+{
+	Animal::operator=(a);
+	delete [] hab;
+	hab=new char[size];
+	hab[0]='o';
+}

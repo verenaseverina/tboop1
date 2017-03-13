@@ -16,9 +16,16 @@ class Anoa : public LandAnimal
 	 	* Menciptakan Tiger.
 	 	*/
 		Anoa(int x, int y, int id);
-
+		/**
+		 * @brief Overloading Operator "="
+		 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
+		 * @param a adalah Anoa yang hendak disalin
+		 */
 		Anoa& operator=(const Anoa& a);
-
+		/**
+		 * @brief Function interact
+		 * Interact pada binatang berupa string
+		 */
 		string interact();
 
 };

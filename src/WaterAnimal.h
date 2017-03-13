@@ -22,10 +22,13 @@ public:
 	/**
 	 * @brief Overloading Operator "="
 	 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
-	 * @param c adalah Animal yang hendak disalin
+	 * @param a adalah Animal yang hendak disalin
 	 */
 	WaterAnimal& operator=(const WaterAnimal& a);
-
+	/**
+	 * @brief Function interact
+	 * Interact pada binatang berupa string
+	 */
 	virtual string interact()=0;
 
 	void move(int);

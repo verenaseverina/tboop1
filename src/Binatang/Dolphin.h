@@ -16,9 +16,17 @@ class Dolphin : public WaterAnimal
 	 	* Menciptakan Dolphin.
 	 	*/
 		Dolphin(int x, int y, int id);
+		/**
+		 * @brief Overloading Operator "="
+		 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
+		 * @param a adalah Dolphin yang hendak disalin
+		 */
 
 		Dolphin& operator=(const Dolphin& a);
-
+		/**
+		 * @brief Function interact
+		 * Interact pada binatang berupa string
+		 */
 		string interact();
 
 };

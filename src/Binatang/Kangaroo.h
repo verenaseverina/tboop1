@@ -16,9 +16,16 @@ class Kangaroo : public LandAnimal
 	 	* Menciptakan Tiger.
 	 	*/
 		Kangaroo(int x, int y, int id);
-
+		/**
+		 * @brief Overloading Operator "="
+		 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
+		 * @param a adalah Kangaroo yang hendak disalin
+		 */
 		Kangaroo& operator=(const Kangaroo& a);
-
+		/**
+		 * @brief Function interact
+		 * Interact pada binatang berupa string
+		 */
 		string interact();
 
 };
