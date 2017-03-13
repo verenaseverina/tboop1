@@ -105,7 +105,7 @@ using namespace std;
 		if(c->GetCellContent()=='H')
 		{
 			bool found=false;
-			int i=0, int j;
+			int i=0; int j;
 			while(!found && i<v.size())
 			{
 				if(c->GetCellRow()==v[i].GetCellRow() && c->GetCellCol()==v[i].GetCellCol())
