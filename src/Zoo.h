@@ -51,7 +51,7 @@ public:
 	 * Mengisi sebuah cage dengan pendekatan BFS 
 	 * @param h adalah koordinat awal habitat
 	 */
-	vector<Habitat> GetCage(Habitat h);
+	vector<Habitat> GetCage(Cell* h);
 	
 	/**
 	 * @brief Method Incage
@@ -59,15 +59,7 @@ public:
 	 * @param v adalah kumpulan habitat yang telah dikunjungi
 	 * @param h adalah habitat yang ingin dilakukan pengecekan
 	 */
-	bool InCage(vector<Habitat> &v, Habitat h);
-	
-	/**
-	 * @brief Method Incage
-	 * Mengeluarkan output false karena facility bukan habitat
-	 * @param v adalah kumpulan habitat yang telah dikunjungi
-	 * @param f adalah facility yang ingin dilakukan pengecekan
-	 */
-	bool InCage(vector<Habitat> &v, Facility f);
+	bool InCage(vector<Habitat>& v, Cell* c);
 	
 	/**
 	 * @brief Method GetHeight

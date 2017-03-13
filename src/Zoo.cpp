@@ -4,14 +4,14 @@
 using namespace std;
 	Zoo::Zoo()
 	{
-		State s=new State;
+		State s;
 		char** smap=s.GetMap();
-		height=s.height;
-		width=s.width;
+		height=s.GetHeight();
+		width=s.GetWidth();
 		//buat matriks cell kosong
-		map = new Cell*[width];
+		map = new Cell**[width];
 		for(int i=0;i<width;i++)
-			map[i] = new Cell[height];
+			map[i] = new Cell*[height];
 		//spesifikasi matriks cell
 		for(int i=0;i<width;i++)
 		{
@@ -23,8 +23,7 @@ using namespace std;
 					map[i][j] = new Facility(smap[i][j],i,j);
 			}
 		}
-		GetAllCage(&s);
-		cages = new Cage []
+		GetAllCage(s);
 	}
 
 	void Zoo::GetAllCage(State& s)
@@ -40,9 +39,9 @@ using namespace std;
 				{
 					bool recorded=false;
 					int x=0;
-					while(!recorded&&x<cagebuffer.size)
+					while(!recorded&&x<cagebuffer.size())
 					{
-						recorded=InCage(&cagebuffer[x],map[i][j]);
+						recorded=InCage(cagebuffer[x],map[i][j]);
 						x++;
 					}
 					if(!recorded)
@@ -54,13 +53,13 @@ using namespace std;
 				}
 			}
 		}
-		cages.resize(cagebuffer.size);
-		for(int i=0;i<cagebuffer.size;i++)
+		cages.resize(cagebuffer.size());
+		for(int i=0;i<cagebuffer.size();i++)
 		{
 			cages[i]=cagebuffer[i];
 		}
 	}
-	vector<Habitat> Zoo::GetCage(Habitat hab)
+	vector<Habitat> Zoo::GetCage(Cell* hab)
 	{
 		vector<Habitat> cage(1);
 		Habitat h;
@@ -68,30 +67,30 @@ using namespace std;
 		int i=0;
 		int j=0;
 
-		while(i<cage.size)
+		while(i<cage.size())
 		{
-			h=cage[i]
-			if(map[h.GetCellRow-1][h.GetCellCol].content==hab.GetCellContent()&&!InCage(&cage,map[i-1][j]))
+			h=cage[i];
+			if(map[h.GetCellRow()-1][h.GetCellCol()]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i-1][j]))
 			{
-				cage.resize(cage.size+1);
+				cage.resize(cage.size()+1);
 				j++;
 				cage[j]=h;
 			}
-			if(map[h.GetCellRow][h.GetCellCol+1].content==hab.GetCellContent()&&!InCage(&cage,map[i][j+1]))
+			if(map[h.GetCellRow()][h.GetCellCol()+1]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i][j+1]))
 			{
-				cage.resize(cage.size+1);
+				cage.resize(cage.size()+1);
 				j++;
 				cage[j]=h;
 			}
-			if(map[h.GetCellRow+1][h.GetCellCol].content==hab.GetCellContent()&&!InCage(&cage,map[i+1][j]))
+			if(map[h.GetCellRow()+1][h.GetCellCol()]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i+1][j]))
 			{
-				cage.resize(cage.size+1);
+				cage.resize(cage.size()+1);
 				j++;
 				cage[j]=h;
 			}
-			if(map[h.GetCellRow][h.GetCellCol-1].content==hab.GetCellContent()&&!InCage(&cage,map[i][j-1]))
+			if(map[h.GetCellRow()][h.GetCellCol()-1]->GetCellContent()==hab->GetCellContent()&&!InCage(cage,map[i][j-1]))
 			{
-				cage.resize(cage.size+1);
+				cage.resize(cage.size()+1);
 				j++;
 				cage[j]=h;
 			}
@@ -101,22 +100,24 @@ using namespace std;
 		
 	}
 	
-	bool Zoo::InCage(vector<Habitat> &v, Habitat h)
+	bool Zoo::InCage(vector<Habitat>& v, Cell* c)
 	{
-		bool found=false;
-		int i=0, int j;
-		while(!found && i<v.size)
+		if(c->GetCellContent()=='H')
 		{
-			if(h.GetCellRow()==v[i].GetCellRow() && h.GetCellCol()==v[i].GetCellCol())
-				found=true;
-			i++;		
+			bool found=false;
+			int i=0, int j;
+			while(!found && i<v.size())
+			{
+				if(c->GetCellRow()==v[i].GetCellRow() && c->GetCellCol()==v[i].GetCellCol())
+					found=true;
+				i++;		
+			}
+			return(found);
 		}
-		return(found);
-	}
-	
-	bool Zoo::InCage(vector<Habitat> &v, Facility f)
-	{
-		return(false);
+		else if(c->GetCellContent()=='F')
+		{
+			return(false);
+		}
 	}
 	
 	int Zoo::GetHeight()
@@ -129,9 +130,9 @@ using namespace std;
 		return(width);
 	}
 	
-	void Zoo::SelectAnimal(char animal)
+	//void Zoo::SelectAnimal(char animal)
+	//
 	// Pilih animal
 	// Cari cage yang sesuai sama karakter animalnya
 	// Cek masih muat ga di cage itu
 	// Akan panggil fungsi addAnimal
-}
