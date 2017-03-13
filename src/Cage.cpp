@@ -65,7 +65,7 @@ Cage& Cage::operator=(const Cage& c)
 	return *this;
 }
 
-Cage& operator=(const vector<Habitat>& v)
+Cage& Cage::operator=(const vector<Habitat>& v)
 {
 	delete [] h;
 	h = new Habitat[v.size()];
@@ -75,6 +75,11 @@ Cage& operator=(const vector<Habitat>& v)
 	}
 
 	return *this;
+}
+
+int Cage::GetSize()
+{
+	return size;
 }
 
 void Cage::addAnimal(char animal, int i)

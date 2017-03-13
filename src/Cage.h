@@ -57,6 +57,13 @@ public:
 	Cage& operator=(const vector<Habitat>& v);
 
 	/**
+	 * @brief Getter size
+	 * Mengambil size dari Cage
+	 * @return size dari Cage
+	 */
+	int GetSize();
+	
+	/**
 	 * @brief Method addAnimal
 	 * Menambahkan animal ke dalam array of animal
 	 * @param animal jenis animal yang ingin dimasukkan ke dalam Cage
