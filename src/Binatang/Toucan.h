@@ -13,7 +13,7 @@ class Toucan : public AirAnimal
 	public:
 		/**
 	 	* @brief Constructor.
-	 	* Menciptakan Tiger.
+	 	* Menciptakan Toucan.
 	 	*/
 		Toucan(int x, int y, int id);
 		/**

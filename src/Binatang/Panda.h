@@ -13,7 +13,7 @@ class Panda : public LandAnimal
 	public:
 		/**
 	 	* @brief Constructor.
-	 	* Menciptakan Tiger.
+	 	* Menciptakan Panda.
 	 	*/
 		Panda(int x, int y, int id);
 		/**

@@ -13,7 +13,7 @@ class Penguin : public LWAnimal
 	public:
 		/**
 	 	* @brief Constructor.
-	 	* Menciptakan Tiger.
+	 	* Menciptakan Penguin.
 	 	*/
 		Penguin(int x, int y, int id);
 		/**

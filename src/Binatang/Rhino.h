@@ -13,7 +13,7 @@ class Rhino : public LandAnimal
 	public:
 		/**
 	 	* @brief Constructor.
-	 	* Menciptakan Tiger.
+	 	* Menciptakan Rhino.
 	 	*/
 		Rhino(int x, int y, int id);
 		/**
