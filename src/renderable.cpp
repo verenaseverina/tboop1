@@ -9,13 +9,13 @@ void Renderable::Render(Zoo& virtual_zoo)
     {
       if (IsThereAnimal(virtual_zoo, i, j) != -999)
       {
-	    int idx = IsThereAnimal(virtual_zoo, i, j);
-	    int an_idx = FindAnimal(virtual_zoo,idx,i,j);
-	    cout << virtual_zoo.GetCages()[idx].GetAnimal()[an_idx]->GetContent();
+	      int idx = IsThereAnimal(virtual_zoo, i, j);
+	      int an_idx = FindAnimal(virtual_zoo,idx,i,j);
+	      cout << virtual_zoo.GetCages()[idx].GetAnimal()[an_idx]->GetContent();
       }
       else
       {
-	    cout << virtual_zoo.GetMap()[i][j]->GetCellContent();
+	      cout << virtual_zoo.GetMap()[i][j]->GetCellContent();
       }
     }
     cout << endl;
