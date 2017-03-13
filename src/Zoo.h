@@ -12,32 +12,80 @@
 class Zoo
 {
 public:
-	//Constructor Zoo
+	/**
+	 * @brief Constructor.
+	 * Menginisialisasi map dan cage.
+	 */
 	Zoo();
 	
-	Zoo(const Zoo&);
+	/**
+	 * @brief Copy Constructor.
+	 * Membuat salinan dari Zoo lain ke objek
+	 * @param z adalah Zoo yang hendak disalin
+	 */	
+	Zoo(const Zoo& z);
 	
-	&Zoo operator= (Zoo&);
 	
+	/**
+     * @brief Overloading Operator "="
+     * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit wise
+	 * @param z adalah Zoo yang hendak disalin
+	 */
+	Zoo& operator= (Zoo& z);
+	
+	/**
+     * @brief Destructor
+     * Melakukan dealokasi pada cage dan map
+     */ 
 	~Zoo();
 	
+	/**
+	 * @brief Method GetAllCage
+     * Mengisi semua cage dari input state
+	 * @param s adalah kelas state yang berisi map zoo 
+	 */
 	void GetAllCage(State& s);
 	
+	/**
+	 * @brief Method GetCage
+	 * Mengisi sebuah cage dengan pendekatan BFS 
+	 * @param h adalah koordinat awal habitat
+	 */
 	vector<Habitat> GetCage(Habitat h);
 	
+	/**
+	 * @brief Method Incage
+	 * Mengeluarkan output apakah sebuah cage telah dikunjungi
+	 * @param v adalah kumpulan habitat yang telah dikunjungi
+	 * @param h adalah habitat yang ingin dilakukan pengecekan
+	 */
 	bool InCage(vector<Habitat> &v, Habitat h);
 	
+	/**
+	 * @brief Method Incage
+	 * Mengeluarkan output false karena facility bukan habitat
+	 * @param v adalah kumpulan habitat yang telah dikunjungi
+	 * @param f adalah facility yang ingin dilakukan pengecekan
+	 */
 	bool InCage(vector<Habitat> &v, Facility f);
 	
+	/**
+	 * @brief Method GetHeight
+	 * Mengembalikan tinggi dari zoo
+	 */
 	int GetHeight();
 	
+	/**
+	 * @brief Method GetWidth
+	 * Mengembalikan lebar dari zoo
+	 */
 	int GetWidth();
 	
 	//Elemen constructor
 	//Pindahin semua State ke map
 private:
 	vector<Cage> cages;
-	Cell** map;
+	Cell*** map;
 	int height;
 	int width;
 }

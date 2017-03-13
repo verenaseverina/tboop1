@@ -42,7 +42,7 @@ public:
 
 	/**
 	 * @brief Overloading Operator "="
-	 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit size
+	 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit wise
 	 * @param c adalah Cage yang hendak disalin
 	 */
 	Cage& operator=(const Cage& c);
