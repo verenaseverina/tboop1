@@ -3,35 +3,38 @@ using namespace std;
 
 void Renderable::Render(Zoo& virtualzoo)
 {
-
 	for (int i = 0; i < virtualzoo.GetHeight(); i++)
 	{
 		for (int j = 0; j < virtualzoo.GetWidth(); j++)
 		{
-			if (IsThereAnimal(virtualzoo,))
+			if (IsThereAnimal(virtualzoo, i, j) !+ -999)
 			{
-				//print animalnya di sini;
+				int idx = IsThereAnimal(virtualzoo, i, j);
+				int anidx = FindAnimal(virtualzoo,idx,i,j);
+				cout << virtualzoo.cages[idx].GetAnimal()[anidx]->GetContent();
 			}
 			else
 			{
-				cout << map[i][j].GetContent();
+				cout << virtualzoo.GetMap()[i][j].GetContent();
 			}
 		}
 		cout << endl;
 	}
 }
 
-bool Renderable::IsThereAnimal(Zoo& virtualzoo, int x, int y)
+int Renderable::IsThereAnimal(Zoo& virtualzoo, int x, int y)
 {
 	int i = 0, j = 0;
 	bool found = false;
+	int cage = -999;
 	while ((i < virtualzoo.cages.size()) && (!found))
 	{
-		while ((j < cages[i].GetSize()) && (!found))
+		while ((j < virtualzoo.cages[i].GetSize()) && (!found))
 		{
-			if ((cages[i].GetAnimal()[j]->GetX() == x) && (cages[i].GetAnimal()[j]->GetY() == y))
+			if ((virtualzoo.cages[i].GetAnimal()[j]->GetX() == x) && (virtualzoo.cages[i].GetAnimal()[j]->GetY() == y))
 			{
 				found = true;
+				cage = i;
 			}
 			else
 			{
@@ -40,4 +43,25 @@ bool Renderable::IsThereAnimal(Zoo& virtualzoo, int x, int y)
 		}
 		i++;
 	}
+
+	return cage;
+}
+
+int Renderable::FindAnimal(Zoo& virtualzoo, int i, int x, int y)
+{
+	int k = 0;
+	bool found = false;
+	while ((k < virtualzoo.cages[i].GetSize()) && (!found))
+	{
+		if ((virtualzoo.cages[i].GetAnimal()[k]->GetX() == x) && (virtualzoo.cages[i].GetAnimal()[k]->GetY() == y))
+		{
+			found = true;
+		}
+		else
+		{
+			k++;
+		}
+	}
+
+	int k;
 }
