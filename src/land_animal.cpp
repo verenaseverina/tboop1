@@ -3,25 +3,25 @@
 
 LandAnimal::LandAnimal(int x, int y,int id) : Animal(x,y,id)
 {
-	hab=new char[size];
-	hab[0]='x';
+  hab=new char[size];
+  hab[0]='x';
 }
 
 LandAnimal::~LandAnimal()
 {
-	delete [] hab;
+  delete [] hab;
 }
 
 LandAnimal& LandAnimal::operator=(const LandAnimal& a)
 {
-	Animal::operator=(a);
-	delete [] hab;
-	hab=new char[size];
-	hab[0]='^';
-	return *this;
+  Animal::operator=(a);
+  delete [] hab;
+  hab=new char[size];
+  hab[0]='^';
+  return *this;
 }
 
 int LandAnimal::GetSize()
 {
-	return size;
+  return size;
 }

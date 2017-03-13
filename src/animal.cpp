@@ -1,60 +1,69 @@
 #include "animal.h"
 
 Animal::Animal(int _x,int _y, int id){
-    x = _x;
-    y = _y;
-    cage_id = id;
+  x = _x;
+  y = _y;
+  cage_id = id;
 }
 
 Animal& Animal::operator=(const Animal& a){
-    x= a.x;
-    y = a.y;
-    cage_id = a.cage_id;
-	return *this;
+  x= a.x;
+  y = a.y;
+  cage_id = a.cage_id;
+  return *this;
 }
 
 void Animal::move(int dir){
-    switch(dir){
+  switch(dir)
+  {
     case 1: //top
-        y -= 1;
-        break;
-    case 2: //right
-        x += 1;
-        break;
-    case 3: //down
-        y += 1;
-        break;
-    case 4: //left
-        x -= 1;
-        break;
+    {
+      y -= 1;
+    break;
     }
+    case 2: //right
+    {
+      x += 1;
+      break;
+    }
+    case 3: //down
+    {
+      y += 1;
+      break;
+    }
+    case 4: //left
+    {
+      x -= 1;
+      break;
+    }
+  }
 }
 
 int Animal::GetID()
 {
-    return cage_id;
+  return cage_id;
 }
 
 int Animal::GetX()
 {
-    return x;
+  return x;
 }
 
 int Animal::GetY()
 {
-    return y;
+  return y;
 }
 
 bool Animal::GetTame()
 {
-    return is_tame;
+  return is_tame;
 }
 
 char* Animal::GetHab()
 {
-    return hab;
+  return hab;
 }
 
 char Animal::GetContent(){
-	return content;
+  return content;
 }

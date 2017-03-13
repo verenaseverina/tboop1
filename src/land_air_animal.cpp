@@ -3,27 +3,27 @@
 
 LAAnimal::LAAnimal(int x, int y,int id) : Animal(x,y,id)
 {
-	hab=new char[size];
-	hab[0]='^';
-	hab[1]='`';
+  hab=new char[size];
+  hab[0]='^';
+  hab[1]='`';
 }
 
 LAAnimal::~LAAnimal()
 {
-	delete [] hab;
+  delete [] hab;
 }
 
 LAAnimal& LAAnimal::operator=(const LAAnimal& a)
 {
-	Animal::operator=(a);
-	delete [] hab;
-	hab=new char[size];
-	hab[0]='x';
-	hab[1]='o';
-	return *this;
+  Animal::operator=(a);
+  delete [] hab;
+  hab=new char[size];
+  hab[0]='x';
+  hab[1]='o';
+  return *this;
 }
 
 int LAAnimal::GetSize()
 {
-	return size;
+  return size;
 }

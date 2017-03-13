@@ -20,6 +20,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = 0;
                 what_i_eat = 'c';
                 is_tame = false;
+                break;
             }
         case 'B' :
             {
@@ -33,6 +34,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = 38*my_weight/100;
                 what_i_eat = 'h';
                 is_tame = true;
+                break;
             }
         case 'A' :
             {              
@@ -46,6 +48,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = 5*my_weight/100;
                 what_i_eat = 'h';
                 is_tame = true;
+                break;
             }
         case 'R' :
             {
@@ -59,6 +62,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = 7.23*my_weight/100;
                 what_i_eat = 'h';
                 is_tame = false;
+                break;
             }
         case 'D' :
             {
@@ -72,6 +76,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = 0.35 * my_weight/100;
                 what_i_eat = 'h';
                 is_tame = true;
+                break;
             }
         case 'L' :
             {
@@ -85,6 +90,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = (0.04 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.09-0.04)))) * my_weight;
                 what_i_eat = 'c';
                 is_tame = true;
+                break;
             }
         case 'W' :
             {
@@ -98,6 +104,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = 0.0667 * my_weight;
                 what_i_eat = 'c';
                 is_tame = true;
+                break;
             }
         case 'S' :
             {
@@ -111,6 +118,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = 0.0667 * my_weight;
                 what_i_eat = 'c';
                 is_tame = false;
+                break;
             }
         case 'K' :
             {
@@ -124,6 +132,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = my_weight;
                 what_i_eat = 'o';
                 is_tame = true;
+                break;
             }
         case 'E' :
             {
@@ -136,6 +145,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 my_weight = 4 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(6-4)));
                 how_much_i_eat = 0.4535*my_weight/4;
                 what_i_eat = 'c';
+                break;
             }
         case 'T' :
             {
@@ -149,6 +159,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = 0.5*my_weight;
                 what_i_eat = 'o';
                 is_tame = true;
+                break;
             }
         case 'P' :
             {
@@ -163,6 +174,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = 0.9*my_weight/27;
                 what_i_eat = 'c';
                 is_tame = true;
+                break;
             }
         case 'C' :
             {
@@ -177,6 +189,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = 2*my_weight/700;
                 what_i_eat = 'c';
                 is_tame = false;
+                break;
             }
         case 'N' :
             {
@@ -191,6 +204,7 @@ Animal::Animal(int _x,int _y, int id,char con){
                 how_much_i_eat = 40*my_weight/2400;
                 what_i_eat = 'h';
                 is_tame = true;
+                break;
             }
     }
 }

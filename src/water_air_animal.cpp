@@ -3,27 +3,27 @@
 
 WAAnimal::WAAnimal(int x, int y,int id) : Animal(x,y,id)
 {
-	hab=new char[size];
-	hab[0]='#';
-	hab[1]='o';
+  hab=new char[size];
+  hab[0]='#';
+  hab[1]='o';
 }
 
 WAAnimal::~WAAnimal()
 {
-	delete [] hab;
+  delete [] hab;
 }
 
 WAAnimal& WAAnimal::operator=(const WAAnimal& a)
 {
-	Animal::operator=(a);
-	delete [] hab;
-	hab=new char[size];
-	hab[0]='~';
-	hab[1]='`';
-	return *this;
+  Animal::operator=(a);
+  delete [] hab;
+  hab=new char[size];
+  hab[0]='~';
+  hab[1]='`';
+  return *this;
 }
 
 int WAAnimal::GetSize()
 {
-	return size;
+  return size;
 }
