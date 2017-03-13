@@ -65,6 +65,18 @@ Cage& Cage::operator=(const Cage& c)
 	return *this;
 }
 
+Cage& operator=(const vector<Habitat>& v)
+{
+	delete [] h;
+	h = new Habitat[v.size()];
+	for (i = 0; i < size; i++)
+	{
+		h[i] = v[i];
+	}
+
+	return *this;
+}
+
 void Cage::addAnimal(char animal, int i)
 {	
 	int posid;

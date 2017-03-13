@@ -50,6 +50,13 @@ public:
 	Cage& operator=(const Cage& c);
 
 	/**
+	 * @brief Overloading Operator "="
+	 * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit wise
+	 * @param v adalah vektor yang hendak disalin
+	 */
+	Cage& operator=(const vector<Habitat>& v);
+
+	/**
 	 * @brief Method addAnimal
 	 * Menambahkan animal ke dalam array of animal
 	 * @param animal jenis animal yang ingin dimasukkan ke dalam Cage
