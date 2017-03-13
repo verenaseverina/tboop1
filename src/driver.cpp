@@ -2,7 +2,6 @@
 
 int main(){
 	Zoo z;
-	State s;
-	cout << z.GetWidth() << endl;
+	cout << z.GetCages().size() << endl << z.GetHeight() << endl;
 	return 0;
 }

@@ -63,6 +63,8 @@ public:
 
 	char* GetHab();
 
+	virtual int GetSize() = 0;
+
 	virtual char GetContent() = 0;
 
 protected:

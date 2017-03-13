@@ -17,7 +17,7 @@ LandAnimal& LandAnimal::operator=(const LandAnimal& a)
 	Animal::operator=(a);
 	delete [] hab;
 	hab=new char[size];
-	hab[0]='x';
+	hab[0]='^';
 	return *this;
 }
 

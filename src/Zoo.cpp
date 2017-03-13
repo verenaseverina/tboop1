@@ -9,13 +9,13 @@ using namespace std;
 		height=s.GetHeight();
 		width=s.GetWidth();
 		//buat matriks cell kosong
-		map = new Cell**[width];
-		for(int i=0;i<width;i++)
-			map[i] = new Cell*[height];
+		map = new Cell**[height];
+		for(int i=0;i<height;i++)
+			map[i] = new Cell*[width];
 		//spesifikasi matriks cell
-		for(int i=0;i<width;i++)
+		for(int i=0;i<height;i++)
 		{
-			for(int j=0;j<height;j++)
+			for(int j=0;j<width;j++)
 			{
 				if(IsHabitat(smap[i][j]))
 					map[i][j] = new Habitat(smap[i][j],i,j);
@@ -27,8 +27,8 @@ using namespace std;
 	}
 
 	Zoo::~Zoo(){
-		for(int i=0;i<width;i++){
-			for(int j=0;j<height;j++){
+		for(int i=0;i<height;i++){
+			for(int j=0;j<width;j++){
 				delete map[i][j];			
 			}
 			delete map[i];		
@@ -41,9 +41,9 @@ using namespace std;
 		vector<vector<Habitat>> cagebuffer;
 		char** smap=s.GetMap();
 		int n=0;
-		for(int i=0;i<width;i++)
+		for(int i=0;i<height;i++)
 		{
-			for(int j=0;j<height;j++)
+			for(int j=0;j<width;j++)
 			{
 				if(IsHabitat(smap[i][j]))
 				{
@@ -153,15 +153,16 @@ using namespace std;
 	
 	bool Zoo::IsHabitat(char c)
 	{
-		return(c=='@'||c=='~'||c=='+');
+		return(c=='^'||c=='~'||c=='`');
 	}
 	bool Zoo::IsFacility(char c)
 	{
 		return(c=='#'||c=='_'||c=='R');
 	}
-/*	void Zoo::MasukkanAnimal()
+	void Zoo::MasukkanAnimal()
 	{
-		cout<<"Nama-Nama Binatang dan kodenya"
+		int size = cages.size();
+		cout<<"Nama-Nama Binatang dan kodenya" << endl;
 		cout<<"- Tiger (H)"<<endl;
 		cout<<"- Panda (B)"<<endl;
 		cout<<"- Anoa (A)"<<endl;
@@ -182,84 +183,84 @@ using namespace std;
 		cout<<"Masukkan kode binatang yang ingin dimasukkan kedalam kandang : "<<endl;
 		cin>>inputuser;
 
-		bool* arr= new bool [CageSize];
+		bool* arr= new bool [size];
 		arr={false};
 		switch(inputuser)
 		{
 			case 'H' :
 				{
 					Tiger H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'B' :
 				{
 					Panda H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'A' :
 				{
 					Anoa H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'R' :
 				{
 					Rhino H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'D' :
 				{
 					Kangaroo H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'L' :
 				{
 					Dolphin H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'W' :
 				{
 					Whale H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'S' :
 				{
 					Shark H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'K' :
 				{
 					Kelelawar H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'E' :
 				{
 					ElangB H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'T' :
 				{
 					Toucan H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'P' :
 				{
 					Penguin H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'C' :
 				{
 					Crocodile H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 			case 'N' :
 				{
 					Hippopotamus H(-1,-1,-1);
-					CekCage(arr,H);
+					CekCage(arr,&H);
 				}
 		}
 
-		cout>>"Kandang yang tersedia :">>endl;
-		for (int i=0;i<CageSize;i++)
+		cout<<"Kandang yang tersedia :"<<endl;
+		for (int i=0;i<size;i++)
 		{
 			if (arr[i])
 			{
@@ -267,7 +268,7 @@ using namespace std;
 			}
 		}
 		cout<<endl;
-		int inputkandang;
+		int x;
 		cout<<"Masukkan kode binatang yang ingin dimasukkan kedalam kandang : "<<endl;
 		cout<<"(Untuk kandang bebas, masukkan -1)"<<endl;
 		cout<<"(Untuk membatalkan, masukkan -2)"<<endl;
@@ -276,7 +277,7 @@ using namespace std;
 			cin>>x;
 			if((arr[x]==false)&&(x>=size)&&(x!=-1)&&(x!=-2))
 			{
-				cout>>"Input salah, masukkan kembali input :"<<endl;
+				cout<<"Input salah, masukkan kembali input :"<<endl;
 			}
 		}while((arr[x]==false)&&(x>=size)&&(x!=-1)&&(x!=-2));
 
@@ -285,31 +286,35 @@ using namespace std;
 			srand(time(NULL));
 			do
 			{
-				x = rand() % CageSize;
+				x = rand() % size;
 			} while (arr[x]==false);
 		}
-
-		Cage[x].addAnimal(inputuser,x);
+		if (x!=-2)
+		{
+			cages[x].addAnimal(inputuser,x);
+		}
+		delete [] arr;
 	}
 
-	void Zoo::CekCage(int* arr,Animal* H)
+	void Zoo::CekCage(bool* arr,Animal* H)
 	{
-		for (int j=0;j<H.GetSize();j++)
+		for (int j=0;j<(*H).GetSize();j++)
 		{				
 			int i=0;
-			while(i<size)
+			while(i<(signed)cages.size())
 			{
-				if ((arr[i]==false)&&(H.Hab[j]==Cage.Hab().GetContent()))
+				if ((arr[i]==false)&&((*H).GetHab()[j]==cages[i].GetAnimal()[0][0].GetHab()[j]))
 				{					
-					if(Cage[i].isEmpty())
+					if(cages[i].isEmpty())
 					{
 						arr[i]=true;
 					}
-					else if((!Cage[i].isFull())&&(H.GetTame()==Cage[i].Animal().GetTame()))
+					else if((!cages[i].isFull())&&((*H).GetTame()==cages[i].GetAnimal()[0][0].GetTame()))
 					{
 						arr[i]=true;
 					}
 				}
+				i++;
 			}
 		}
-	}*/
+	}
