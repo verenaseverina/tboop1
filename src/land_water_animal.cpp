@@ -15,8 +15,8 @@ LWAnimal& LWAnimal::operator=(const LWAnimal& a) {
   Animal::operator=(a);
   delete [] hab;
   hab = new char[size];
-  hab[0] = 'x';
-  hab[1] = '#';
+  hab[0] = '^';
+  hab[1] = '~';
   return *this;
 }
 

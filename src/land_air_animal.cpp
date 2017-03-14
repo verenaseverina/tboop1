@@ -15,8 +15,8 @@ LAAnimal& LAAnimal::operator=(const LAAnimal& a) {
   Animal::operator=(a);
   delete [] hab;
   hab = new char[size];
-  hab[0] = 'x';
-  hab[1] = 'o';
+  hab[0] = '^';
+  hab[1] = '`';
   return *this;
 }
 

@@ -58,8 +58,8 @@ void Zoo::GetAllCage(State& s) {
     }
   }
   for(int i=0;i<(signed)cage_buffer.size();i++) {
-    Cage cgbuf(cage_buffer.size(),cage_buffer[i]);
-    cages.push_back(cgbuf);
+    Cage* cgbuf = new Cage(cage_buffer.size(),cage_buffer[i]);
+    cages.push_back(*cgbuf);
   }
 }
 vector<Habitat> Zoo::GetCage(Cell* hab) {
@@ -169,7 +169,9 @@ void Zoo::MasukkanAnimal() {
   cin>>input_user;
 
   bool* arr= new bool [size];
-  arr={false};
+  for(int i = 0; i < size; i++) {
+    arr[i] = false;
+  }
   switch(input_user) {
     case 'H' : {
 	      Tiger H(-1,-1,-1);
@@ -245,6 +247,7 @@ void Zoo::MasukkanAnimal() {
 
   cout<<"Kandang yang tersedia :"<<endl;
   for (int i=0;i<size;i++) {
+    //cout << arr[i] << endl;
     if (arr[i])
     {
       cout<<i<<endl;
@@ -255,14 +258,15 @@ void Zoo::MasukkanAnimal() {
   cout<<"Masukkan kode binatang yang ingin dimasukkan kedalam kandang : "<<endl;
   cout<<"(Untuk kandang bebas, masukkan -1)"<<endl;
   cout<<"(Untuk membatalkan, masukkan -2)"<<endl;
-  do {
+  cin >> x;  
+/*do {
     cin>>x;
-    if((arr[x]==false)&&(x>=size)&&(x!=-1)&&(x!=-2))
+    if((arr[x]==false)&&(x>=size)&&(x<-2))
     {
       cout<<"Input salah, masukkan kembali input :"<<endl;
     }
-  }while((arr[x]==false)&&(x>=size)&&(x!=-1)&&(x!=-2));
-
+  }while((arr[x]==false)&&(x>=size)&&(x<-2));
+*/
   if (x==-1) {
     srand(time(NULL));
     do
@@ -273,14 +277,14 @@ void Zoo::MasukkanAnimal() {
   if (x!=-2) {
     cages[x].AddAnimal(input_user,x);
   }
-  delete [] arr;
+  delete arr;
 }
 
 void Zoo::CekCage(bool* arr,Animal* H) {
   for (int j=0;j<(*H).GetSize();j++) {				
     int i=0;
     while(i<(signed)cages.size()) {
-      if ((arr[i]==false)&&((*H).GetHab()[j]==cages[i].GetAnimal()[0][0].GetHab()[j])) {					
+      if ((arr[i]==false)&&((*H).GetHab()[j]==cages[i].GetHabitat()[0].GetCellContent())) {					
         if(cages[i].IsEmpty()) {
           arr[i]=true;
         }

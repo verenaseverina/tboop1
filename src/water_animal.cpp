@@ -13,7 +13,7 @@ WaterAnimal& WaterAnimal::operator=(const WaterAnimal& a) {
   Animal::operator=(a);
   delete [] hab;
   hab = new char[size];
-  hab[0] = '#';
+  hab[0] = '~';
   return *this;
 }
 

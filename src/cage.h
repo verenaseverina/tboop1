@@ -76,7 +76,12 @@ public:
    * @return array of pointer to Animal
    */
   Animal** GetAnimal();
-	
+  /**
+   * @brief Getter array of habitat
+   * Mengambil array of habitat
+   * @return array of habitat
+   */
+  Habitat* GetHabitat();
   /**
    * @brief Method addAnimal
    * Menambahkan animal ke dalam array of animal
@@ -112,6 +117,6 @@ private:
   Habitat* h;
   Animal** a;
   int size;
-  static int neff;
+  int neff;
 };
 #endif
