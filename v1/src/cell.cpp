@@ -42,6 +42,6 @@ int Cell::GetCellCol() {
   return cell_id_col;
 }
 
-void set_true(int n){
+void Cell::set_true(int n){
   n = 0;
 }
