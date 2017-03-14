@@ -17,13 +17,13 @@ class Facility : public Cell{
 	 *  Mengembalikan apakah facility = entrance
 	 *  @return boolean apakah facility entrance
 	 */
-	bool is_entrance();
+	bool IsEntrance();
 	/**
 	 *  @brief Getter Exit
 	 *  Mengembalikan apakah facility = exit
 	 *  @return boolean apakah facility exit
 	 */
-	bool is_exit();
+	bool IsExit();
 	/**
 	 *  @brief Set true untuk entrance atau exit
 	 *  Memberikan nilai true untuk entrance apabila parameter 0, exit apabila parameter 1

@@ -4,11 +4,11 @@ Facility::Facility(char _content,int i, int j) : Cell(i,j) {
   this->content = _content;  
 }
 
-bool Facility::is_entrance() {
+bool Facility::IsEntrance() {
   return(entrance);
 }
 
-bool Facility::is_exit() {
+bool Facility::IsExit() {
   return(exit);
 }
 

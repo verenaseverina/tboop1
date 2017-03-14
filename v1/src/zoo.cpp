@@ -173,9 +173,7 @@ void Zoo::MasukkanAnimal() {
   cin>>input_user;
 
   bool* arr= new bool [size];
-  for (int i=0; i<size ;i++) {
-    arr[i]=false;
-  }
+  arr={false};
   switch(input_user) {
     case 'H' : {
 	      Tiger H(-1,-1,-1);
@@ -263,12 +261,11 @@ void Zoo::MasukkanAnimal() {
   cout<<"(Untuk membatalkan, masukkan -2)"<<endl;
   do {
     cin>>x;
-    if(((x>=size)&&(x<-2))||(arr[x]==false))
+    if((arr[x]==false)&&(x>=size)&&(x!=-1)&&(x!=-2))
     {
       cout<<"Input salah, masukkan kembali input :"<<endl;
-      x=-3;
     }
-  }while (x==-3);
+  }while((arr[x]==false)&&(x>=size)&&(x!=-1)&&(x!=-2));
 
   if (x==-1) {
     srand(time(NULL));
@@ -301,5 +298,77 @@ void Zoo::CekCage(bool* arr,Animal* H) {
 }
 
 void Zoo::Tour() {
-	
+  vector<Facility> ent;
+  vector<Facility> ex;
+  for(int i=0;i<width;i++)
+  {
+	if(map[i][0].IsEntrance())
+	  ent.push_back(map[i][0]);
+    if(map[i][width-1].IsExit())
+	  ex.push_back(map[i][width-1]);
+  }
+  for(int j=0;j<height;j++)
+  {
+	if(map[0][j].IsEntrance()) 
+	  ent.push_back(map[0][j]);
+    if(map[height-1][j].IsExit())
+	  ex.push_back(map[height-1][j]);
+  }
+  srand(time(NULL));
+  int randidx;
+  Facility player = ent[randidx%4];
+  int* pilihan = SelectTour();
+  for(int k = 0;k < cages.size();k++)
+  {
+	if(pilihan[k] == 1)
+	{
+	  GoTour(player,k);  	
+	}		
+  }
 }
+
+int* Zoo::SelectTour() {
+  int* pilihan = new int [cages.size()]
+  for(int i = 0;i < cages.size();i++)
+	pilihan[i]=0;
+  cout << "Masukkan pilihan kandang yang akan dikunjungi:" << endl;
+  cout << "Masukkan 0 untuk mengakhiri." << endl;
+  int n = 0
+  int pil;
+  while(n <= cages.size() && pil != 0)
+  {
+	cin >> pil;
+	if(pil < cages.size()+1 && pil > 0)
+	{
+	  if(pilihan[pil] == 1)
+		cout << "Kandang sudah dipilih untuk dikunjungi." << endl;  
+	  else 
+	  {
+		pilihan[pil-1]=1;
+		n++;
+	  }
+	}
+	else if(pil != 0)
+	{
+	  cout << "Tidak ada kandang dengan id tersebut." << endl;
+	}
+  }
+  cout << "Kandang yang akan dikunjungi adalah: ";
+  for(int i = 0;i < cages.size();i++)
+  {
+	if(pilihan[i] == 1)
+      cout << i;
+	if(i < cages.size() - 1)
+	  cout << ", ";
+	else
+	  cout << ".";
+  }
+  return(pilihan);
+}
+
+void Zoo::GoTour(Facility p,int q)
+{
+  GetRoute();	
+}
+
+vector<>
