@@ -48,12 +48,6 @@ public:
    */
   char GetContent();
   /**
-   * @brief Getter interact
-   * Mengambil interaksi yang dihasilkan oleh Animal
-   * @return interaksi yang dihasilkan oleh Animal
-   */
-  string Interact();
-  /**
    * @brief Getter my_weight
    * Mengambil berat dari Animal
    * @return berat dari Animal
