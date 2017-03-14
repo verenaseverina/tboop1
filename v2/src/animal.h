@@ -11,7 +11,7 @@ public:
    * @brief Constructor.
    * Menciptakan Animal kosong.
    */
-  Animal(int _x, int _y, int id);
+  Animal(int _x, int _y, int id,char con);
   /**
    * @brief Overloading Operator "="
    * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit wise
@@ -23,7 +23,7 @@ public:
   * @brief Function interact
   * Interact pada binatang berupa string
   */
-  string interact();
+  string Interact();
   /**
    * @brief Procedure move
    * Pergerakan binatang dari point ke point yang dituju berdasarkan int yang dipilih
@@ -72,5 +72,6 @@ protected:
   char what_i_eat;
   bool is_tame;
   char* hab;
+  int size;
 };
 #endif

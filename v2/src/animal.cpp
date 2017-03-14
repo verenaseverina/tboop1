@@ -6,7 +6,7 @@ Animal::Animal(int _x,int _y, int id,char con){
   cage_id = id;
   content = con;
 
-  switch(animal) {
+  switch(content) {
     case 'H' : {
         size = 1;
         hab = new char[size];
@@ -242,7 +242,7 @@ char Animal::GetContent() {
   return content;
 }
 
-string Animal::interact() {
+string Animal::Interact() {
   return this->interaction;
 }
 
