@@ -95,8 +95,6 @@ public:
    *  @details More details
    */
   void CekCage(bool*, Animal*);
-
-  void apaaja();
 private:
   vector<Cage> cages;
   Cell*** map;

@@ -1,6 +1,7 @@
 //File: zoo.cpp
 #include <iostream>
 #include "zoo.h"
+#include "
 using namespace std;
 Zoo::Zoo() {
   State s;
@@ -20,6 +21,10 @@ Zoo::Zoo() {
       }
       else if(IsFacility(smap[i][j])) {
         map[i][j] = new Facility(smap[i][j],i,j);
+		if(i==0||j==0)
+		  map[i][j].set_true(0);
+	    else if(i==height||j==width)
+		  map[i][j].set_true(1);
       }
     }
   }
@@ -58,8 +63,8 @@ void Zoo::GetAllCage(State& s) {
     }
   }
   for(int i=0;i<(signed)cage_buffer.size();i++) {
-    Cage* cgbuf = new Cage(cage_buffer.size(),cage_buffer[i]);
-    cages.push_back(*cgbuf);
+    Cage cgbuf(cage_buffer.size(),cage_buffer[i]);
+    cages.push_back(cgbuf);
   }
 }
 vector<Habitat> Zoo::GetCage(Cell* hab) {
@@ -169,9 +174,7 @@ void Zoo::MasukkanAnimal() {
   cin>>input_user;
 
   bool* arr= new bool [size];
-  for(int i = 0; i < size; i++) {
-    arr[i] = false;
-  }
+  arr={false};
   switch(input_user) {
     case 'H' : {
 	      Tiger H(-1,-1,-1);
@@ -247,7 +250,6 @@ void Zoo::MasukkanAnimal() {
 
   cout<<"Kandang yang tersedia :"<<endl;
   for (int i=0;i<size;i++) {
-    //cout << arr[i] << endl;
     if (arr[i])
     {
       cout<<i<<endl;
@@ -258,15 +260,14 @@ void Zoo::MasukkanAnimal() {
   cout<<"Masukkan kode binatang yang ingin dimasukkan kedalam kandang : "<<endl;
   cout<<"(Untuk kandang bebas, masukkan -1)"<<endl;
   cout<<"(Untuk membatalkan, masukkan -2)"<<endl;
-  cin >> x;  
-/*do {
+  do {
     cin>>x;
-    if((arr[x]==false)&&(x>=size)&&(x<-2))
+    if((arr[x]==false)&&(x>=size)&&(x!=-1)&&(x!=-2))
     {
       cout<<"Input salah, masukkan kembali input :"<<endl;
     }
-  }while((arr[x]==false)&&(x>=size)&&(x<-2));
-*/
+  }while((arr[x]==false)&&(x>=size)&&(x!=-1)&&(x!=-2));
+
   if (x==-1) {
     srand(time(NULL));
     do
@@ -284,7 +285,7 @@ void Zoo::CekCage(bool* arr,Animal* H) {
   for (int j=0;j<(*H).GetSize();j++) {				
     int i=0;
     while(i<(signed)cages.size()) {
-      if ((arr[i]==false)&&((*H).GetHab()[j]==cages[i].GetHabitat()[0].GetCellContent())) {					
+      if ((arr[i]==false)&&((*H).GetHab()[j]==cages[i].GetAnimal()[0][0].GetHab()[j])) {					
         if(cages[i].IsEmpty()) {
           arr[i]=true;
         }
@@ -295,4 +296,8 @@ void Zoo::CekCage(bool* arr,Animal* H) {
       i++;
     }
   }
+}
+
+void Zoo::Tour() {
+	
 }

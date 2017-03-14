@@ -12,7 +12,27 @@ class Facility : public Cell{
       *Mengisi content pada Cell
     */
     Facility(char _content,int x, int y);
-
+	/**
+	 *  @brief Getter Entrance
+	 *  Mengembalikan apakah facility = entrance
+	 *  @return boolean apakah facility entrance
+	 */
+	bool is_entrance();
+	/**
+	 *  @brief Getter Exit
+	 *  Mengembalikan apakah facility = exit
+	 *  @return boolean apakah facility exit
+	 */
+	bool is_exit();
+	/**
+	 *  @brief Set true untuk entrance atau exit
+	 *  Memberikan nilai true untuk entrance apabila parameter 0, exit apabila parameter 1
+	 *  @param n seleksi entrance atau exit yang akan di set true
+	 */
+	void set_true(int n);
+  private:
+    bool entrance=false;
+	bool exit=false;
 };
 
 #endif
