@@ -6,8 +6,8 @@ Cell::Cell() {
   cell_id_col = -1;
 }
 
-Cell::Cell(int x, int y) {
-  content = '\0';
+Cell::Cell(char _content,int x, int y) {
+  content = _content;
   cell_id_row = x;
   cell_id_col = y;
 }
@@ -40,4 +40,11 @@ int Cell::GetCellRow() {
 
 int Cell::GetCellCol() {
   return cell_id_col;
+}
+
+void Cell::set_true(int n) {
+  if(n==0)
+	entrance=true;
+  else if(n==1)
+	exit=true;
 }

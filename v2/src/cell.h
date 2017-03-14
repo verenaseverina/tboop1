@@ -15,7 +15,7 @@ public:
    * @brief Constructor.
    * Menciptakan Cell kosong dengan parameter.
    */
-  Cell(int x, int y);
+  Cell(char _content,int x, int y);
 
   /**
    * @brief CopyConstructor.
@@ -53,10 +53,18 @@ public:
    * @return kolom dari Cell
    */
   int GetCellCol();
+   /**
+	 *  @brief Set true untuk entrance atau exit
+	 *  Memberikan nilai true untuk entrance apabila parameter 0, exit apabila parameter 1
+	 *  @param n seleksi entrance atau exit yang akan di set true
+	 */
+  void set_true(int n);
 
 protected:
   char content; // Untuk mengidentifikasi isi dari Cell
   int cell_id_row; // Untuk mengetahui posisi baris Cell pada matriks
   int cell_id_col; // Untuk mengetahui posisi kolom Cell pada matriks
+  bool entrance; //Untuk mengetahui apakah cell itu entrance
+  bool exit; //Untuk mengetahui apakah cell adalah exit
 };
 #endif

@@ -2,28 +2,8 @@
 
 #ifndef CAGE_H
 #define CAGE_H
-#include "habitat.h"
 #include "animal.h"
-#include "Binatang/tiger.h"
-#include "Binatang/panda.h"
-#include "Binatang/anoa.h"
-#include "Binatang/rhino.h"
-#include "Binatang/kangaroo.h"
-#include "Binatang/dolphin.h"
-#include "Binatang/whale.h"
-#include "Binatang/shark.h"
-#include "Binatang/kelelawar.h"
-#include "Binatang/elang_botak.h"
-#include "Binatang/toucan.h"
-#include "Binatang/penguin.h"
-#include "Binatang/crocodile.h"
-#include "Binatang/hippopotamus.h"
-#include "Binatang/ostrich.h"
-#include "Binatang/kasuari.h"
-#include "Binatang/kiwi.h"
-#include "Binatang/flying_fish.h"
-#include "Binatang/pelikan.h"
-#include "Binatang/cormorants.h"
+#include "cell.h"
 #include <math.h>
 #include <vector>
 
@@ -35,7 +15,7 @@ public:
    * @brief Constructor.
    * Menciptakan Cage kosong.
    */
-  Cage(int _size, vector<Habitat> &buf);
+  Cage(int _size, vector<Cell> &buf);
   /**
    * @brief CopyConstructor.
    * Membuat salinan dari Cage lain ke objek
@@ -57,7 +37,7 @@ public:
    * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit wise
    * @param v adalah vektor yang hendak disalin
    */
-  Cage& operator=(const vector<Habitat>& v);
+  Cage& operator=(const vector<Cell>& v);
   /**
    * @brief Getter size
    * Mengambil size dari Cage
@@ -75,7 +55,7 @@ public:
    * Mengambil array of habitat
    * @return array of habitat
    */
-  Habitat* GetHabitat();
+  Cell* GetHabitat();
   /**
    * @brief Getter neff
    * Mengambil neff dari array of pointer to Animal
@@ -110,7 +90,7 @@ public:
   bool IsEmpty();
 
 private:
-  Habitat* h;
+  Cell* h;
   Animal** a;
   int size;
   int neff;
