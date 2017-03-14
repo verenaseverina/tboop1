@@ -92,7 +92,7 @@ public:
    *  @param int* 
    *  @details More details
    */
-  void CekCage(bool*, Animal);
+  void CekCage(bool*, Animal*);
 private:
   vector<Cage> cages;
   Cell*** map;

@@ -7,9 +7,9 @@ int main(){
 	Zoo z;
 	int x;
     do {
-    	x==1;
+    	x = 1;
     	z.MasukkanAnimal();
-    } while (x==1);
+    } while (x == 1);
 	//r.Render(z);
     //cout << Cage::neff;
 	cout << z.GetCages().size() << endl << z.GetHeight() << endl;
