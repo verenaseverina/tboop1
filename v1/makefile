@@ -14,9 +14,6 @@ endif
 LD = g++ -Wall
 CC = g++ -Wall -std=c++11 -c
 
-docs:
-	doxygen ./Doxyfile
-
 MAIN = main
 all: $(MAIN)
 $(MAIN): $(OOBJS)
