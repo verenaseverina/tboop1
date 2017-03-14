@@ -10,7 +10,7 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'H' : {
         size = 1;
         hab = new char[size];
-        hab[0] = 'x';
+        hab[0] = '^';
 
         interaction = "Roooarrrr";
         srand(time(NULL));
@@ -23,7 +23,7 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'B' : {
         size = 1;
         hab = new char[size];
-        hab[0] = 'o';
+        hab[0] = '`';
                 
         interaction = "Mmmm";
         srand(time(NULL));
@@ -36,7 +36,7 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'A' : {              
         size = 1;
         hab = new char[size];
-        hab[0] = 'o';
+        hab[0] = '`';
 
         interaction = "Grrrr";
         srand(time(NULL));
@@ -49,7 +49,7 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'R' : {
         size = 1;
         hab = new char[size];
-        hab[0] = 'x';
+        hab[0] = '^';
                
         interaction = "Woooo";
         srand(time(NULL));
@@ -62,7 +62,7 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'D' : {
         size = 1;
         hab = new char[size];
-        hab[0] = 'x';
+        hab[0] = '^';
 
         interaction = "Jummpp";
         srand(time(NULL));
@@ -75,7 +75,7 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'L' : {
         size = 1;
         hab = new char[size];
-        hab[0] = '#';
+        hab[0] = '~';
 
         interaction = "Cuitttt";
         srand(time(NULL));
@@ -88,7 +88,7 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'W' : {
         size = 1;
         hab = new char[size];
-        hab[0] = '#';
+        hab[0] = '~';
 
         interaction = "Wet";
         srand(time(NULL));
@@ -101,7 +101,7 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'S' : {
         size = 1;
         hab = new char[size];
-        hab[0] = '#';
+        hab[0] = '~';
 
         interaction = "Wett";
         srand(time(NULL));
@@ -114,20 +114,20 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'K' : {
         size = 1;
         hab = new char[size];
-        hab[0] = 'o';
+        hab[0] = '`';
 
         interaction = "Kiiiaaa";
         srand(time(NULL));
         my_weight = 1.2 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(1.4-1.2)));
         how_much_i_eat = my_weight;
-        what_i_eat = 'o';
+        what_i_eat = '`';
         is_tame = true;
         break;
       }
     case 'E' : {
         size = 1;
         hab = new char[size];
-        hab[0] = 'o';
+        hab[0] = '`';
 
         interaction = "Kiiiaaa";
         srand(time(NULL));
@@ -139,21 +139,21 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'T' : {
         size = 1;
         hab = new char[size];
-        hab[0] = 'o';
+        hab[0] = '`';
 
         interaction = "Kwwaakk";
         srand(time(NULL));
         my_weight = 0.592 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(0.760-0.592)));
         how_much_i_eat = 0.5*my_weight;
-        what_i_eat = 'o';
+        what_i_eat = '`';
         is_tame = true;
         break;
       }
     case 'P' : {
         size = 2;
         hab = new char[size];
-        hab[0] = '#';
-        hab[1] = 'x';
+        hab[0] = '~';
+        hab[1] = '^';
 
         interaction = "Sqqqaaa";
         srand(time(NULL));
@@ -166,8 +166,8 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'C' : {
         size = 2;
         hab = new char[size];
-        hab[0] = 'x';
-        hab[1] = '#';
+        hab[0] = '^';
+        hab[1] = '~';
 
         interaction = "Rrrrr";
         srand(time(NULL));
@@ -180,8 +180,8 @@ Animal::Animal(int _x,int _y, int id,char con){
     case 'N' : {
         size = 2;
         hab = new char[size];
-        hab[0] = 'x';
-        hab[1] = '#';
+        hab[0] = '^';
+        hab[1] = '~';
 
         interaction = "Grooowwll";
         srand(time(NULL));

@@ -68,77 +68,16 @@ Cell* Cage::GetHabitat() {
 }
 void Cage::AddAnimal(char animal, int i) {  
   int pos_id = 0;
-/*  do {
+  do {
     srand(time(NULL));
     pos_id = rand() % size;
   } while (!ContainAnimal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol()));
-*/
+  cout<<"c"<<endl;
   neff++;
-  switch(animal) {
-    case 'H' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i,'H');
-      break;
-    }
-    case 'B' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'B');
-      break;
-    }
-    case 'A' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'A');
-      break;
-    }
-    case 'R' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'R');
-      break;
-    }
-    case 'D' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'D');
-      break;
-    }
-    case 'L' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'L');
-      break;
-    }
-    case 'W' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'W');
-      break;
-    }
-    case 'S' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'S');
-      break;
-    }
-    case 'K' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'K');
-      break;
-    }
-    case 'E' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'E');
-      break;
-    }
-    case 'T' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'T');
-      break;
-    }
-    case 'P' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'P');
-      break;
-    }
-    case 'C' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'C');
-      break;
-    }
-    case 'N' : {
-      a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i, 'N');
-      break;
-    }
-    //case '' :
-    //case '' :
-    //case '' :
-    //case '' :
-    //case '' :
-    //case '' :
-  }
+  
+  a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i,animal);
 }
+
 bool Cage::ContainAnimal(int x, int y) {
   bool found = false;
   int i = 0;
