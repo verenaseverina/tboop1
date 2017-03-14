@@ -114,25 +114,10 @@ public:
    */
   void UpdatePosition();
   /**
-   * @brief Method GetRightIdx
-   * Getter untuk index terkanan dari cage
+   * @brief Method InsideCage
+   * Mengecek apakah sebuah habitat berada di cage
    */
-  int GetRightIdx();
-  /**
-   * @brief Method GetLeftIdx
-   * Getter untuk index terkiri dari cage
-   */
-  int GetLeftIdx();
-  /**
-   * @brief Method GetTopIdx
-   * Getter untuk index teratas dari cage
-   */
-  int GetTopIdx();
-  /**
-   * @brief Method GetDownIdx
-   * Getter untuk index terbawah dari cage
-   */
-  int GetDownIdx();
+  bool InsideCage(int x,int y);
 private:
   Habitat* h;
   Animal** a;

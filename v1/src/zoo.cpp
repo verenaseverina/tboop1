@@ -265,7 +265,7 @@ void Zoo::MasukkanAnimal() {
   do {
     cin>>x;
     found = true;
-    if((x>=size)||(x<=-2)) {
+    if((x>=size)||(x<-2)) {
       cout<<"Input salah, masukkan kembali input :"<<endl;
       found = false;
     }else if (arr[x]==false && x < size && x > -2) {
@@ -323,8 +323,8 @@ void Zoo::Tour() {
 	  ex.push_back(map[height-1][j]);
   }
   srand(time(NULL));
-  int randidx = rand();
-  Cell* player = ent[randidx%ent.size()];
+  int randidx = rand()%(signed)ent.size();
+  Cell* player = ent[randidx];
   vector<Cell*> route;
   Cell* next;
   bool up;
@@ -354,7 +354,7 @@ void Zoo::Tour() {
 	  {
 		mov.push_back(map[x][y+1]);
 		right = true;	  
-	  }	
+	  }
 	}
 	if(x > height - 1)
 	{
@@ -374,15 +374,16 @@ void Zoo::Tour() {
 	}
 	if(mov.size() > 0)
 	{
-	  int command =  	rand();
+	  int command = rand();
 	  command = command % mov.size();
 	  next = mov[command];
-	  route.push_back(next);	
+	  route.push_back(next);
 	}
   } while (!(next->GetCellContent() == '_')  && !( up || right || left || down ));
+  cout << route.size();
 }
-/*
-bool Zoo::NoMoreMove(Facility f, vector<Facility> farr)
+
+bool Zoo::NoMoreMove(Facility f, vector<Cell*> farr)
 {
   bool up;
   bool right;
@@ -390,35 +391,35 @@ bool Zoo::NoMoreMove(Facility f, vector<Facility> farr)
   bool left;
   int i = f.GetCellCol();
   int j = f.GetCellRow();
-  int c = f.GetCellContent();
+  char c = f.GetCellContent();
   if(i > 0)
   {
-	if(map[i-1][j].GetCellContent != c || RouteTaken(map[i-1][j],farr))
+	if(map[i-1][j]->GetCellContent() != c || RouteTaken(map[i-1][j],farr))
 	  up = true;	
   }
   if(j > 0)
   {
-	if(map[i][j+1].GetCellContent != c || RouteTaken(map[i][j+1],farr))
+	if(map[i][j+1]->GetCellContent() != c || RouteTaken(map[i][j+1],farr))
 	  right = true;	
   }
   if(i > height - 1)
   {
-	if(map[i+1][j].GetCellContent != c || RouteTaken(map[i+1][j],farr))
+	if(map[i+1][j]->GetCellContent() != c || RouteTaken(map[i+1][j],farr))
 	  down = true;
   }
   if(j > width - 1)
   {
-	if(map[i][j-1].GetCellContent != c || RouteTaken(map[i][j-1],farr))
+	if(map[i][j-1]->GetCellContent() != c || RouteTaken(map[i][j-1],farr))
 	  left = true;
   }
   return(up && right && left && down);
 }
-*/
+
 bool Zoo::RouteTaken(Cell* f, vector<Cell*> farr)
 {
   bool yes = false;
   int i = 0;
-  while(i < farr.size() && !yes)
+  while(i < (signed)farr.size() && !yes)
   {
 	if(f->GetCellCol() == farr[i]->GetCellCol())
 	{

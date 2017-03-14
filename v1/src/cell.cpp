@@ -45,9 +45,9 @@ int Cell::GetCellCol() {
 void Cell::set_true(int n) {
   n = 0;
 }
-bool IsEntrance() {
+bool Cell::IsEntrance() {
   return false;
 }
-bool IsExit() {
+bool Cell::IsExit() {
   return false;
 }

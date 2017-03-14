@@ -98,6 +98,7 @@ public:
   void CekCage(bool*, Animal*);
   void Tour();
   bool RouteTaken(Cell*, vector<Cell*>);
+  bool NoMoreMove(Facility f, vector<Cell*> farr);
 private:
   vector<Cage> cages;
   Cell*** map;
