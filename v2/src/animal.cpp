@@ -191,6 +191,90 @@ Animal::Animal(int _x,int _y, int id,char con){
         is_tame = true;
         break;
       }
+    case 'M' : {
+        size = 2;
+        hab = new char[size];
+        hab[0] = '~';
+        hab[1] = '`';
+
+        interaction = "*fly and swim*";
+        srand(time(NULL));
+        my_weight = 2.5 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (5 - 2.5)));
+        how_much_i_eat = 10 * my_weight / 100;
+        what_i_eat = 'c';
+        is_tame = true;
+        break;
+      }
+    case 'F' : {
+        size = 2;
+        hab = new char[size];
+        hab[0] = '~';
+        hab[1] = '`';
+
+        interaction = "*stride*";
+        srand(time(NULL));
+        my_weight = 1 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (7 - 1)));
+        how_much_i_eat = 5 * my_weight / 100;
+        what_i_eat = 'o';
+        is_tame = true;
+        break;
+      }
+    case 'Y' : {
+        size = 2;
+        hab = new char[size];
+        hab[0] = '^';
+        hab[1] = '`';
+
+        interaction = "Arrrrkkkk";
+        srand(time(NULL));
+        my_weight = 25 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (59 - 25)));
+        how_much_i_eat = 5 * my_weight / 100;
+        what_i_eat = 'o';
+        is_tame = true;
+        break;
+      }
+    case 'I' : {
+        size = 2;
+        hab = new char[size];
+        hab[0] = '^';
+        hab[1] = '`';
+
+        interaction = "*walk and fly slightly*";
+        srand(time(NULL));
+        my_weight = 1 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (3 - 1)));
+        how_much_i_eat = 5 * my_weight / 100;
+        what_i_eat = 'o';
+        is_tame = true;
+        break;
+      }
+    case 'O' : {
+        size = 2;
+        hab = new char[size];
+        hab[0] = '^';
+        hab[1] = '`';
+
+        interaction = "Nguuukkk";
+        srand(time(NULL));
+        my_weight = 100 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (120 - 100)));
+        how_much_i_eat = 5 * my_weight / 100;
+        what_i_eat = 'o';
+        is_tame = true;
+        break;
+      }
+    case 'Z' : {
+        size = 2;
+        hab = new char[size];
+        hab[0] = '~';
+        hab[1] = '`';
+
+        interaction = "Aaaakk";
+        srand(time(NULL));
+        my_weight = 2.8 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (15 - 2.8)));
+        how_much_i_eat = 26.67 * my_weight / 100 ;
+        what_i_eat = 'c';
+        is_tame = true;
+        break;
+      }
   }
 }
 
