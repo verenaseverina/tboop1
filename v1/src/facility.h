@@ -29,7 +29,7 @@ class Facility : public Cell{
 	 *  Memberikan nilai true untuk entrance apabila parameter 0, exit apabila parameter 1
 	 *  @param n seleksi entrance atau exit yang akan di set true
 	 */
-	void set_true(int n);
+	virtual void set_true(int n);
   private:
     bool entrance=false;
 	bool exit=false;

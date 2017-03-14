@@ -1,7 +1,6 @@
 //File: zoo.cpp
 #include <iostream>
 #include "zoo.h"
-#include "
 using namespace std;
 Zoo::Zoo() {
   State s;
@@ -22,9 +21,9 @@ Zoo::Zoo() {
       else if(IsFacility(smap[i][j])) {
         map[i][j] = new Facility(smap[i][j],i,j);
 		if(i==0||j==0)
-		  map[i][j].set_true(0);
+		  map[i][j]->set_true(0);
 	    else if(i==height||j==width)
-		  map[i][j].set_true(1);
+		  map[i][j]->set_true(1);
       }
     }
   }

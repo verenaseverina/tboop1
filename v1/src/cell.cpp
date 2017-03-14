@@ -41,3 +41,7 @@ int Cell::GetCellRow() {
 int Cell::GetCellCol() {
   return cell_id_col;
 }
+
+void set_true(int n){
+  n = 0;
+}
