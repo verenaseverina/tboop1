@@ -6,6 +6,10 @@ int main(){
     Renderable r;
     z.MasukkanAnimal();
 	r.Render(z);
+    z.MasukkanAnimal();
+	r.Render(z);
+    z.MasukkanAnimal();
+	r.Render(z);
     //cout << Cage::neff;
 	//cout << z.GetCages().size() << endl << z.GetHeight() << endl;
 	return 0;

@@ -185,7 +185,7 @@ bool Cage::ContainAnimal(int x, int y) {
 bool Cage::IsFull() {
   float temp_many_animal = 0.3 * size;
   int many_animal = floor(temp_many_animal);
-  return (many_animal == neff);
+  return (many_animal == neff+1);
 }
 bool Cage::IsEmpty() {
   return (neff == -1);
