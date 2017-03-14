@@ -68,10 +68,10 @@ Cell* Cage::GetHabitat() {
 }
 void Cage::AddAnimal(char animal, int i) {  
   int pos_id = 0;
-  // do {
-  //   srand(time(NULL));
-  //   pos_id = rand() % size;
-  // } while (!ContainAnimal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol()));
+  do {
+    srand(time(NULL));
+    pos_id = rand() % size;
+  } while (ContainAnimal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol()));
   neff++;
   a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i,animal);
 }
