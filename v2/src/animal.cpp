@@ -214,6 +214,10 @@ Animal& Animal::operator=(const Animal& a) {
   return *this;
 }
 
+Animal::~Animal() {
+  delete [] hab;
+}
+
 void Animal::move(int dir){
   switch(dir) {
     case 1: { //top 

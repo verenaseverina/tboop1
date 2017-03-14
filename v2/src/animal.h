@@ -13,6 +13,10 @@ public:
    */
   Animal(int _x, int _y, int id,char con);
   /**
+   * @brief Destructor
+   */
+  ~Animal();
+  /**
    * @brief Overloading Operator "="
    * Menambahkan fungsi pada operator "=" agar penyalinan tidak terjadi secara bit wise
    * @param a adalah Animal yang hendak disalin
