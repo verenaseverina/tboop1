@@ -306,69 +306,80 @@ void Zoo::CekCage(bool* arr,Animal* H) {
 }
 
 void Zoo::Tour() {
-  vector<Facility> ent;
-  vector<Facility> ex;
+  vector<Cell*> ent;
+  vector<Cell*> ex;
   for(int i=0;i<width;i++)
   {
-	if(map[i][0].IsEntrance())
+	if(map[i][0]->GetCellContent() == '_')
 	  ent.push_back(map[i][0]);
-    if(map[i][width-1].IsExit())
+    if(map[i][width-1]->GetCellContent() == '_')
 	  ex.push_back(map[i][width-1]);
   }
   for(int j=0;j<height;j++)
   {
-	if(map[0][j].IsEntrance()) 
+	if(map[0][j]->GetCellContent() == '_') 
 	  ent.push_back(map[0][j]);
-    if(map[height-1][j].IsExit())
+    if(map[height-1][j]->GetCellContent() == '_')
 	  ex.push_back(map[height-1][j]);
   }
   srand(time(NULL));
   int randidx = rand();
-  Facility player = ent[randidx%ent.size()];
-  vector<Facility> route;
-  Facility next;
+  Cell* player = ent[randidx%ent.size()];
+  vector<Cell*> route;
+  Cell* next;
+  bool up;
+  bool right;
+  bool down;
+  bool left;
   do {
-	bool up = false;
-    bool right = false;
-    bool down = false;
-    bool left = false;
-    int x = player.GetCellCol();
-    int y = player.GetCellRow();
-    int c = player.GetCellContent();
-    vector<int> mov;
+	up = false;
+    right = false;
+    down = false;
+    left = false;
+    int x = player->GetCellCol();
+    int y = player->GetCellRow();
+    char c = player->GetCellContent();
+    vector<Cell*> mov;
     if(x > 0)
     {
-   	  if(map[x-1][y].GetCellContent == c || !RouteTaken(map[x-1][y],route))
+   	  if(map[x-1][y]->GetCellContent() == c || !RouteTaken(map[x-1][y],route))
 	  {
-		mov.push_back(1);
+		mov.push_back(map[x-1][y]);
 		up = true;  
 	  }	
 	}
 	if(y > 0)
 	{
-	  if(map[x][y+1].GetCellContent == c || !RouteTaken(map[x][y+1],route))
+	  if(map[x][y+1]->GetCellContent() == c || !RouteTaken(map[x][y+1],route))
 	  {
-		mov.push_back(2);
+		mov.push_back(map[x][y+1]);
 		right = true;	  
 	  }	
 	}
 	if(x > height - 1)
 	{
-	  if(map[x+1][y].GetCellContent == c || !RouteTaken(map[x+1][y],route))
+	  if(map[x+1][y]->GetCellContent() == c || !RouteTaken(map[x+1][y],route))
 	  {
-		mov.push_back(3);
+		mov.push_back(map[x+1][y]);
 	    down = true;
 	  }		
 	}
 	if(y > width - 1)
 	{
-	  if(map[x][y-1].GetCellContent == c || !RouteTaken(map[x][y-1],route))
+	  if(map[x][y-1]->GetCellContent() == c || !RouteTaken(map[x][y-1],route))
 	  {
-		mov.push_back(4);
+		mov.push_back(map[x][y-1]);
 	    left = true;  
 	  } 
 	}
-  } while (!next.IsExit() || !(up || right || left || down));
+	if(mov.size() > 0)
+	{
+	  int command =  	rand();
+	  command = command % mov.size();
+	  next = mov[command];
+	  route.push_back(next);	
+	}
+  } while (!(next->GetCellContent() == '_')  && !( up || right || left || down ));
 }
 /*
 bool Zoo::NoMoreMove(Facility f, vector<Facility> farr)
@@ -403,15 +414,15 @@ bool Zoo::NoMoreMove(Facility f, vector<Facility> farr)
   return(up && right && left && down);
 }
 */
-bool Zoo::RouteTaken(Cell* f, vector<Facility> farr)
+bool Zoo::RouteTaken(Cell* f, vector<Cell*> farr)
 {
   bool yes = false;
   int i = 0;
   while(i < farr.size() && !yes)
   {
-	if(f->GetCellCol() == farr[i].GetCellCol())
+	if(f->GetCellCol() == farr[i]->GetCellCol())
 	{
-	  if(f->GetCellRow() == farr[i].GetCellRow())
+	  if(f->GetCellRow() == farr[i]->GetCellRow())
 	  {
 		yes = true;  
 	  }		  

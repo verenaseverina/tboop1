@@ -42,6 +42,12 @@ int Cell::GetCellCol() {
   return cell_id_col;
 }
 
-void Cell::set_true(int n){
+void Cell::set_true(int n) {
   n = 0;
+}
+bool IsEntrance() {
+  return false;
+}
+bool IsExit() {
+  return false;
 }

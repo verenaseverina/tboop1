@@ -9,6 +9,7 @@
 #include "cell.h"
 #include "habitat.h"
 #include "facility.h"
+#include "time.h"
 class Zoo
 {
 public:
@@ -95,6 +96,8 @@ public:
    *  @details More details
    */
   void CekCage(bool*, Animal*);
+  void Tour();
+  bool RouteTaken(Cell*, vector<Cell*>);
 private:
   vector<Cage> cages;
   Cell*** map;

@@ -59,6 +59,8 @@ public:
 	 *  @param n seleksi entrance atau exit yang akan di set true
 	 */
   virtual void set_true(int n);
+  virtual bool IsEntrance();
+  virtual bool IsExit();
 protected:
   char content; // Untuk mengidentifikasi isi dari Cell
   int cell_id_row; // Untuk mengetahui posisi baris Cell pada matriks
