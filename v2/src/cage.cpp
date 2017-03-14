@@ -64,7 +64,7 @@ Animal** Cage::GetAnimal() {
   return a;
 }
 Cell* Cage::GetHabitat() {
-  return h;
+  return h;Joe pass
 }
 void Cage::AddAnimal(char animal, int i) {  
   int pos_id = 0;

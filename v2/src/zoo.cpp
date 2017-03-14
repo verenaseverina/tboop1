@@ -166,6 +166,12 @@ void Zoo::MasukkanAnimal() {
   cout<<"- Penguin (P)"<<endl;
   cout<<"- Crocodile (C)"<<endl;
   cout<<"- Hippopotamus (N)"<<endl;
+  cout<<"- Ostrich (O)"<<endl;
+  cout<<"- Pelikan (Z)"<<endl;
+  cout<<"- Cormorants (M)"<<endl;
+  cout<<"- Flying Fish (F)"<<endl;
+  cout<<"- Kasuari (Y)"<<endl;
+  cout<<"- Kiwi (I)"<<endl;
   cout<<endl;
 
   char input_user;
