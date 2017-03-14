@@ -1,6 +1,4 @@
 // File: flyingfish.h
-
-
 #include <string>
 #include "../water_air_animal.h"
 #ifndef FLYINGFISH_H
@@ -8,8 +6,7 @@
 
 using namespace std;
 
-class FlyingFish : public WAAnimal 
-{
+class FlyingFish : public WAAnimal {
   public:
     /**
      * @brief Constructor.
@@ -27,28 +24,24 @@ class FlyingFish : public WAAnimal
      * Interact pada binatang berupa string
      */
     string interact();
-
     /**
      * @brief Getter Content
      * Mengambil simbol yang menggambarkan spesies FlyingFish
      * @return simbol yang menggambarkan spesies FlyingFish
      */
     char GetContent();
-
     /**
      * @brief Getter Weight
      * Mengambil Weight dari FlyingFish
      * @return Weight dari FlyingFish
      */
     float GetWeight();
-
     /**
      * @brief Getter how_much_i_eat
      * Mengembalikan banyaknya jumlah makanan untuk FlyingFish
      * @return banyaknya jumlah makanan untuk FlyingFish
      */
     float GetEat();
-
     /**
      * @brief Getter what_i_eat
      * Mengembalikan jenis makanan FlyingFish

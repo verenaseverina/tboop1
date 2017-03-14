@@ -1,6 +1,4 @@
 // File: kasuari.h
-
-
 #include <string>
 #include "../land_air_animal.h"
 #ifndef KASUARI_H
@@ -8,8 +6,7 @@
 
 using namespace std;
 
-class Kasuari : public LAAnimal 
-{
+class Kasuari : public LAAnimal {
   public:
     /**
      * @brief Constructor.
@@ -33,28 +30,24 @@ class Kasuari : public LAAnimal
      * @return simbol yang menggambarkan spesies Kasuari
      */
     char GetContent();
-
     /**
      * @brief Getter Weight
      * Mengambil Weight dari Kasuari
      * @return Weight dari Kasuari
      */
     float GetWeight();
-
     /**
      * @brief Getter how_much_i_eat
      * Mengembalikan banyaknya jumlah makanan untuk Kasuari
      * @return banyaknya jumlah makanan untuk Kasuari
      */
     float GetEat();
-
     /**
      * @brief Getter what_i_eat
      * Mengembalikan jenis makanan Kasuari
      * @return jenis makanan Kasuari
      */
     char GetWEat();
-
 };
 
 #endif

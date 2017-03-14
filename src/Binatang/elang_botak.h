@@ -8,8 +8,7 @@
 
 using namespace std;
 
-class ElangB : public AirAnimal 
-{
+class ElangB : public AirAnimal {
   public:
     /**
 	 * @brief Constructor.
@@ -28,13 +27,29 @@ class ElangB : public AirAnimal
      * Interact pada binatang berupa string
      */
     string interact();
-
+    /**
+     * @brief Getter Content
+     * Mengambil simbol yang menggambarkan spesies ElangB
+     * @return simbol yang menggambarkan spesies ElangB
+     */
     char GetContent();
-
+    /**
+     * @brief Getter Weight
+     * Mengambil Weight dari ElangB
+     * @return Weight dari ElangB
+     */
     float GetWeight();
-
+    /**
+     * @brief Getter how_much_i_eat
+     * Mengembalikan banyaknya jumlah makanan untuk ElangB
+     * @return banyaknya jumlah makanan untuk ElangB
+     */
     float GetEat();
-
+    /**
+     * @brief Getter what_i_eat
+     * Mengembalikan jenis makanan ElangB
+     * @return jenis makanan ElangB
+     */
     char GetWEat();
 
 };

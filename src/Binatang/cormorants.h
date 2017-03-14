@@ -8,8 +8,7 @@
 
 using namespace std;
 
-class Cormorants : public WAAnimal 
-{
+class Cormorants : public WAAnimal {
   public:
     /**
      * @brief Constructor.

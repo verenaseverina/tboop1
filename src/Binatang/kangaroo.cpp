@@ -1,19 +1,16 @@
 #include "kangaroo.h"
 #include <cstdlib>
 
-Kangaroo::Kangaroo(int x, int y, int id) : LandAnimal(x,y,id)
-{
+Kangaroo::Kangaroo(int x, int y, int id) : LandAnimal(x,y,id) {
   interaction = "Jummpp";
-  content='D';
+  content = 'D';
   srand(time(NULL));
-  my_weight = 18 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(100-18)));
+  my_weight = 18 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (100 - 18)));
   how_much_i_eat = 0.35 * my_weight / 100;
   what_i_eat = 'h';
   is_tame = true;
 }
-
-Kangaroo& Kangaroo::operator=(const Kangaroo& a)
-{
+Kangaroo& Kangaroo::operator=(const Kangaroo& a) {
   LandAnimal::operator=(a);
   content = a.content;
   interaction = a.interaction;
@@ -23,28 +20,18 @@ Kangaroo& Kangaroo::operator=(const Kangaroo& a)
   is_tame = a.is_tame;
   return *this;
 }
-
-char Kangaroo::GetContent()
-{
+char Kangaroo::GetContent() {
   return content;
 }
-
-string Kangaroo::interact()
-{
+string Kangaroo::interact() {
   return interaction;
 }
-
-float Kangaroo::GetWeight()
-{
+float Kangaroo::GetWeight() {
   return my_weight;
 }
-
-float Kangaroo::GetEat()
-{
+float Kangaroo::GetEat() {
   return how_much_i_eat;
 }
-
-char Kangaroo::GetWEat()
-{
+char Kangaroo::GetWEat() {
   return what_i_eat;
 }

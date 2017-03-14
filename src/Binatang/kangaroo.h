@@ -1,6 +1,4 @@
 // File: kangaroo.h
-
-
 #include <string>
 #include "../land_animal.h"
 #ifndef KANGAROO_H
@@ -8,8 +6,7 @@
 
 using namespace std;
 
-class Kangaroo : public LandAnimal 
-{
+class Kangaroo : public LandAnimal {
   public:
     /**
      * @brief Constructor.
@@ -27,13 +24,29 @@ class Kangaroo : public LandAnimal
      * Interact pada binatang berupa string
      */
     string interact();
-
+    /**
+     * @brief Getter Content
+     * Mengambil simbol yang menggambarkan spesies Kangaroo
+     * @return simbol yang menggambarkan spesies Kangaroo
+     */
     char GetContent();
-
+    /**
+     * @brief Getter Weight
+     * Mengambil Weight dari Kangaroo
+     * @return Weight dari Kangaroo
+     */
     float GetWeight();
-
+    /**
+     * @brief Getter how_much_i_eat
+     * Mengembalikan banyaknya jumlah makanan untuk Kangaroo
+     * @return banyaknya jumlah makanan untuk Kangaroo
+     */
     float GetEat();
-
+    /**
+     * @brief Getter what_i_eat
+     * Mengembalikan jenis makanan Kangaroo
+     * @return jenis makanan Kangaroo
+     */
     char GetWEat();
 
 };

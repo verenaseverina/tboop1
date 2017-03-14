@@ -1,6 +1,4 @@
 // File: anoa.h
-
-
 #include <string>
 #include "../land_animal.h"
 #ifndef ANOA_H
@@ -8,8 +6,7 @@
 
 using namespace std;
 
-class Anoa : public LandAnimal 
-{
+class Anoa : public LandAnimal {
   public:
     /**
 	* @brief Constructor.
@@ -27,13 +24,29 @@ class Anoa : public LandAnimal
      * Interact pada binatang berupa string
      */
     string interact();
-
+    /**
+     * @brief Getter Content
+     * Mengambil simbol yang menggambarkan spesies Anoa
+     * @return simbol yang menggambarkan spesies Anoa
+     */
     char GetContent();
-
+    /**
+     * @brief Getter Weight
+     * Mengambil Weight dari Anoa
+     * @return Weight dari Anoa
+     */
     float GetWeight();
-
+    /**
+     * @brief Getter how_much_i_eat
+     * Mengembalikan banyaknya jumlah makanan untuk Anoa
+     * @return banyaknya jumlah makanan untuk Anoa
+     */
     float GetEat();
-
+    /**
+     * @brief Getter what_i_eat
+     * Mengembalikan jenis makanan Anoa
+     * @return jenis makanan Anoa
+     */
     char GetWEat();
 };
 

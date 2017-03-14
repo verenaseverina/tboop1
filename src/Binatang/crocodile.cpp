@@ -1,8 +1,7 @@
 #include "crocodile.h"
 #include <cstdlib>
 
-Crocodile::Crocodile(int x, int y, int id) : LWAnimal(x,y,id)
-{
+Crocodile::Crocodile(int x, int y, int id) : LWAnimal(x,y,id) {
   interaction = "Rrrrr";
   content = 'C';
   srand(time(NULL));
@@ -11,9 +10,7 @@ Crocodile::Crocodile(int x, int y, int id) : LWAnimal(x,y,id)
   what_i_eat = 'c';
   is_tame = false;
 }
-
-Crocodile& Crocodile::operator=(const Crocodile& a)
-{
+Crocodile& Crocodile::operator=(const Crocodile& a) {
   LWAnimal::operator=(a);
   content = a.content;
   interaction = a.interaction;
@@ -23,28 +20,18 @@ Crocodile& Crocodile::operator=(const Crocodile& a)
   is_tame = a.is_tame;
   return *this;
 }
-
-char Crocodile::GetContent()
-{
+char Crocodile::GetContent() {
   return content;
 }
-
-string Crocodile::interact()
-{
+string Crocodile::interact() {
   return interaction;
 }
-
-float Crocodile::GetWeight()
-{
+float Crocodile::GetWeight() {
   return my_weight;
 }
-
-float Crocodile::GetEat()
-{
+float Crocodile::GetEat() {
   return how_much_i_eat;
 }
-
-char Crocodile::GetWEat()
-{
+char Crocodile::GetWEat() {
   return what_i_eat;
 }

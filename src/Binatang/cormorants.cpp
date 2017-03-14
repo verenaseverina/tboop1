@@ -1,19 +1,16 @@
 #include "cormorants.h"
 #include <cstdlib>
 
-Cormorants::Cormorants(int x, int y, int id) : WAAnimal(x,y,id)
-{
+Cormorants::Cormorants(int x, int y, int id) : WAAnimal(x,y,id) {
   interaction = "*fly and swim*";
   content = 'M';
   srand(time(NULL));
-  my_weight = 2.5 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(5-2.5)));
+  my_weight = 2.5 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (5 - 2.5)));
   how_much_i_eat = 10 * my_weight / 100;
   what_i_eat = 'c';
   is_tame = true;
 }
-
-Cormorants& Cormorants::operator=(const Cormorants& a)
-{
+Cormorants& Cormorants::operator=(const Cormorants& a) {
   WAAnimal::operator=(a);
   content = a.content;
   interaction = a.interaction;
@@ -23,28 +20,18 @@ Cormorants& Cormorants::operator=(const Cormorants& a)
   is_tame = a.is_tame;
   return *this;
 }
-
-char Cormorants::GetContent()
-{
+char Cormorants::GetContent() {
   return content;
 }
-
-string Cormorants::interact()
-{
+string Cormorants::interact() {
   return interaction;
 }
-
-float Cormorants::GetWeight()
-{
+float Cormorants::GetWeight() {
   return my_weight;
 }
-
-float Cormorants::GetEat()
-{
+float Cormorants::GetEat() {
   return how_much_i_eat;
 }
-
-char Cormorants::GetWEat()
-{
+char Cormorants::GetWEat() {
   return what_i_eat;
 }

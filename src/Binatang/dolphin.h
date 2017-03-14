@@ -1,6 +1,4 @@
 // File: dolphin.h
-
-
 #include <string>
 #include "../water_animal.h"
 #ifndef DOLPHIN_H
@@ -8,8 +6,7 @@
 
 using namespace std;
 
-class Dolphin : public WaterAnimal 
-{
+class Dolphin : public WaterAnimal {
   public:
     /**
      * @brief Constructor.
@@ -28,13 +25,29 @@ class Dolphin : public WaterAnimal
      * Interact pada binatang berupa string
      */
     string interact();
-
+    /**
+     * @brief Getter Content
+     * Mengambil simbol yang menggambarkan spesies Dolphin
+     * @return simbol yang menggambarkan spesies Dolphin
+     */
     char GetContent();
-
+    /**
+     * @brief Getter Weight
+     * Mengambil Weight dari Dolphin
+     * @return Weight dari Dolphin
+     */
     float GetWeight();
-
+    /**
+     * @brief Getter how_much_i_eat
+     * Mengembalikan banyaknya jumlah makanan untuk Dolphin
+     * @return banyaknya jumlah makanan untuk Dolphin
+     */
     float GetEat();
-
+    /**
+     * @brief Getter what_i_eat
+     * Mengembalikan jenis makanan Dolphin
+     * @return jenis makanan Dolphin
+     */
     char GetWEat();
 
 };

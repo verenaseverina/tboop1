@@ -1,19 +1,16 @@
 #include "flying_fish.h"
 #include <cstdlib>
 
-FlyingFish::FlyingFish(int x, int y, int id) : WAAnimal(x,y,id)
-{
+FlyingFish::FlyingFish(int x, int y, int id) : WAAnimal(x,y,id) {
   interaction = "*stride*";
-  content='F';
+  content = 'F';
   srand(time(NULL));
-  my_weight = 1 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(7-1)));
+  my_weight = 1 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (7 - 1)));
   how_much_i_eat = 5 * my_weight / 100;
   what_i_eat = 'o';
   is_tame = true;
 }
-
-FlyingFish& FlyingFish::operator=(const FlyingFish& a)
-{
+FlyingFish& FlyingFish::operator=(const FlyingFish& a) {
   WAAnimal::operator=(a);
   content = a.content;
   interaction = a.interaction;
@@ -23,28 +20,18 @@ FlyingFish& FlyingFish::operator=(const FlyingFish& a)
   is_tame = a.is_tame;
   return *this;
 }
-
-char FlyingFish::GetContent()
-{
+char FlyingFish::GetContent() {
   return content;
 }
-
-string FlyingFish::interact()
-{
+string FlyingFish::interact() {
   return interaction;
 }
-
-float FlyingFish::GetWeight()
-{
+float FlyingFish::GetWeight() {
   return my_weight;
 }
-
-float FlyingFish::GetEat()
-{
+float FlyingFish::GetEat() {
   return how_much_i_eat;
 }
-
-char FlyingFish::GetWEat()
-{
+char FlyingFish::GetWEat() {
   return what_i_eat;
 }
