@@ -139,12 +139,30 @@ void Cage::AddAnimal(char animal, int i) {
       a[neff] = new Hippopotamus(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i);
       break;
     }
-    //case '' :
-    //case '' :
-    //case '' :
-    //case '' :
-    //case '' :
-    //case '' :
+    case 'O' : {
+      a[neff] = new Ostrich(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i);
+      break;
+    }
+    case 'Y' : {
+      a[neff] = new Kasuari(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i);
+      break;
+    }
+    case 'I' : {
+      a[neff] = new Kiwi(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i);
+      break;
+    }
+    case 'F' : {
+      a[neff] = new FlyingFish(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i);
+      break;
+    }
+    case 'Z' : {
+      a[neff] = new Pelikan(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i);
+      break;
+    }
+    case 'M' : {
+      a[neff] = new Cormorants(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i);
+      break;
+    }
   }
 }
 bool Cage::ContainAnimal(int x, int y) {
