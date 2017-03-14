@@ -193,3 +193,79 @@ bool Cage::IsEmpty() {
 int Cage::GetNeff() {
   return neff;
 }
+void Cage::UpdatePosition() {
+  for(int i = 0; i <= neff; i++){
+    srand(time(NULL));
+    int j = (rand() % 4)+1;
+    switch(j) {
+      case 1:
+        for (int k = 0; k < neff; k++) {
+          int y = a[i]->GetY()-1;
+          if (y >= a[k]->GetY() && y >= GetTopIdx()) {
+            a[i]->Move(1);
+          }
+        }
+        break;
+      case 2:
+        for (int k = 0; k < neff; k++) {
+          int x = a[i]->GetX()+1;
+          if (x >= a[k]->GetX() && x <= GetRightIdx()) {
+            a[i]->Move(2);
+          }
+        }
+        break;
+      case 3:
+        for (int k = 0; k < neff; k++) {
+          int y = a[i]->GetY()+1;
+          if (y >= a[k]->GetY() && y <= GetDownIdx()) {
+            a[i]->Move(3);
+          }
+        }
+        break;
+      case 4:
+        for (int k = 0; k < neff; k++) {
+          int x = a[i]->GetX()-1;
+          if (x >= a[k]->GetY() && x >= GetLeftIdx()) {
+            a[i]->Move(4);
+          }
+        }
+        break;
+    }
+  }
+}
+int Cage::GetRightIdx() {
+  int max = h[0].GetCellRow();
+  for(int i = 1; i < size; i++) {
+    if(max < h[i].GetCellRow()) {
+      max = h[i].GetCellRow();
+    }
+  }
+  return max;
+}
+int Cage::GetLeftIdx() {
+  int min = h[0].GetCellRow();
+  for(int i = 1; i < size; i++) {
+    if(min > h[i].GetCellRow()) {
+      min = h[i].GetCellRow();
+    }
+  }
+  return min;
+}
+int Cage::GetTopIdx() {
+  int max = h[0].GetCellCol();
+  for(int i = 1; i < size; i++) {
+    if(max < h[i].GetCellCol()) {
+      max = h[i].GetCellCol();
+    }
+  }
+  return max;
+}
+int Cage::GetDownIdx() {
+  int min = h[0].GetCellCol();
+  for(int i = 1; i < size; i++) {
+    if(min > h[i].GetCellCol()) {
+      min = h[i].GetCellCol();
+    }
+  }
+  return min;
+}

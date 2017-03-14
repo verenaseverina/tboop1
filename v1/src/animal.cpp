@@ -15,11 +15,11 @@ Animal& Animal::operator=(const Animal& a) {
 
 void Animal::Move(int dir) {
   switch(dir) {
-    case 1: {//top 
+    case 1: {//top
       y -= 1;
       break;
     }
-    case 2: {//right 
+    case 2: {//right
       x += 1;
       break;
     }
@@ -27,7 +27,7 @@ void Animal::Move(int dir) {
       y += 1;
       break;
     }
-    case 4: {//left 
+    case 4: {//left
       x -= 1;
       break;
     }

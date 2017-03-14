@@ -29,29 +29,41 @@ public:
    * @param int dir adalah pilihan swicth untuk 1.moveup 2.moveright 3.movedown 4.moveleft
    */
   void Move(int);
-
+  /**
+  * @brief Function GetID()
+  * Getter cage id
+  */
   int GetID();
-
   /**
   * @brief Function GetX()
   * Getter x
   */
   int GetX();
-	
   /**
   * @brief Function GetY()
   * Getter y
   */
   int GetY();
-
+  /**
+  * @brief Function GetTame()
+  * Getter untuk kejinakkan hewan
+  */
   bool GetTame();
-
+  /**
+  * @brief Function GetHab()
+  * Getter content dari habitat animal
+  */
   char* GetHab();
-
+  /**
+  * @brief Function GetSize()
+  * Getter untuk jumlah content habitat
+  */
   virtual int GetSize() = 0;
-
+  /**
+  * @brief Function GetContent()
+  * Getter char content animal
+  */
   virtual char GetContent() = 0;
-
 protected:
   string interaction;
   char content;
