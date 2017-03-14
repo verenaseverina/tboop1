@@ -27,7 +27,7 @@ public:
   /**
    * @brief Destructor.
    */
-  ~Cell();
+  virtual ~Cell();
 
   /**
    * @brief Overloading Operator "="
@@ -53,7 +53,12 @@ public:
    * @return kolom dari Cell
    */
   int GetCellCol();
-
+   /**
+	 *  @brief Set true untuk entrance atau exit
+	 *  Memberikan nilai true untuk entrance apabila parameter 0, exit apabila parameter 1
+	 *  @param n seleksi entrance atau exit yang akan di set true
+	 */
+  virtual void set_true(int n);
 protected:
   char content; // Untuk mengidentifikasi isi dari Cell
   int cell_id_row; // Untuk mengetahui posisi baris Cell pada matriks
