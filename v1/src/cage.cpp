@@ -77,11 +77,10 @@ Habitat* Cage::GetHabitat() {
 }
 void Cage::AddAnimal(char animal, int i) {  
   int pos_id = 0;
-  /*do {
+  do {
     srand(time(NULL));
     pos_id = rand() % size;
-  } while (!ContainAnimal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol()));
-*/
+  } while (ContainAnimal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol()));
   neff++;
   switch(animal) {
     case 'H' : {
