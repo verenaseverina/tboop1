@@ -277,7 +277,7 @@ void Zoo::MasukkanAnimal() {
   if (x!=-2) {
     cages[x].AddAnimal(input_user,x);
   }
-  delete arr;
+  delete [] arr;
 }
 
 void Zoo::CekCage(bool* arr,Animal* H) {

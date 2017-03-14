@@ -4,7 +4,7 @@ using namespace std;
 void Renderable::Render(Zoo& virtual_zoo) {
   for (int i = 0; i < virtual_zoo.GetHeight(); i++) {
     for (int j = 0; j < virtual_zoo.GetWidth(); j++) {
-      if (IsThereAnimal(virtual_zoo, i, j) != -999) {
+      if (IsThereAnimal(virtual_zoo, i, j) != -999) { 
 	      int idx = IsThereAnimal(virtual_zoo, i, j);
 	      int an_idx = FindAnimal(virtual_zoo,idx,i,j);
 	      cout << virtual_zoo.GetCages()[idx].GetAnimal()[an_idx]->GetContent();
@@ -22,9 +22,10 @@ int Renderable::IsThereAnimal(Zoo& virtual_zoo, int x, int y) {
   bool found = false;
   int cage = -999;
   while ((i < (signed)virtual_zoo.GetCages().size()) && (!found)) {
-    while ((j < virtual_zoo.GetCages()[i].GetSize()) && (!found)) {
+    bool stop = false;
+    while ((j <= virtual_zoo.GetCages()[i].GetNeff()) && (!found) && (!stop)) {
       if(virtual_zoo.GetCages()[i].IsEmpty()){
-        j++;
+        stop = true;
       }
       else if ((virtual_zoo.GetCages()[i].GetAnimal()[j]->GetX() == x) && (virtual_zoo.GetCages()[i].GetAnimal()[j]->GetY() == y)) {
         found = true;
