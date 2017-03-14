@@ -328,37 +328,49 @@ void Zoo::Tour() {
   vector<Facility> route;
   Facility next;
   do {
-	  int x = player.GetCellCol();
-	  int y = player.GetCellRow();
-	  int c = player.GetCellContent();
-	  vector<int> mov;
-	  if(x > 0)
+	bool up = false;
+    bool right = false;
+    bool down = false;
+    bool left = false;
+    int x = player.GetCellCol();
+    int y = player.GetCellRow();
+    int c = player.GetCellContent();
+    vector<int> mov;
+    if(x > 0)
+    {
+   	  if(map[x-1][y].GetCellContent == c || !RouteTaken(map[x-1][y],route))
 	  {
-		if(map[x-1][y].GetCellContent == c || !RouteTaken(map[x-1][y],route))
-		  mov.push_back(1);
-		  up = true;	
-	  }
-	  if(y > 0)
+		mov.push_back(1);
+		up = true;  
+	  }	
+	}
+	if(y > 0)
+	{
+	  if(map[x][y+1].GetCellContent == c || !RouteTaken(map[x][y+1],route))
 	  {
-		if(map[x][y+1].GetCellContent == c || !RouteTaken(map[x][y+1],route))
-		  mov.push_back(2);
-		  right = true;	
-	  }
-	  if(x > height - 1)
+		mov.push_back(2);
+		right = true;	  
+	  }	
+	}
+	if(x > height - 1)
+	{
+	  if(map[x+1][y].GetCellContent == c || !RouteTaken(map[x+1][y],route))
 	  {
-		if(map[x+1][y].GetCellContent == c || !RouteTaken(map[x+1][y],route))
-		  mov.push_back(3);
-	      down = true;
-	  }
-	  if(y > width - 1)
+		mov.push_back(3);
+	    down = true;
+	  }		
+	}
+	if(y > width - 1)
+	{
+	  if(map[x][y-1].GetCellContent == c || !RouteTaken(map[x][y-1],route))
 	  {
-		if(map[x][y-1].GetCellContent == c || !RouteTaken(map[x][y-1],route))
-		  mov.push_back(4);
-	      left = true;
-	  }
-  } while (!next.IsExit() || !NoMoreMove(next,route));
+		mov.push_back(4);
+	    left = true;  
+	  } 
+	}
+  } while (!next.IsExit() || !(up || right || left || down));
 }
-
+/*
 bool Zoo::NoMoreMove(Facility f, vector<Facility> farr)
 {
   bool up;
@@ -390,7 +402,7 @@ bool Zoo::NoMoreMove(Facility f, vector<Facility> farr)
   }
   return(up && right && left && down);
 }
-
+*/
 bool Zoo::RouteTaken(Cell* f, vector<Facility> farr)
 {
   bool yes = false;
