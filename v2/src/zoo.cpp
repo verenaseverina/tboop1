@@ -210,7 +210,6 @@ void Zoo::MasukkanAnimal() {
   }
   if (x!=-2) {
     cages[x].AddAnimal(input_user,x);
-    cout<<"x";
   }
   delete [] arr;
 }

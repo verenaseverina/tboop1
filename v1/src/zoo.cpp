@@ -173,7 +173,9 @@ void Zoo::MasukkanAnimal() {
   cin>>input_user;
 
   bool* arr= new bool [size];
-  arr={false};
+  for (int i=0; i<size ;i++) {
+    arr[i]=false;
+  }
   switch(input_user) {
     case 'H' : {
 	      Tiger H(-1,-1,-1);
@@ -261,11 +263,12 @@ void Zoo::MasukkanAnimal() {
   cout<<"(Untuk membatalkan, masukkan -2)"<<endl;
   do {
     cin>>x;
-    if((arr[x]==false)&&(x>=size)&&(x!=-1)&&(x!=-2))
+    if(((x>=size)&&(x<-2))||(arr[x]==false))
     {
       cout<<"Input salah, masukkan kembali input :"<<endl;
+      x=-3;
     }
-  }while((arr[x]==false)&&(x>=size)&&(x!=-1)&&(x!=-2));
+  }while (x==-3);
 
   if (x==-1) {
     srand(time(NULL));

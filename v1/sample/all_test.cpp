@@ -31,7 +31,11 @@
 #include "../src/facility.h"
 #include "../src/cage.h"
 #include "../src/zoo.h"
+#include <string>
+#include <iostream>
 #include <gtest/gtest.h>
+
+using namespace std;
 
 #include <gtest/gtest.h>
 
@@ -338,17 +342,19 @@ TEST(FacilityTest, GetFacilityContentX) {
   ASSERT_EQ('x',c.GetCellContent());
 }
 
-//ZooTest
-TEST(ZooTest, ZooGetWidth) {
-  Zoo z;
+//StateTest
+TEST(StateTest, StateGetWidth) {
+  State z;
   ASSERT_EQ(5,z.GetWidth());
 }
 
-TEST(ZooTest, ZooGetHeight) {
-  Zoo z;
+TEST(StateTest, StateGetHeight) {
+  State z;
   ASSERT_EQ(5,z.GetHeight());
 }
 
+
+//ZooTest
 TEST(ZooTest, ZooIsHabitat) {
   Zoo z;
   ASSERT_EQ(0,z.IsHabitat('^'));
