@@ -1,4 +1,5 @@
 #include "../src/animal.h"
+#include "../src/state.h"
 #include "../src/land_animal.h"
 #include "../src/water_animal.h"
 #include "../src/air_animal.h"
@@ -25,11 +26,18 @@
 #include "../src/Binatang/kiwi.h"
 #include "../src/Binatang/pelikan.h"
 #include "../src/Binatang/cormorants.h"
+#include "../src/cell.h"
+#include "../src/habitat.h"
+#include "../src/facility.h"
+#include "../src/cage.h"
+#include "../src/zoo.h"
 #include <gtest/gtest.h>
 
-class AnimalTest : public ::testing::Test {
+#include <gtest/gtest.h>
+
+class AllTest : public ::testing::Test {
   protected:
-  	AnimalTest();
+  	AllTest();
 };
 
 
@@ -295,4 +303,64 @@ TEST(WaterAirAnimalTest, MoveLeft) {
   ASSERT_EQ(0,A->GetX());
 }
 
-//g++ ../src/Binatang/panda.cpp ../src/Binatang/anoa.cpp ../src/Binatang/rhino.cpp ../src/Binatang/kangaroo.cpp ../src/Binatang/dolphin.cpp ../src/Binatang/shark.cpp ../src/Binatang/kelelawar.cpp ../src/Binatang/elang_botak.cpp ../src/Binatang/penguin.cpp ../src/Binatang/crocodile.cpp ../src/Binatang/kasuari.cpp ../src/Binatang/kiwi.cpp ../src/Binatang/pelikan.cpp ../src/Binatang/cormorants.cpp ../src/animal.cpp ../src/Binatang/whale.cpp ../src/Binatang/ostrich.cpp ../src/Binatang/flying_fish.cpp ../src/Binatang/toucan.cpp ../src/Binatang/hippopotamus.cpp ../src/air_animal.cpp ../src/water_animal.cpp ../src/land_water_animal.cpp ../src/land_air_animal.cpp ../src/water_air_animal.cpp ../src/land_animal.cpp ../src/Binatang/tiger.cpp animal_test.cpp -o main -pthread -lgtest_main -lgtest -std=c++11
+//CelTest
+TEST(CellTest, GetCellRow) {
+  Cell c(1,1);
+  ASSERT_EQ(1,c.GetCellRow());
+}
+
+TEST(CellTest, GetCellCol) {
+  Cell c(1,1);
+  ASSERT_EQ(1,c.GetCellCol());
+}
+
+TEST(CellTest, GetCellContent) {
+  Cell c(1,1);
+  ASSERT_EQ('\0',c.GetCellContent());
+}
+
+
+//HabitatTest
+TEST(HabitatTest, GetHabitatContent) {
+  Habitat c;
+  ASSERT_EQ('0',c.GetCellContent());
+}
+
+TEST(HabitatTest, GetHabitatContentX) {
+  Habitat c('x',1,1);
+  ASSERT_EQ('x',c.GetCellContent());
+}
+
+
+//FacilityTest
+TEST(FacilityTest, GetFacilityContentX) {
+  Facility c('x',1,1);
+  ASSERT_EQ('x',c.GetCellContent());
+}
+
+//ZooTest
+TEST(ZooTest, ZooGetWidth) {
+  Zoo z;
+  ASSERT_EQ(5,z.GetWidth());
+}
+
+TEST(ZooTest, ZooGetHeight) {
+  Zoo z;
+  ASSERT_EQ(5,z.GetHeight());
+}
+
+TEST(ZooTest, ZooIsHabitat) {
+  Zoo z;
+  ASSERT_EQ(0,z.IsHabitat('^'));
+}
+
+TEST(ZooTest, ZooIsFacility) {
+  Zoo z;
+  ASSERT_EQ(0,z.IsFacility('_'));
+}
+
+
+
+
+
+//g++ ../src/zoo.cpp ../src/state.cpp ../src/cage.cpp ../src/cell.cpp ../src/habitat.cpp ../src/facility.cpp ../src/Binatang/panda.cpp ../src/Binatang/anoa.cpp ../src/Binatang/rhino.cpp ../src/Binatang/kangaroo.cpp ../src/Binatang/dolphin.cpp ../src/Binatang/shark.cpp ../src/Binatang/kelelawar.cpp ../src/Binatang/elang_botak.cpp ../src/Binatang/penguin.cpp ../src/Binatang/crocodile.cpp ../src/Binatang/kasuari.cpp ../src/Binatang/kiwi.cpp ../src/Binatang/pelikan.cpp ../src/Binatang/cormorants.cpp ../src/animal.cpp ../src/Binatang/whale.cpp ../src/Binatang/ostrich.cpp ../src/Binatang/flying_fish.cpp ../src/Binatang/toucan.cpp ../src/Binatang/hippopotamus.cpp ../src/air_animal.cpp ../src/water_animal.cpp ../src/land_water_animal.cpp ../src/land_air_animal.cpp ../src/water_air_animal.cpp ../src/land_animal.cpp ../src/Binatang/tiger.cpp all_test.cpp -o main -pthread -lgtest_main -lgtest -std=c++11
