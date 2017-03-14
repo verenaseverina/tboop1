@@ -8,7 +8,9 @@ Cage::Cage(int _size, vector<Cell> &buf) : size(buf.size()) {
     h[i] = buf[i];
   }
   neff = -1;
-  a = new Animal*[size];
+  float temp_many_animal = 0.3 * size;
+  int many_animal = floor(temp_many_animal);
+  a = new Animal*[many_animal];
 }
 Cage::Cage(const Cage& c) : size(c.size) {
   h = new Cell[c.size];
@@ -17,8 +19,10 @@ Cage::Cage(const Cage& c) : size(c.size) {
     h[i] = c.h[i];
   }
   neff = c.neff;
-  a = new Animal*[size];
-  for (i = 0; i < size; i++) {
+  float temp_many_animal = 0.3 * size;
+  int many_animal = floor(temp_many_animal);
+  a = new Animal*[many_animal];
+  for (i = 0; i < many_animal; i++) {
     a[i] = c.a[i];
   }
 }
@@ -39,8 +43,9 @@ Cage& Cage::operator=(const Cage& c) {
   for (i = 0; i < size; i++) {
     h[i] = c.h[i];
   }
-
-  a = new Animal*[size];
+  float temp_many_animal = 0.3 * size;
+  int many_animal = floor(temp_many_animal);
+  a = new Animal*[many_animal];
   neff = c.neff;
   for (i = 0; i < size; i++) {
     a[i] = c.a[i];
@@ -64,7 +69,7 @@ Animal** Cage::GetAnimal() {
   return a;
 }
 Cell* Cage::GetHabitat() {
-  return h;Joe pass
+  return h;
 }
 void Cage::AddAnimal(char animal, int i) {  
   int pos_id = 0;
