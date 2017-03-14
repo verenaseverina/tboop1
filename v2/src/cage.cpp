@@ -72,11 +72,8 @@ void Cage::AddAnimal(char animal, int i) {
   //   srand(time(NULL));
   //   pos_id = rand() % size;
   // } while (!ContainAnimal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol()));
-  cout<<"c"<<endl;
   neff++;
-  cout<<"X";
   a[neff] = new Animal(h[pos_id].GetCellRow(), h[pos_id].GetCellCol(), i,animal);
-  cout<<"Xs";
 }
 
 bool Cage::ContainAnimal(int x, int y) {
