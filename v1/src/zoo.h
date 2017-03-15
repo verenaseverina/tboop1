@@ -101,6 +101,7 @@ public:
   bool NoMoreMove(Facility f, vector<Cell*> farr);
 private:
   vector<Cage> cages;
+  Cell* playerpos;
   Cell*** map;
   int height;
   int width;
