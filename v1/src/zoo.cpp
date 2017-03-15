@@ -333,7 +333,7 @@ void Zoo::Tour() {
   int i = playerpos->GetCellRow();
   int j = playerpos->GetCellCol();
   if(map[i][j+1]->GetCellContent() == '_') {
-    Cell* next = new Cell(i+1,j);
+    Cell* next = new Cell(i,j+1);
     playerpos = next;
     delete next;
 	TourInteract(playerpos);
@@ -345,89 +345,83 @@ void Zoo::Tour() {
 	TourInteract(playerpos);
   }
   else if(map[i][j-1]->GetCellContent() == '_') {
-	Cell* next = new Cell(i+1,j);
+	Cell* next = new Cell(i,j-1);
 	playerpos = next;
 	delete next;
 	TourInteract(playerpos);
   }
   else if(map[i-1][j]->GetCellContent() == '_') {
-	Cell* next = new Cell(i+1,j);
+	Cell* next = new Cell(i-1,j);
 	playerpos = next;
 	delete next;
 	TourInteract(playerpos);
   }
+  cout << playerpos->GetCellRow() << playerpos->GetCellCol();
 }
 
 void Zoo::TourInteract(Cell* pos) {
-  if(pos->GetCellRow() > 0)
-  {	  
+  if(pos->GetCellRow() > 0) {	  
 	int x = pos->GetCellRow()-1;
-	int y = GetCellCol();
+	int y = pos->GetCellCol();
 	for(int k = 0; k < cages.size(); k++)
 	{
 	  if(cages[k].InsideCage(x,y))
 	  {
 		if(!cages[k].IsEmpty())
 		{
-		  cages[k].GetAnimal[0]->Interact();
-		  cages[k].GetAnimal[0]->KasihMakan();
+		  cages[k].GetAnimal()[0]->Interact();
+		  cages[k].GetAnimal()[0]->GiveFood();
 		}			
 	  }
 	}
   }
-  if(pos->GetCellCol() < width-1)  
-  {
-	Cell* right = map[pos->GetCellRow()][pos->GetCellCol()+1];
+  if(pos->GetCellCol() < width-1) {
 	int x = pos->GetCellRow();
-	int y = GetCellCol()+1;
+	int y = pos->GetCellCol()+1;
 	for(int k = 0; k < cages.size(); k++)
 	{
 	  if(cages[k].InsideCage(x,y))
 	  {
 		if(!cages[k].IsEmpty())
 		{
-		  cages[k].GetAnimal[0]->Interact();
-		  cages[k].GetAnimal[0]->KasihMakan();
+		  cages[k].GetAnimal()[0]->Interact();
+		  cages[k].GetAnimal()[0]->GiveFood();
 		}			
 	  }
 	}
   }
-  if(pos->GetCellRow() < height-1)
-  { 
-    Cell* down = map[pos->GetCellRow()+1][pos->GetCellCol()];
+  if(pos->GetCellRow() < height-1) { 
 	int x = pos->GetCellRow()+1;
-	int y = GetCellCol();
+	int y = pos->GetCellCol();
 	for(int k = 0; k < cages.size(); k++)
 	{
 	  if(cages[k].InsideCage(x,y))
 	  {
 		if(!cages[k].IsEmpty())
 		{
-		  cages[k].GetAnimal[0]->Interact();
-		  cages[k].GetAnimal[0]->KasihMakan();
+		  cages[k].GetAnimal()[0]->Interact();
+		  cages[k].GetAnimal()[0]->GiveFood();
 		}			
 	  }
 	}
   }
-  if(pos->GetCellCol() > 0)
-  {  
-    Cell* left = map[pos->GetCellRow()][pos->GetCellCol()-1];
+  if(pos->GetCellCol() > 0) {
 	int x = pos->GetCellRow();
-	int y = GetCellCol()-1;
+	int y = pos->GetCellCol()-1;
 	for(int k = 0; k < cages.size(); k++)
 	{
 	  if(cages[k].InsideCage(x,y))
 	  {
 		if(!cages[k].IsEmpty())
 		{
-		  cages[k].GetAnimal[0]->Interact();
-		  cages[k].GetAnimal[0]->KasihMakan();
+		  cages[k].GetAnimal()[0]->Interact();
+		  cages[k].GetAnimal()[0]->GiveFood();
 		}			
 	  }
 	}
   }
 }
 
-void Zoo::Exit(Cell* pos) {
+bool Zoo::Exit(Cell* pos) {
   return(pos->GetCellRow() == height-1 || pos->GetCellCol() == width-1);
 }

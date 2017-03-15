@@ -6,7 +6,9 @@ int main(){
     Renderable r;
     z.MasukkanAnimal();
     z.MasukkanAnimal();
-    z.Tour();    
+    z.RandomEntrance();
+    z.Tour();
+
 	r.Render(z);
 	//r.Render(z);
 	//r.Render(z);
