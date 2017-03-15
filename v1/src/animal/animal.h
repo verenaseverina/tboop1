@@ -3,6 +3,8 @@
 #ifndef ANIMAL_H
 #define ANIMAL_H
 #include <string>
+#include <iostream>
+
 using namespace std;
 
 class Animal {
@@ -68,7 +70,7 @@ public:
   * @brief Procedure GiveFood()
   * Mengeluarkan jumlah makanan yang dimakan binatang
   */
-  void Animal::GiveFood()
+  void GiveFood();
 protected:
   string interaction;
   char content;
