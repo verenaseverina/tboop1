@@ -9,6 +9,9 @@ void Renderable::Render(Zoo& virtual_zoo) {
 	      int an_idx = FindAnimal(virtual_zoo,idx,i,j);
 	      cout << virtual_zoo.GetCages()[idx].GetAnimal()[an_idx]->GetContent();
       }
+	  else if (virtual_zoo.IsPlayer(i,j)) {
+		  cout << 'P';  
+	  }
       else {
 	      cout << virtual_zoo.GetMap()[i][j]->GetCellContent();
       }
