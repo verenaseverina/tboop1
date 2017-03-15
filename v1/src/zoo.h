@@ -6,9 +6,9 @@
 #include <vector>
 #include "state.h"
 #include "cage.h"
-#include "cell.h"
-#include "habitat.h"
-#include "facility.h"
+#include "cell/cell.h"
+#include "cell/turunancell/habitat.h"
+#include "cell/turunancell/facility.h"
 #include "time.h"
 class Zoo
 {
