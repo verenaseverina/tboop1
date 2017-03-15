@@ -247,6 +247,7 @@ void Cage::UpdatePosition() {
     }
   }
 }
+
 bool Cage::InsideCage(int x, int y){
   int i = 0;
   bool found = false;

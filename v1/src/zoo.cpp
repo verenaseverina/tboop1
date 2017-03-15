@@ -281,6 +281,7 @@ void Zoo::MasukkanAnimal() {
       x = rand() % size;
     } while (arr[x]==false);
   }
+  
   if (x!=-2) {
     cages[x].AddAnimal(input_user,x);
   }

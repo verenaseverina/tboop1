@@ -4,11 +4,11 @@
 int main(){
 	Zoo z;
     Renderable r;
+    z.MasukkanAnimal();
+    z.MasukkanAnimal();
     z.Tour();    
 	r.Render(z);
-    //z.MasukkanAnimal();
 	//r.Render(z);
-    //z.MasukkanAnimal();
 	//r.Render(z);
     //cout << Cage::neff;
 	//cout << z.GetCages().size() << endl << z.GetHeight() << endl;
