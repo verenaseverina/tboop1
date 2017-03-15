@@ -2,8 +2,15 @@
 #include "renderable.h"
 
 int main(){
-	Zoo z;
-    Renderable r;
+  Zoo z; int input; Renderable r;
+  do {
+    cout << "1.Tambahkan Animal" << endl << "2. Tour" << "3. Exit" << endl;
+    cin >> input;
+    switch (input) {
+      case 1:
+          
+    }
+  }
     z.MasukkanAnimal();
     z.MasukkanAnimal();
     z.Tour();    
