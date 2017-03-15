@@ -101,6 +101,7 @@ public:
   void RandomEntrance();
   bool Exit(Cell* pos);
   bool IsPlayer(int, int);
+  Cell* GetPlayerPos();
 private:
   vector<Cage> cages;
   Cell* playerpos;

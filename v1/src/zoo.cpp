@@ -329,7 +329,7 @@ void Zoo::RandomEntrance() {
 }
 
 void Zoo::Tour() {
-  RandomEntrance();
+  //RandomEntrance();
   int i = playerpos->GetCellRow();
   int j = playerpos->GetCellCol();
   if(map[i][j+1]->GetCellContent() == '_') {
@@ -420,6 +420,10 @@ void Zoo::TourInteract(Cell* pos) {
 	  }
 	}
   }
+}
+
+Cell* Zoo::GetPlayerPos() {
+  return(playerpos);
 }
 
 bool Zoo::Exit(Cell* pos) {
