@@ -64,6 +64,11 @@ public:
   * Getter char content animal
   */
   virtual char GetContent() = 0;
+  /**
+  * @brief Procedure GiveFood()
+  * Mengeluarkan jumlah makanan yang dimakan binatang
+  */
+  void Animal::GiveFood()
 protected:
   string interaction;
   char content;

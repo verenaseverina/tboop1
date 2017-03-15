@@ -57,3 +57,7 @@ char* Animal::GetHab() {
 char Animal::GetContent() {
   return content;
 }
+
+void Animal::GiveFood() {
+  cout<<"Makan"<<how_much_i_eat<<endl;
+}
