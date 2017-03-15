@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['getallcage',['GetAllCage',['../classZoo.html#a5c4569b2c91d076c3bdbd816fd0d5cc3',1,'Zoo']]],
+  ['getanimal',['GetAnimal',['../classCage.html#a7f9028496b1a0b2de06dae5dbcff3dab',1,'Cage']]],
+  ['getcage',['GetCage',['../classZoo.html#ac34459105151af5240e0146225531304',1,'Zoo']]],
+  ['getcages',['GetCages',['../classZoo.html#aafc64e3821f9d4c15a8e9c1f4fba6a4d',1,'Zoo']]],
+  ['getcellcol',['GetCellCol',['../classCell.html#a4601d5de6cca2713ed1e5a22b3745c24',1,'Cell']]],
+  ['getcellcontent',['GetCellContent',['../classCell.html#af92703aadfe123caf58b53c2e1c0189d',1,'Cell']]],
+  ['getcellrow',['GetCellRow',['../classCell.html#a18e4a0304419ef34d14f2c74f71e5fc7',1,'Cell']]],
+  ['getcontent',['GetContent',['../classAnimal.html#ae5da2126e837029de213f9a05a8ec4c3',1,'Animal']]],
+  ['geteat',['GetEat',['../classAnimal.html#a43d6b40a2a498e9a23779c91b74f57b7',1,'Animal']]],
+  ['gethab',['GetHab',['../classAnimal.html#a90f69269263fad128140e6f24d84f705',1,'Animal']]],
+  ['gethabitat',['GetHabitat',['../classCage.html#ad09ab78f4d94f3cad01d4aa6e06e3ff3',1,'Cage']]],
+  ['getheight',['GetHeight',['../classState.html#a5aab908ab11f655f4100a7d35f32afaa',1,'State::GetHeight()'],['../classZoo.html#a8c4218ff2065dcef777fc8f1f41c38dc',1,'Zoo::GetHeight()']]],
+  ['getid',['GetID',['../classAnimal.html#abfb32d0af74791999af1e7cebcff575d',1,'Animal']]],
+  ['getmap',['GetMap',['../classState.html#a43dbbdbb3eb30cd0296c0e6c06ec15c8',1,'State::GetMap()'],['../classZoo.html#ae3a73ce4c9dc8d6b53e37861371aa540',1,'Zoo::GetMap()']]],
+  ['getneff',['GetNeff',['../classCage.html#a7731669086b646d3325b52d3cb659849',1,'Cage']]],
+  ['getsize',['GetSize',['../classAnimal.html#a32ba1e238ca062dcc384185c748e56c5',1,'Animal::GetSize()'],['../classCage.html#a74e7e02204f0312a3f58ce5e1231a36c',1,'Cage::GetSize()']]],
+  ['gettame',['GetTame',['../classAnimal.html#a11a08df3bdb68262474d27be1f0a8f87',1,'Animal']]],
+  ['getweat',['GetWEat',['../classAnimal.html#a7d7a31c24908fc00321f66176ce1639d',1,'Animal']]],
+  ['getweight',['GetWeight',['../classAnimal.html#adcc8159c66d02301977e448a0964b653',1,'Animal']]],
+  ['getwidth',['GetWidth',['../classState.html#a86aad8aef7149b16bae1cd09ed1f035b',1,'State::GetWidth()'],['../classZoo.html#a7c64c9bc4156508f76c378e327c1d310',1,'Zoo::GetWidth()']]],
+  ['getx',['GetX',['../classAnimal.html#a6d0d928ff6812fd7ce0a9e4a35e4093e',1,'Animal']]],
+  ['gety',['GetY',['../classAnimal.html#a563b793d92299ace452b4f11f65b8741',1,'Animal']]]
+];
