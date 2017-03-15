@@ -97,10 +97,13 @@ public:
    */
   void CekCage(bool*, Animal*);
   void Tour();
-  bool RouteTaken(Cell*, vector<Cell*>);
-  bool NoMoreMove(Facility f, vector<Cell*> farr);
+  void TourInteract(Cell* pos);
+  void RandomEntrance();
+  bool Exit(Cell* pos);
+  bool IsPlayer(int, int);
 private:
   vector<Cage> cages;
+  Cell* playerpos;
   Cell*** map;
   int height;
   int width;
