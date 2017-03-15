@@ -59,5 +59,5 @@ char Animal::GetContent() {
 }
 
 void Animal::GiveFood() {
-  cout<<"Makan"<<how_much_i_eat<<endl;
+  cout<<"Animal makan sebanyak "<<how_much_i_eat<< " kg" <<endl;
 }
