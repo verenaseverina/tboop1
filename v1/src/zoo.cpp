@@ -425,3 +425,7 @@ void Zoo::TourInteract(Cell* pos) {
 bool Zoo::Exit(Cell* pos) {
   return(pos->GetCellRow() == height-1 || pos->GetCellCol() == width-1);
 }
+
+bool Zoo::IsPlayer(int i, int j) {
+  return(playerpos->GetCellRow() == i && playerpos->GetCellCol() == j);
+}

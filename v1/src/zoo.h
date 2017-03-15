@@ -100,6 +100,7 @@ public:
   void TourInteract(Cell* pos);
   void RandomEntrance();
   bool Exit(Cell* pos);
+  bool IsPlayer(int, int);
 private:
   vector<Cage> cages;
   Cell* playerpos;
