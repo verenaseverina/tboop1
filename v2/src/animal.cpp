@@ -302,7 +302,7 @@ Animal::~Animal() {
   delete [] hab;
 }
 
-void Animal::move(int dir){
+void Animal::Move(int dir){
   switch(dir) {
     case 1: { //top 
       y -=  1;
