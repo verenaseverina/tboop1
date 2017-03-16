@@ -333,7 +333,7 @@ void Zoo::RandomEntrance() {
   playerpos = ent[randidx];
 }
 
-void Zoo::Tour(vector<Cell*> visited) {
+void Zoo::Tour() {
   //RandomEntrance();
   int i = playerpos->GetCellRow();
   int j = playerpos->GetCellCol();
@@ -376,7 +376,8 @@ void Zoo::TourInteract(Cell* pos) {
 	  {
 		if(!cages[k].IsEmpty())
 		{
-		  cages[k].GetAnimal()[0]->Interact();
+		  cout << cages[k].GetAnimal()[0]->GetContent() << ":";
+      cout << cages[k].GetAnimal()[0]->Interact() << endl;
 		  cages[k].GetAnimal()[0]->GiveFood();
 		}			
 	  }
@@ -391,7 +392,8 @@ void Zoo::TourInteract(Cell* pos) {
 	  {
 		if(!cages[k].IsEmpty())
 		{
-		  cages[k].GetAnimal()[0]->Interact();
+		  cout << cages[k].GetAnimal()[0]->GetContent() << ":";
+      cout << cages[k].GetAnimal()[0]->Interact() << endl;
 		  cages[k].GetAnimal()[0]->GiveFood();
 		}			
 	  }
@@ -406,7 +408,8 @@ void Zoo::TourInteract(Cell* pos) {
 	  {
 		if(!cages[k].IsEmpty())
 		{
-		  cages[k].GetAnimal()[0]->Interact();
+		  cout << cages[k].GetAnimal()[0]->GetContent() << ":";
+      cout << cages[k].GetAnimal()[0]->Interact() << endl;
 		  cages[k].GetAnimal()[0]->GiveFood();
 		}			
 	  }
@@ -421,7 +424,8 @@ void Zoo::TourInteract(Cell* pos) {
 	  {
 		if(!cages[k].IsEmpty())
 		{
-		  cages[k].GetAnimal()[0]->Interact();
+		  cout << cages[k].GetAnimal()[0]->GetContent() << ":";
+      cout << cages[k].GetAnimal()[0]->Interact() << endl;
 		  cages[k].GetAnimal()[0]->GiveFood();
 		}			
 	  }

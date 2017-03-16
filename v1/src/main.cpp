@@ -6,7 +6,7 @@ int main(){
   
   Zoo z; int input; Renderable r;
   bool endloop = false;
-  vector<Cell*> visited;
+  //vector<Cell*> visited;
   cout << z.GetHeight() << " " << z.GetWidth() << endl;
   r.Render(z);
   do {
@@ -25,9 +25,9 @@ int main(){
       	system("clear||cls");
       	r.Render(z);
       	while(!z.Exit(z.GetPlayerPos())) {
-      	  usleep(500000);
+      	  usleep(1500000);
       	  system("clear||cls");
-      	  z.Tour(visited);
+      	  z.Tour();
       	  r.Render(z);
       	  //getchar();
       	}

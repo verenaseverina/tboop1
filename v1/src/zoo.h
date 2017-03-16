@@ -96,7 +96,7 @@ public:
    *  @details More details
    */
   void CekCage(bool*, Animal*);
-  void Tour(vector<Cell*>);
+  void Tour();
   void TourInteract(Cell* pos);
   void RandomEntrance();
   bool Exit(Cell* pos);
