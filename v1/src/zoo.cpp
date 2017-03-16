@@ -3,6 +3,7 @@
 #include "zoo.h"
 using namespace std;
 Zoo::Zoo() {
+  
   State s;
   char** smap=s.GetMap();
   height=s.GetHeight();
@@ -147,6 +148,10 @@ bool Zoo::IsHabitat(char c) {
 
 bool Zoo::IsFacility(char c) {
   return(c=='#'||c=='_'||c=='R');
+}
+
+bool Zoo::IsRoad(Cell* c) {
+  return(c->GetCellContent() == '_');
 }
 
 void Zoo::MasukkanAnimal() {
@@ -311,16 +316,16 @@ void Zoo::RandomEntrance() {
   vector<Cell*> ex;
   for(int i=0;i<width;i++)
   {
-	if(map[i][0]->GetCellContent() == '_')
+	if(IsRoad(map[i][0]))
 	  ent.push_back(map[i][0]);
-    if(map[i][width-1]->GetCellContent() == '_')
+    if(IsRoad(map[i][width-1]))
 	  ex.push_back(map[i][width-1]);
   }
   for(int j=0;j<height;j++)
   {
-	if(map[0][j]->GetCellContent() == '_') 
+	if(IsRoad(map[0][j])) 
 	  ent.push_back(map[0][j]);
-    if(map[height-1][j]->GetCellContent() == '_')
+    if(IsRoad(map[height-1][j]))
 	  ex.push_back(map[height-1][j]);
   }
   srand(time(NULL));
@@ -328,42 +333,44 @@ void Zoo::RandomEntrance() {
   playerpos = ent[randidx];
 }
 
-void Zoo::Tour() {
+void Zoo::Tour(vector<Cell*> visited) {
   //RandomEntrance();
   int i = playerpos->GetCellRow();
   int j = playerpos->GetCellCol();
-  if(map[i][j+1]->GetCellContent() == '_') {
+  //getchar();
+  TourInteract(playerpos);
+  if(IsRoad(map[i][j+1])) {
     Cell* next = new Cell(i,j+1);
     playerpos = next;
     delete next;
-	TourInteract(playerpos);
+	//TourInteract(playerpos);
   }
-  else if(map[i+1][j]->GetCellContent() == '_') {
+  else if(IsRoad(map[i+1][j])) {
     Cell* next = new Cell(i+1,j);
-	playerpos = next;
-	delete next;
-	TourInteract(playerpos);
+	  playerpos = next;
+	  delete next;
+	//TourInteract(playerpos);
   }
-  else if(map[i][j-1]->GetCellContent() == '_') {
-	Cell* next = new Cell(i,j-1);
-	playerpos = next;
-	delete next;
-	TourInteract(playerpos);
+  else if(IsRoad(map[i-1][j])) {
+	  Cell* next = new Cell(i-1,j);
+	  playerpos = next;
+	  delete next;
+	//TourInteract(playerpos);
   }
-  else if(map[i-1][j]->GetCellContent() == '_') {
-	Cell* next = new Cell(i-1,j);
-	playerpos = next;
-	delete next;
-	TourInteract(playerpos);
+  else if(IsRoad(map[i][j-1])) {
+	  Cell* next = new Cell(i,j-1);
+	  playerpos = next;
+	  delete next;
+	//TourInteract(playerpos);
   }
-  cout << playerpos->GetCellRow() << playerpos->GetCellCol();
+  //cout << playerpos->GetCellRow() << playerpos->GetCellCol();
 }
 
 void Zoo::TourInteract(Cell* pos) {
   if(pos->GetCellRow() > 0) {	  
 	int x = pos->GetCellRow()-1;
 	int y = pos->GetCellCol();
-	for(int k = 0; k < cages.size(); k++)
+	for(int k = 0; k < (signed)cages.size(); k++)
 	{
 	  if(cages[k].InsideCage(x,y))
 	  {
@@ -378,7 +385,7 @@ void Zoo::TourInteract(Cell* pos) {
   if(pos->GetCellCol() < width-1) {
 	int x = pos->GetCellRow();
 	int y = pos->GetCellCol()+1;
-	for(int k = 0; k < cages.size(); k++)
+	for(int k = 0; k < (signed)cages.size(); k++)
 	{
 	  if(cages[k].InsideCage(x,y))
 	  {
@@ -393,7 +400,7 @@ void Zoo::TourInteract(Cell* pos) {
   if(pos->GetCellRow() < height-1) { 
 	int x = pos->GetCellRow()+1;
 	int y = pos->GetCellCol();
-	for(int k = 0; k < cages.size(); k++)
+	for(int k = 0; k < (signed)cages.size(); k++)
 	{
 	  if(cages[k].InsideCage(x,y))
 	  {
@@ -408,7 +415,7 @@ void Zoo::TourInteract(Cell* pos) {
   if(pos->GetCellCol() > 0) {
 	int x = pos->GetCellRow();
 	int y = pos->GetCellCol()-1;
-	for(int k = 0; k < cages.size(); k++)
+	for(int k = 0; k < (signed)cages.size(); k++)
 	{
 	  if(cages[k].InsideCage(x,y))
 	  {

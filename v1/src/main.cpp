@@ -1,22 +1,35 @@
+#include <unistd.h>
 #include "zoo.h"
 #include "renderable.h"
 
 int main(){
+  
   Zoo z; int input; Renderable r;
   bool endloop = false;
+  vector<Cell*> visited;
+  cout << z.GetHeight() << " " << z.GetWidth() << endl;
+  r.Render(z);
   do {
     cout << "1.Tambahkan Animal" << endl << "2. Tour" << endl << "3. Exit" << endl;
     cin >> input;
     switch (input) {
       case 1: {
+      	system("clear||cls");
+      	r.Render(z);
       	z.MasukkanAnimal();
       	break;
       }
       case 2: {
+      	//cout << 'a';
+      	z.RandomEntrance();
+      	system("clear||cls");
+      	r.Render(z);
       	while(!z.Exit(z.GetPlayerPos())) {
-      	  z.Tour();
+      	  usleep(500000);
       	  system("clear||cls");
+      	  z.Tour(visited);
       	  r.Render(z);
+      	  //getchar();
       	}
       	break;
       }

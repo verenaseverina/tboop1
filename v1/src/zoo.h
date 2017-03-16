@@ -96,11 +96,12 @@ public:
    *  @details More details
    */
   void CekCage(bool*, Animal*);
-  void Tour();
+  void Tour(vector<Cell*>);
   void TourInteract(Cell* pos);
   void RandomEntrance();
   bool Exit(Cell* pos);
   bool IsPlayer(int, int);
+  bool IsRoad(Cell*);
   Cell* GetPlayerPos();
 private:
   vector<Cage> cages;
